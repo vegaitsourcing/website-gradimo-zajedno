@@ -1,0 +1,202 @@
+@media print {
+	body {
+		background: #fff;
+		color: #000;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+	}
+	a:link, a:visited {
+		background: #fff;
+		color: #000;
+		text-decoration: underline;
+	}
+	a:not([href='javascript:;']):after {
+		content: '[' attr(href) ']';
+	}
+	h1, h2, h3, h4, h5, h6,
+	.h1
+	.rte h1,
+	.rte h2,
+	.rte h3,
+	.rte h4 {
+		background: none;
+		color: #000 !important;
+		font-size: 25px;
+		line-height: 28px;
+		max-width: unset;
+	}
+	.rte p,
+	blockquote {
+		color: #000 !important;
+	}
+	blockquote {
+		border-color: $black !important;
+	}
+	.rte ul,
+	.rte ol {
+		color: $black;
+	}
+	.text {
+		font-size: 18px;
+		color: $black;
+	}
+	// add elements that are going to be hidden
+	.temp,
+	.btn,
+	.nav,
+	.banner__bg,
+	.banner__img,
+	.block__bg,
+	.block__img,
+	.image-block,
+	.cards,
+	.slider,
+	.basic-block__img-wrap,
+	.events,
+	.forms,
+	.footer__list,
+	.event-single__bg,
+	.items__header,
+	.pagination,
+	.item__btn,
+	.object__header,
+	.object-single__bg {
+		display: none;
+	}
+	.header,
+	.banner__content,
+	.banner__title,
+	.basic-block,
+	.block,
+	.block__text,
+	.footer__text,
+	.basic-block__title,
+	.event-single,
+	.event-single__img-wrap,
+	.object__col,
+	.object__body,
+	.object__text,
+	.tag,
+	.object__desc-wrap,
+	.object__price,
+	.stories,
+	.stories__body,
+	.story__header,
+	.story__body,
+	.story__body-holder,
+	.error-mod,
+	.basic-block__text {
+		padding: 0 !important;
+		margin: 20px 0 !important;
+	}
+	.banner {
+		min-height: unset;
+	}
+	.basic-block,
+	.footer,
+	.stories__header,
+	.error-mod,
+	.banner__title {
+		background-color: $white;
+		text-align: left;
+	}
+	.basic-block__title {
+		font-size: 22px;
+	}
+	.block__content,
+	.basic-block__content,
+	.footer__content,
+	.event-single__img-wrap,
+	.items__content,
+	.object__body,
+	.stories__body {
+		display: block !important;
+		width: 100%;
+	}
+	.block__col {
+		&:not(.block__col--sm) {
+			flex: none;
+			max-width: unset;
+		}
+	}
+	.block__col--sm,
+	.basic-block__col,
+	.footer__col,
+	.item,
+	.story,
+	.footer__address {
+		flex: none;
+		max-width: unset;
+	}
+	.footer,
+	.event-single__date,
+	.item__desc,
+	.object__desc {
+		color: $black;
+	}
+	.event-single__img-holder,
+	.object__img-wrap {
+		box-shadow: none;
+		border-radius: 0;
+		filter: none;
+	}
+	.item {
+		box-shadow: none;
+		border-radius: 0;
+	}
+	.item__body-col--flex {
+		background: none;
+	}
+	.item__price {
+		.item__desc {
+			color: $black;
+		}
+	}
+	.item__body-col--margin {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.tag,
+	.object__location,
+	.story__header {
+		background-color: $white;
+		color: $black;
+	}
+	.item--sold {
+		.item__overlay {
+			display: none;
+		}
+	}
+	.object__price {
+		&::after {
+			display: none;
+		}
+	}
+	.object__price {
+		.object__desc {
+			color: $black;
+		}
+	}
+	.object__col {
+		&:not(.object__col--sm) {
+			flex: none;
+			max-width: unset;
+		}
+	}
+	.object__text {
+		max-width: unset;
+	}
+	.stories__header {
+		border-bottom: none;
+	}
+	.story {
+		border: none;
+		border-radius: 0;
+	}
+	.banner {
+		.wrap {
+			padding: 0;
+		}
+	}
+}

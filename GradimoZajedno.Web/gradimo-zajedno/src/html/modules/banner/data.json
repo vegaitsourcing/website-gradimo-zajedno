@@ -1,0 +1,12 @@
+{
+	"title": "“Uvek sa decom” udruženje građanja za borbu protiv raka kod dece",
+	"backgroundImage": "assets/images/banner.png",
+	"image": {
+		"src": "assets/images/cancer-logo-gold.png",
+		"alt": "Logo"
+	},
+	"btn": "Doniraj",
+	"popup": {
+		">>": "modules/popup/data.json"
+	}
+}

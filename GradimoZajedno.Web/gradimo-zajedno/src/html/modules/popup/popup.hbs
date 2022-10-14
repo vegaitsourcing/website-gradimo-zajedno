@@ -1,0 +1,41 @@
+<div class="popup js-popup">
+	<div class="popup__content">
+		<div class="popup__header">
+			{{#if desc}}
+			<span class="popup__header-desc">{{desc}}</span>
+			{{/if}}
+			<button type="button" class="popup__btn-close js-close-popup">
+				<span class="icon font-ico-close"></span>
+				<span class="sr-only">{{closeBtn}}</span>
+			</button>
+		</div>
+		<div class="popup__body">
+			{{#if text}}
+			<p class="text text--sm popup__text">{{text}}</p>
+			{{/if}}
+			{{#if desc}}
+			<div class="popup__desc">
+				<span class="popup__item-desc">{{desc.object}}</span>
+				<span class="popup__item-desc">{{desc.location}}</span>
+			</div>
+			{{/if}}
+			{{#if forms}}
+			{{> forms forms}}
+			{{/if}}
+			{{#if img}}
+			<img class="popup__img" src="{{img.src}}" alt="{{img.alt}}">
+			{{/if}}
+		</div>
+		<div class="popup__success">
+			{{#if successImg}}
+			<img class="popup__succes-img" src="{{successImg.src}}" alt="{{successImg.alt}}">
+			{{/if}}
+			{{#if successTitle}}
+			<span class="h1 popup__succes-title">{{successTitle}}</span>
+			{{/if}}
+			{{#if successText}}
+			<p class="text text--sm popup__success-text">{{successText}}</p>
+			{{/if}}
+		</div>
+	</div>
+</div>

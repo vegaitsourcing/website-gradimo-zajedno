@@ -1,0 +1,260 @@
+// ---------- items
+// ------------------------------------------------------------------------------
+
+.items {
+	width: 100%;
+	padding: 28px 0;
+}
+.filters-btn {
+	display: none;
+	@include media-breakpoint-down(sm) {
+		display: block;
+		width: 100%;
+	}
+}
+.filters {
+	@include media-breakpoint-down(sm) {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		background-color: $white;
+		z-index: 11;
+	}
+}
+.filters--active {
+	display: block;
+}
+.filters__close-btn {
+	display: none;
+	width: 40px;
+	height: 40px;
+	border: 2px solid $purple;
+	background-color: $white;
+	border-radius: 20px;
+	@include icon(close) {
+		color: $purple;
+		font-size: 22px;
+	}
+	@include media-breakpoint-down(sm) {
+		display: block;
+		margin-left: auto;
+	}
+}
+.filters__row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	padding: 30px 0;
+	&:not(:last-of-type) {
+		border-bottom: 2px solid $purple;
+	}
+}
+.filter {
+	position: relative;
+	@include media-breakpoint-down(sm) {
+		margin: 15px 0;
+	}
+}
+.filter__input {
+	height: 0;
+	width: 0;
+	opacity: 0;
+	&:checked {
+		+ .filter__label {
+			background-color: $purple;
+			color: $white;
+		}
+	}
+	&:focus {
+		+ .filter__label {
+			border: 1px dashed $purple-dark;
+		}
+	}
+}
+.filter__label {
+	background-color: $grey;
+	color: $purple;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	letter-spacing: 0.04em;
+	padding: 8px 16px;
+	border-radius: 12px;
+}
+.items__content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 25px 0;
+}
+.item {
+	flex: 1 1 calc(50% - 5px);
+	max-width: calc(50% - 5px);
+	background-color: $white;
+	box-shadow: 0 0 24px 2px rgba($black, 0.15);
+	border-radius: 20px;
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	margin-bottom: 48px;
+	@include media-breakpoint-down(lg) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		flex-direction: column;
+	}
+}
+.item--sold {
+	.item__overlay {
+		display: flex;
+	}
+	.item__btn {
+		display: none;
+	}
+}
+.item__overlay {
+	display: none;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#272727, 0.6);
+		z-index: 2;
+	}
+	@include media-breakpoint-down(lg) {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.item__overlay-span {
+	position: relative;
+	z-index: 3;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: rgba($white, 0.84);
+}
+.item__col {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&:not(.item__col--sm) {
+		flex: 1 1 58%;
+		max-width: 58%;
+	}
+	@include media-breakpoint-down(lg) {
+		&:not(.item__col--sm) {
+			flex: 1 1 100%;
+			max-width: 100%;
+		}
+	}
+}
+.item__col--sm {
+	flex: 1 1 42%;
+	max-width: 42%;
+	@include media-breakpoint-down(lg) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		padding-bottom: 45%;
+	}
+}
+.item__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+.item__header {
+	padding: 28px 0 0 25px;
+	display: flex;
+	justify-content: space-between;
+}
+.item__header-col--flex {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+.item__desc {
+	display: block;
+	color: $purple;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.04em;
+	padding-bottom: 8px;
+	padding-right: 15px;
+}
+.item__desc--lg {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+}
+.item__text {
+	color: $purple;
+	letter-spacing: 0;
+	max-width: 340px;
+	margin: 9px 0;
+	@include media-breakpoint-down(sm) {
+		max-width: unset;
+		padding-right: 15px;
+	}
+}
+.item__body-col {
+	padding-left: 25px;
+}
+.item__body-col--margin {
+	margin: 58px 0 50px;
+	.item__desc {
+		padding-bottom: 0;
+		letter-spacing: 0;
+	}
+}
+.item__body-col--flex {
+	background-color: $purple;
+	display: flex;
+	justify-content: space-between;
+	padding: 17px 23px;
+}
+.item__price {
+	.item__desc {
+		color: $white;
+		padding-bottom: 4px;
+	}
+}
+.item__btn {
+	background-color: $white;
+	color: $purple;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	padding: 8px 24px;
+	border-radius: 4px;
+	transition: $transition;
+	@include hover {
+		opacity: 0.8;
+	}
+}

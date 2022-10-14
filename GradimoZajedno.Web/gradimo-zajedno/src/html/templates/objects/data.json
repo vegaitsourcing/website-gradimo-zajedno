@@ -1,0 +1,31 @@
+{
+	"template": "objects",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json",
+			"active": "3"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"sections": [
+			{
+				"moduleAlias": "cards",
+				">>": "modules/cards/data.json"
+			},
+			{
+				"moduleAlias": "basic-block",
+				"text": ["Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."]
+			},
+			{
+				"moduleAlias": "items",
+				">>": "modules/items/data.json"
+			},
+			{
+				"moduleAlias": "forms",
+				">>": "modules/forms/data.json"
+			}
+		]
+	}
+}

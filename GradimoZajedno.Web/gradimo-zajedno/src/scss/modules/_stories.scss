@@ -1,0 +1,101 @@
+// ---------- stories
+// ------------------------------------------------------------------------------
+
+.stories {
+	width: 100%;
+	padding: 110px 0;
+	::-webkit-scrollbar {
+		width: 5px;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: $purple;
+		border-radius: 2px;
+		height: 110px;
+	}
+	::-webkit-scrollbar-track {
+		background-color: $white;
+		border-radius: 2px;
+	}
+	.pagination {
+		padding: 0;
+	}
+	.popup__content {
+		min-width: 800px;
+	}
+	.popup__header {
+		display: flex;
+	}
+	@include media-breakpoint-down(lg) {
+		padding: 80px 0;
+	}
+	@include media-breakpoint-down(md) {
+		.popup__content {
+			min-width: unset;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 60px 0;
+	}
+}
+.stories__header {
+	border-bottom: 2px solid $purple;
+	text-align: center;
+}
+.stories__btn {
+	margin: 0 auto 45px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	padding: 6px 14px;
+}
+.stories__text {
+	color: $purple;
+	padding: 47px 0;
+	@include media-breakpoint-down(lg) {
+		padding: 30px 20px;
+	}
+}
+.stories__body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 48px 0;
+	@include media-breakpoint-down(lg) {
+		flex-direction: column;
+	}
+}
+.story {
+	flex: 1 1 calc(33% - 8px);
+	max-width: calc(33% - 8px);
+	border-radius: 20px;
+	border: 1px solid $purple;
+	overflow: hidden;
+	margin-bottom: 48px;
+	@include media-breakpoint-down(lg) {
+		flex: 1 1 100%;
+		max-width: 100%;
+		margin-bottom: 35px;
+	}
+}
+.story__header {
+	background-color: $purple;
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 14px 24px;
+}
+.story__body {
+	padding: 24px 5px;
+}
+.story__body-holder {
+	padding: 0 21px;
+	overflow-y: auto;
+	max-height: 384px;
+	@include media-breakpoint-down(lg) {
+		max-height: 200px;
+	}
+}
+.story__text {
+	color: $purple;
+}

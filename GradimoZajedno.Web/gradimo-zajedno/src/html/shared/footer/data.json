@@ -1,0 +1,50 @@
+{
+	"address": "Pasterova 14, Savski venac<br>11000 Beograd, Srbija",
+	"mail": {
+		"url": "mailto:sadecom@sbb.rs",
+		"name": "sadecom@sbb.rs"
+	},
+	"list": [
+		{
+			"link": [
+				{
+					"url": "javascript:;",
+					"name": "Početna"
+				},
+				{
+					"url": "javascript:;",
+					"name": "O nama"
+				},
+				{
+					"url": "javascript:;",
+					"name": "Kontakt"
+				}
+			]
+		},
+		{
+			"link": [
+				{
+					"url": "javascript:;",
+					"name": "Grad"
+				},
+				{
+					"url": "javascript:;",
+					"name": "Arhiva grada"
+				},
+				{
+					"url": "javascript:;",
+					"name": "Vremenska kapsula"
+				}
+				,
+				{
+					"url": "javascript:;",
+					"name": "Blog"
+				}
+			]
+		}
+	],
+	"text": [
+		"Postoji nekoliko načina da nam pomognete: direktnom uplatom na naš broj računa kod Raiffeisen Bank: 265–1610310004281–79",
+		"Slanjem SMS poruke sa sadržajem 7175 na broj 7175, ili slanjem poklona za decu na adresu udruženja."
+	]
+}

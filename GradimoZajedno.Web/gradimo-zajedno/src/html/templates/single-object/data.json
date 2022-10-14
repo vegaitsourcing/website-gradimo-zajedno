@@ -1,0 +1,18 @@
+{
+	"template": "single-object",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"sections": [
+			{
+				"moduleAlias": "object-single",
+				">>": "modules/object-single/data.json"
+			}
+		]
+	}
+}

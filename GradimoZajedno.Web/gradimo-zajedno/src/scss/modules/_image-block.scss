@@ -1,0 +1,14 @@
+// ---------- image-block
+// ------------------------------------------------------------------------------
+
+.image-block {
+	width: 100%;
+}
+.image-block__wrap {
+	@include aspect-ratio(1728, 409, rel, img);
+	@include media-breakpoint-down(sm) {
+		.img {
+			padding-bottom: 47%;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+{
+	"template": "index",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json",
+			"active": "1"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+
+		"sections1": [
+			{
+				"moduleAlias":"banner",
+				">>": "modules/banner/data.json"
+			}
+		],
+
+		"sections2": [
+			{
+				"moduleAlias": "basic-block",
+				">>": "modules/basic-block/data.json"
+			},
+			{
+				"moduleAlias": "block",
+				">>": "modules/block/data.json"
+			},
+			{
+				"moduleAlias": "image-block",
+				">>": "modules/image-block/data.json"
+			},
+			{
+				"moduleAlias": "cards",
+				">>": "modules/cards/data.json"
+			},
+			{
+				"moduleAlias": "basic-block",
+				"text": ["Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."],
+				"link": {
+					"url": "javascript:;",
+					"name": "Saznaj Više"
+				}
+			},
+			{
+				"moduleAlias": "swiper",
+				">>": "modules/swiper/data.json"
+			},
+			{
+				"moduleAlias": "basic-block",
+				"col": [
+					{
+						"title": "Vremenska kapsula",
+						"img": {
+							"src": "assets/images/teddy-img.png",
+							"alt": "Image"
+						}
+					},
+					{
+						"text": ["Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.."],
+						"link": {
+							"url": "javascript:;",
+							"name": "Saznaj Više"
+						}
+					}
+				]
+			},
+			{
+				"moduleAlias": "events",
+				">>": "modules/events/data.json"
+			},
+			{
+				"moduleAlias": "forms",
+				">>": "modules/forms/data.json"
+			}
+		]
+	}
+}

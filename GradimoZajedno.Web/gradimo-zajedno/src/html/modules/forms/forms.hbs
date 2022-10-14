@@ -1,0 +1,39 @@
+<div class="forms">
+	<div class="wrap">
+		<div class="forms__content">
+			{{#each col}}
+			<div class="forms__col">
+				{{#if title}}
+				<h2 class="h1 forms__title">{{title}}</h2>
+				{{/if}}
+				{{#if form}}
+				<form class="form js-form" action="/">
+					{{#each input}}
+					<div class="form__input-wrap{{#if full}} form__input-wrap--full{{/if}}">
+						{{#if textarea}}
+						<label for="{{name}}" class="label">{{label}}</label>
+						<textarea class="input js-input" name="{{name}}" id="{{name}}" cols="30" rows="5"></textarea>
+						<span class="form__error-msg"></span>
+						{{else}}
+						<div class="input-wrap">
+							<label for="{{name}}" class="label">{{label}}</label>
+							<span class="error-msg"></span>
+							<input class="input js-input" type="{{type}}" name="{{name}}" id="{{name}}">
+							<span class="form__error-msg js-error-msg"></span>
+						</div>
+						{{/if}}
+					</div>
+					{{/each}}
+					<div class="form__btn-wrap">
+						<button class="btn form__btn" type="submit">{{submit}}</button>
+						{{#if exit}}
+						<button class="btn btn--outline form__btn js-submit" type="button">{{exit}}</button>
+						{{/if}}
+					</div>
+				</form>
+				{{/if}}
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

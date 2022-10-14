@@ -1,0 +1,125 @@
+// ----------  button
+// ------------------------------------------------------------------------------
+
+button,
+input[type='button'],
+input[type='submit'] {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+}
+
+a,
+button {
+	appearance: none;
+	outline: none;
+	font-family: $font-default;
+
+	&:focus {
+		outline: 1px dashed $purple-dark;
+	}
+}
+
+.btn {
+	background-color: $purple;
+	color: $white;
+	display: block;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	padding: 17px 46px;
+	transition: $transition;
+	border-radius: 12px;
+	letter-spacing: 0.04em;
+	border: 2px solid $purple;
+	@include hover {
+		opacity: 0.7;
+	}
+	@include media-breakpoint-down(md) {
+		padding: 8px 20px;
+	}
+}
+.btn--padding-sm {
+	padding: 6px 18px;
+}
+.btn--white {
+	background-color: $white;
+	color: $purple;
+	border: 2px solid $white;
+}
+.btn--outline {
+	background-color: $white;
+	border: 2px solid $purple;
+	color: $purple;
+}
+.link {
+	color: $purple;
+	font-family: $font-default;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	transition: $transition;
+	position: relative;
+	padding: 5px;
+	@include hover {
+		opacity: 0.7;
+	}
+}
+.link--active {
+	border-bottom: 2px solid $purple;
+	@include media-breakpoint-down(md) {
+		border-bottom: none;
+		background-color: rgba($purple, 0.9);
+		color: $white;
+	}
+}
+.link--white {
+	color: $white;
+	letter-spacing: 0.04em;
+}
+.tag {
+	display: inline-block;
+	color: $white;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: 0.04em;
+	border-radius: 4px 0 0 4px;
+	padding: 3px 13px;
+	margin-bottom: 8px;
+}
+.tag--green {
+	background-color: $green;
+}
+.tag--red {
+	background-color: $red;
+}
+.tag--gold {
+	background-color: $gold;
+	font-size: 14px;
+	line-height: 17px;
+	padding: 2px 21px;
+}
+.btn-navigation {
+	display: block;
+	background-color: transparent;
+	border: 3px solid $purple;
+	border-radius: 50%;
+	flex: 1 1 39px;
+	max-width: 39px;
+	height: 39px;
+	.icon {
+		color: $purple;
+		font-size: 34px;
+	}
+}
+.btn-navigation--purple {
+	background-color: $purple;
+	border: 3px solid $white;
+	.icon {
+		color: $white;
+	}
+}

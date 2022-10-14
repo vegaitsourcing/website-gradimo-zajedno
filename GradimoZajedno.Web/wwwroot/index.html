@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta charset="utf-8">
+	<title>Gradimo Zajedno</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="canonical" href="http://umbraco9-test.local/">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="googlebot" content="noindex, nofollow">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://umbraco9-test.local/">
+	<meta property="og:locale" content="en-US">
+	<meta property="og:site_name" content="Gradimo Zajedno">
+	<meta property="og:title" content="Home">
+	<meta property="og:description" content="Home page open graph description">
+	<meta property="og:image" content="http://umbraco9-test.local/media/kklffmoc/img3.jpg">
+	<meta property="og:image:type" content="image/jpg">
+	<meta property="og:image:width" content="1120">
+	<meta property="og:image:height" content="700">
+	<meta property="og:image:alt" content="">
+	<!-- main css file -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<!-- global js file -->
+	<script defer src="js/global.min.js"></script>
+	<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+	<script>
+		let optionalCookies = [{
+			name: "analytics",
+			label: "Analytics cookies",
+			description: "Analytical cookies help us to improve our website by collecting and reporting information on its usage.",
+			cookies: ["_ga", "_gid", "_gat"],
+			onAccept: function() {
+				(function(w, d, s, l, i) {
+					w[l] = w[l] || [];
+					w[l].push({
+						"gtm.start": new Date().getTime(),
+						event: "gtm.js"
+					});
+					var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s),
+						dl = l != "dataLayer" ? "&l=" + l : "";
+					j.async = true;
+					j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+					f.parentNode.insertBefore(j, f);
+				})(window, document, "script", "dataLayer", "GTM-TVGRBHL");
+				if (typeof BrowseAloud != "undefined") {
+					BrowseAloud.analytics = BrowseAloud.org_analytics;
+				}
+			},
+			onRevoke: function() {
+				window["ga-disable-GTM-TVGRBHL"] = true;
+				if (typeof BrowseAloud != "undefined") {
+					BrowseAloud.analytics = BrowseAloud.no_analytics;
+				}
+			},
+		}, {
+			name: "marketing",
+			label: "Marketing (targeting or advertising) cookies",
+			description: "We use marketing (targeting or advertising) cookies to help us improve the relevancy of advertising campaigns you receive.",
+			cookies: [],
+			lawfulBasis: "consent",
+			onAccept: function() {},
+			onRevoke: function() {},
+			thirdPartyCookies: [{
+				name: "Ad personalization",
+				optOutLink: "https://adssettings.google.com/authenticated?hl=en"
+			}],
+		}, ];
+		let brandingOptions = {
+			fontSizeTitle: "16px",
+			fontSizeIntro: "16px",
+			fontSizeHeaders: "16px",
+			fontSize: "16px",
+			alertBackground: "#cc4141",
+			alertText: "#fff",
+			removeAbout: true,
+			removeIcon: true
+		};
+		let onLoad = function() {
+			let cookieSettingsBtn = document.getElementsByClassName("ccc-notify-link")[0];
+			if (cookieSettingsBtn) {
+				cookieSettingsBtn.onclick = function() {
+					let panelInfo = document.getElementById("ccc-info");
+					let confirmButton = document.createElement("button");
+					confirmButton.classList.add("btn-info");
+					confirmButton.setAttribute("id", "confirm-btn");
+					confirmButton.innerText = "Confirm Settings";
+					panelInfo.appendChild(confirmButton);
+				};
+			}
+		};
+		var config = getConfigByWindowSize();
+
+		function getConfigByWindowSize() {
+			if (window.screen.width > 768) {
+				return {
+					apiKey: "fa2ccff0bfa8a43281efcaa76e77d077a745640d",
+					product: "PRO_MULTISITE",
+					initialState: "notify",
+					necessaryCookies: ["UMB-XSRF-TOKEN"],
+					position: "LEFT",
+					layout: "popup",
+					text: {
+						settings: "Cookie settings"
+					},
+					statement: {
+						description: "For more detailed information about the cookies we use, see our",
+						name: "cookie policy",
+						url: "/cookie-policy/",
+						updated: "01/12/2019"
+					},
+					optionalCookies: optionalCookies,
+					branding: brandingOptions,
+					onLoad: onLoad,
+				};
+			} else {
+				return {
+					apiKey: "fa2ccff0bfa8a43281efcaa76e77d077a745640d",
+					product: "PRO_MULTISITE",
+					initialState: "notify",
+					necessaryCookies: ["UMB-XSRF-TOKEN"],
+					position: "RIGHT",
+					layout: "popup",
+					text: {
+						settings: "Cookie settings"
+					},
+					statement: {
+						description: "For more detailed information about the cookies we use, see our",
+						name: "cookie policy",
+						url: "/cookie-policy/",
+						updated: "01/12/2019"
+					},
+					optionalCookies: optionalCookies,
+					branding: brandingOptions,
+				};
+			}
+		}
+		CookieControl.load(config);
+	</script>
+	<!-- http://PROJECTNAME.emperordev.com/ -->
+	<!-- globalVars -> cookieCivic = true -->
+	<!-- for cookie trigger add class on link 'js-cookie-opener' -->
+	<!-- <a class="js-cookie-opener" href="javascript:;">Cookie settings</a> -->
+	<!-- var config = {
+		apiKey: 'fa2ccff0bfa8a43281efcaa76e77d077a745640d',
+		product: 'PRO_MULTISITE',
+		};
+		
+		CookieControl.load( config ); -->
+	<link href="favicon.ico" rel="icon">
+</head>
+
+<body class="">
+	<header class="header">
+		<div class="wrap">
+			<div class="header__container">
+				<a href="/" class="header__home">
+					<img src="assets/images/logo.png" alt="Logo" class="header__logo">
+				</a>
+				<nav class="nav js-nav">
+					<button class="nav__btn js-menu" type="button">
+						<span class="nav__btn-icon"></span>
+						<span class="sr-only">menu icon</span>
+					</button>
+					<ul class="nav__list" role="menubar">
+						<li class="nav__item" role="menuitem">
+							<a href="javascript:;" class="link link--active nav__link">Početna</a>
+						</li>
+						<li class="nav__item" role="menuitem">
+							<a href="javascript:;" class="link nav__link">O nama</a>
+						</li>
+						<li class="nav__item" role="menuitem">
+							<a href="javascript:;" class="link nav__link">Grad</a>
+						</li>
+						<li class="nav__item" role="menuitem">
+							<a href="javascript:;" class="link nav__link">Vremenska kapsula</a>
+						</li>
+						<li class="nav__item" role="menuitem">
+							<a href="javascript:;" class="link nav__link">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<div class="wrap">
+		<ul>
+			<li>
+				<a href="index.html">home</a>
+			</li>
+			<li>
+				<a href="about.html">about</a>
+			</li>
+			<li>
+				<a href="contact.html">contact</a>
+			</li>
+			<li>
+				<a href="event.html">event</a>
+			</li>
+			<li>
+				<a href="objects.html">objects</a>
+			</li>
+			<li>
+				<a href="single-object.html">single object</a>
+			</li>
+			<li>
+				<a href="timeline.html">vremenska kapsula</a>
+			</li>
+			<li>
+				<a href="rte.html">rte example</a>
+			</li>
+			<li>
+				<a href="error.html">404</a>
+			</li>
+		</ul>
+	</div>
+	<div class="banner wrap wrap--xl js-popup-parent">
+		<div class="banner__bg has-cover" style="background-image: url(assets/images/banner.png);"></div>
+		<div class="wrap">
+			<div class="banner__holder">
+				<div class="banner__content">
+					<h1 class="h1 banner__title">“Uvek sa decom” udruženje građanja za borbu protiv raka kod dece</h1>
+					<img class="banner__img" src="assets/images/cancer-logo-gold.png" alt="Logo">
+					<button type="button" class="btn banner__btn js-popup-btn">Doniraj</button>
+				</div>
+			</div>
+		</div>
+		<div class="popup js-popup">
+			<div class="popup__content">
+				<div class="popup__header">
+					<button type="button" class="popup__btn-close js-close-popup">
+						<span class="icon font-ico-close"></span>
+						<span class="sr-only">Close popup</span>
+					</button>
+				</div>
+				<div class="popup__body">
+					<p class="text text--sm popup__text">Postoji nekoliko načina da nam pomognete: direktnom uplatom na naš broj računa kod Raiffeisen Bank (265–1610310004281–79), slanjem SMS poruke sa sadržajem 7175 na broj 7175, ili slanjem poklona za decu na adresu udruženja.</p>
+					<img class="popup__img" src="assets/images/uplatnica.png" alt="Uplatnica">
+				</div>
+				<div class="popup__success">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="basic-block">
+		<div class="wrap">
+			<div class="basic-block__content">
+				<h2 class="h1 basic-block__title">Pomozimo deci oboleloj od raka!</h2>
+			</div>
+		</div>
+	</div>
+	<div class="block">
+		<div class="block__bg has-cover" style="background-image: url(assets/images/dots.png);"></div>
+		<div class="wrap">
+			<div class="block__content">
+				<div class="block__col block__col--sm">
+					<h3 class="h1 block__title">Čime se bavi udruženje?</h3>
+					<img class="block__img" src="assets/images/heart-img.png" alt="Heart image">
+				</div>
+				<div class="block__col">
+					<p class="text block__text">Udruženje “Uvek sa decom” osnovano je 1991. i od tada pomaže deci koja se leče na dečijem odeljenju Instituta za onkologiju i radiologiju Srbije.</p>
+					<p class="text block__text">Kako bi doprinelo kvalitetu lečenja i što bržem vraćanju detinjstva deci oboleloj od raka, Udruženje “Uvek sa decom” organizuje brojne vidove pomoći i podrške – od smeštaja tokom lečenja, finansijske pomoći i pomoći u vidu medicinske opreme i higijenskih sredstava, igračaka i knjiga, do psihološke podrške kako deci tako i roditeljima kroz brojne aktivnosti, druženja i posete glumaca, pisaca, sportista I drugih poznatih ličnosti...</p>
+					<a class="btn block__btn" href="javascript:;">Saznaj Više</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="image-block">
+		<div class="image-block__wrap">
+			<div class="image-block__img img" style="background-image: url(assets/images/image-block-img.png);"></div>
+		</div>
+	</div>
+	<div class="cards">
+		<div class="cards__bg has-cover" style="background-image: url(assets/images/dots-3.png);"></div>
+		<div class="wrap swiper js-swiper-cards">
+			<div class="cards__img-wrap">
+				<div class="cards__img-holder">
+					<div class="cards__img has-cover" style="background-image: url(assets/images/round-img.png);"></div>
+				</div>
+			</div>
+			<div class="cards__content swiper-wrapper">
+				<div class="card js-card swiper-slide card-0" data-id="0">
+					<div class="card__info">
+						<h2 class="card__title">Kvart Otkrića</h2>
+						<p class="card__text">Kvart se nalazi između Bulevara Deda Mraza na severu i Gusarskog Bulevara na zapadu.</p>
+						<p class="card__text">U južnom delu ovog kvarta nalazi se nacionalni muzej Žizuko.</p>
+					</div>
+				</div>
+				<div class="card js-card swiper-slide card-1" data-id="1">
+					<div class="card__info">
+						<h2 class="card__title">Kvart Pobede</h2>
+						<p class="card__text">Kvart se nalazi između Sunčanog Bulevara na istoku i Bulevara Deda Mraza na severu.</p>
+						<p class="card__text">U severnom delu ovog kvarta nalazi se Hram dobrog srca.</p>
+					</div>
+				</div>
+				<div class="card js-card swiper-slide card-2" data-id="2">
+					<div class="card__info">
+						<h2 class="card__title">Kvart Blaga</h2>
+						<p class="card__text">Kvart se nalazi između Bulevara Savane na jugu i Gusarskog Bulevara na zapadu.</p>
+						<p class="card__text">U južnom delu ovog kvarta nalaze se Skupština i Koncertna dvorana.</p>
+					</div>
+				</div>
+				<div class="card js-card swiper-slide card-3" data-id="3">
+					<div class="card__info">
+						<h2 class="card__title">Magični Kvart</h2>
+						<p class="card__text">Kvart se nalazi između Sunčanog Bulevara na istoku i Bulevara Savane na jugu.</p>
+						<p class="card__text">U severnom delu ovog kvarta nalazi se roditeljski kutak, bolnica...</p>
+					</div>
+				</div>
+			</div>
+			<div class="cards__pagination js-cards-pagination"></div>
+			<div class="swiper-pagination"></div>
+			<div class="cards__navigation">
+				<button type="button" class="cards-button-prev btn-navigation cards__btn cards__btn--prev">
+					<span class="icon font-ico-arrow-left"></span>
+					<span class="sr-only">Previous slide</span>
+				</button>
+				<button type="button" class="cards-button-next btn-navigation cards__btn cards__btn--next">
+					<span class="icon font-ico-arrow-right"></span>
+					<span class="sr-only">Next slide</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="basic-block">
+		<div class="wrap">
+			<div class="basic-block__content">
+				<p class="text basic-block__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+				<a href="javascript:;" class="btn btn--white basic-block__link">Saznaj Više</a>
+			</div>
+		</div>
+	</div>
+	<div class="swiper slider">
+		<div class="slider__bg has-cover" style="background-image: url(assets/images/dots-2.png);"></div>
+		<div class="wrap wrap--xs">
+			<!-- Slider main container -->
+			<div class="swiper-container js-swiper slider__container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper slider__wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide slide">
+						<div class="slide__col slide__col--sm">
+							<span class="slide__year">2021.</span>
+							<p class="text slide__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+						<div class="slide__col">
+							<h3 class="h1 slide__title">Grad Žizuko</h3>
+							<img src="assets/images/round-img.png" alt="City image">
+						</div>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="slide__col slide__col--sm">
+							<span class="slide__year">2022.</span>
+							<p class="text slide__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+						<div class="slide__col">
+							<h3 class="h1 slide__title">Grad Žizuko</h3>
+							<img src="assets/images/round-img.png" alt="City image">
+						</div>
+					</div>
+					<div class="swiper-slide slide">
+						<div class="slide__col slide__col--sm">
+							<span class="slide__year">2023.</span>
+							<p class="text slide__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+						<div class="slide__col">
+							<h3 class="h1 slide__title">Grad Žizuko</h3>
+							<img src="assets/images/round-img.png" alt="City image">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider__navigation">
+			<button type="button" class="swiper-button-prev btn-navigation btn-navigation--purple slider__btn slider__btn--prev">
+				<span class="icon font-ico-arrow-left"></span>
+				<span class="sr-only">Previous slide</span>
+			</button>
+			<button type="button" class="swiper-button-next btn-navigation btn-navigation--purple slider__btn slider__btn--next">
+				<span class="icon font-ico-arrow-right"></span>
+				<span class="sr-only">Next slide</span>
+			</button>
+		</div>
+	</div>
+	<div class="basic-block basic-block--flex">
+		<div class="wrap">
+			<div class="basic-block__content">
+				<div class="basic-block__col">
+					<h2 class="h1 basic-block__title">Vremenska kapsula</h2>
+					<div class="basic-block__img-wrap">
+						<img class="basic-block__img" src="assets/images/teddy-img.png" alt="Image">
+					</div>
+				</div>
+				<div class="basic-block__col">
+					<p class="text basic-block__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet..</p>
+					<a href="javascript:;" class="btn btn--white basic-block__link">Saznaj Više</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="swiper events">
+		<div class="events__bg has-cover" style="background-image: url(assets/images/dots-2.png);"></div>
+		<div class="wrap">
+			<!-- Slider main container -->
+			<div class="swiper-container js-swiper-events events__container">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper events__wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide events__slide">
+						<div class="events__slide-col">
+							<div class="events__img-wrap">
+								<div class="events__img has-cover" style="background-image: url(assets/images/events-img.jpg);"></div>
+							</div>
+						</div>
+						<div class="events__slide-col">
+							<div class="events__info">
+								<h3 class="h1 events__title">Radionica Naziv</h3>
+								<time class="events__date" datetime="2022-09-10">10. septembar 2022.</time>
+								<p class="text text--sm events__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								<a href="javascript:;" class="btn btn--white events__link">Saznaj Više</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide events__slide">
+						<div class="events__slide-col">
+							<div class="events__img-wrap">
+								<div class="events__img has-cover" style="background-image: url(assets/images/events-img.jpg);"></div>
+							</div>
+						</div>
+						<div class="events__slide-col">
+							<div class="events__info">
+								<h3 class="h1 events__title">Radionica Naziv</h3>
+								<time class="events__date" datetime="2022-09-10">10. septembar 2022.</time>
+								<p class="text text--sm events__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								<a href="javascript:;" class="btn btn--white events__link">Saznaj Više</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="events__navigation">
+					<button type="button" class="events-button-prev btn-navigation events__btn events__btn--prev">
+						<span class="icon font-ico-arrow-left"></span>
+						<span class="sr-only">Previous slide</span>
+					</button>
+					<button type="button" class="events-button-next btn-navigation events__btn events__btn--next">
+						<span class="icon font-ico-arrow-right"></span>
+						<span class="sr-only">Next slide</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="forms">
+		<div class="wrap">
+			<div class="forms__content">
+				<div class="forms__col">
+					<h2 class="h1 forms__title">Želite da stupite u kontakt sa nama? Pošaljite nam poruku!</h2>
+					<form class="form js-form" action="/">
+						<div class="form__input-wrap">
+							<div class="input-wrap">
+								<label for="ime" class="label">Ime:</label>
+								<span class="error-msg"></span>
+								<input class="input js-input" type="text" name="ime" id="ime">
+								<span class="form__error-msg js-error-msg"></span>
+							</div>
+						</div>
+						<div class="form__input-wrap">
+							<div class="input-wrap">
+								<label for="prezime" class="label">Prezime:</label>
+								<span class="error-msg"></span>
+								<input class="input js-input" type="text" name="prezime" id="prezime">
+								<span class="form__error-msg js-error-msg"></span>
+							</div>
+						</div>
+						<div class="form__input-wrap form__input-wrap--full">
+							<div class="input-wrap">
+								<label for="email" class="label">Email:</label>
+								<span class="error-msg"></span>
+								<input class="input js-input" type="email" name="email" id="email">
+								<span class="form__error-msg js-error-msg"></span>
+							</div>
+						</div>
+						<div class="form__input-wrap form__input-wrap--full">
+							<div class="input-wrap">
+								<label for="tel" class="label">Kontakt telefon:</label>
+								<span class="error-msg"></span>
+								<input class="input js-input" type="tel" name="tel" id="tel">
+								<span class="form__error-msg js-error-msg"></span>
+							</div>
+						</div>
+						<div class="form__input-wrap form__input-wrap--full">
+							<label for="poruka" class="label">Vaša poruka:</label>
+							<textarea class="input js-input" name="poruka" id="poruka" cols="30" rows="5"></textarea>
+							<span class="form__error-msg"></span>
+						</div>
+						<div class="form__btn-wrap">
+							<button class="btn form__btn" type="submit">Pošalji</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="wrap wrap--lg">
+			<div class="footer__content">
+				<div class="footer__col">
+					<address class="footer__address"> Pasterova 14, Savski venac<br>11000 Beograd, Srbija <a class="footer__mail" href="mailto:sadecom@sbb.rs">sadecom@sbb.rs</a>
+					</address>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">Početna</a>
+						</li>
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">O nama</a>
+						</li>
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">Kontakt</a>
+						</li>
+					</ul>
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">Grad</a>
+						</li>
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">Arhiva grada</a>
+						</li>
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">Vremenska kapsula</a>
+						</li>
+						<li class="footer__item">
+							<a class="link link--white footer__link" href="javascript:;">Blog</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__col footer__col--sm">
+					<p class="footer__text">Postoji nekoliko načina da nam pomognete: direktnom uplatom na naš broj računa kod Raiffeisen Bank: 265–1610310004281–79</p>
+					<p class="footer__text">Slanjem SMS poruke sa sadržajem 7175 na broj 7175, ili slanjem poklona za decu na adresu udruženja.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

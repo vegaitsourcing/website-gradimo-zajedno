@@ -1,0 +1,24 @@
+<header class="header">
+	<div class="wrap">
+		<div class="header__container">
+			<a href="/" class="header__home">
+				<img src="{{logo.src}}" alt="{{logo.alt}}" class="header__logo">
+			</a>
+			{{#if menu}}
+			<nav class="nav js-nav">
+				<button class="nav__btn js-menu" type="button">
+					<span class="nav__btn-icon"></span>
+					<span class="sr-only">{{menuIcon}}</span>
+				</button>
+				<ul class="nav__list" role="menubar">
+					{{#each menu}}
+					<li class="nav__item" role="menuitem">
+						<a href="{{url}}" class="link{{#if (compare id "===" ../active)}} link--active{{/if}} nav__link">{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</nav>
+			{{/if}}
+		</div>
+	</div>
+</header>

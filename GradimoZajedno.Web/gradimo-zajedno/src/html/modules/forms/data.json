@@ -1,0 +1,39 @@
+{
+	"col": [
+		{
+			"title": "Želite da stupite u kontakt sa nama? Pošaljite nam poruku!",
+			"form": true,
+			"input": [
+				{
+					"label": "Ime:",
+					"name": "ime",
+					"type": "text"
+				},
+				{
+					"label": "Prezime:",
+					"name": "prezime",
+					"type": "text"
+				},
+				{
+					"label": "Email:",
+					"name": "email",
+					"type": "email",
+					"full": true
+				},
+				{
+					"label": "Kontakt telefon:",
+					"name": "tel",
+					"type": "tel",
+					"full": true
+				},
+				{
+					"textarea": true,
+					"name": "poruka",
+					"label": "Vaša poruka:",
+					"full": true
+				}
+			],
+			"submit": "Pošalji"
+		}
+	]
+}

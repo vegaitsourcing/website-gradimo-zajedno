@@ -1,0 +1,31 @@
+{
+	"template": "about",
+	"bodyCssClass": "about",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json",
+			"active": "2"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"sections": [
+			{
+				"moduleAlias": "banner",
+				"bottom": true,
+				"backgroundImage": "assets/images/about-banner.png"
+			},
+			{
+				"moduleAlias": "basic-block",
+				"sm": true,
+				"title": "O nama",
+				"text": ["Udruženje “Uvek sa decom” osnovano je 1991. i od tada pomaže deci koja se leče na dečijem odeljenju Instituta za onkologiju i radiologiju Srbije.", "Kako bi doprinelo kvalitetu lečenja i što bržem vraćanju detinjstva deci oboleloj od raka, Udruženje “Uvek sa decom” organizuje brojne vidove pomoći i podrške – od smeštaja tokom lečenja, finansijske pomoći I pomoći u vidu medicinske opreme i higijenskih sredstava, igračaka i knjiga, do psihološke podrške kako deci tako i roditeljima kroz brojne aktivnosti,druženja i posete glumaca, pisaca, sportista I drugih poznatih ličnosti. Udruženje organizuje brojne akcije prikupljanja sredstava za decu na lečenju i svojim neumornim radom već više od trideset godina dokazuje da nad sudbinom dece obolele od raka ne treba tugovati, već da im treba pomoći.", "Obezbeđivanjem optimalnih uslova lečenja, širenjem ispravnih informacija o raku i obezbeđivanjem adekvatne nege broj dece koja iz borbe sa rakom izlaze kao pobednici se povećava. Građenjem zajedničkog grada, u projektu čiji je nosilac Udruženje “Uvek sa decom”, a graditelji su sama deca i vi možete postati aktivan činilac u ovoj borbi i vratiti deci oboleloj od raka detinjstvo koje im pripada."]
+			},
+			{
+				"moduleAlias": "forms",
+				">>": "modules/forms/data.json"
+			}
+		]
+	}
+}

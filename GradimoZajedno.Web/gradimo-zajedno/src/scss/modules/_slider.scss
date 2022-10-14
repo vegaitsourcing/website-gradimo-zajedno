@@ -1,0 +1,139 @@
+// ----------  slider
+// ------------------------------------------------------------------------------
+.slider {
+	padding: 112px 0;
+	overflow: hidden;
+	position: relative;
+	@include media-breakpoint-down(lg) {
+		padding: 80px 0;
+	}
+	@include media-breakpoint-down(sm) {
+		padding: 60px 0;
+	}
+}
+.slider__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
+}
+.slider__container {
+	overflow: visible;
+}
+.slider__wrapper {
+	padding: 80px 0;
+}
+.slide {
+	padding: 20px;
+	background-color: $purple;
+	color: $white;
+	border-radius: 20px;
+	display: flex;
+	overflow: hidden;
+	filter: blur(6px);
+	@include media-breakpoint-down(md) {
+		flex-direction: column-reverse;
+	}
+}
+.slide__col {
+	display: flex;
+	flex-direction: column;
+	&:not(.slide__col--sm) {
+		flex: 1 1 calc(58% - 10px);
+		max-width: calc(58% - 10px);
+	}
+	@include media-breakpoint-down(md) {
+		&:not(.slide__col--sm) {
+			flex: 1 1 100%;
+			max-width: 100%;
+			margin-top: 80px;
+		}
+	}
+}
+.slide__col--sm {
+	flex: 1 1 calc(42% - 10px);
+	max-width: calc(42% - 10px);
+	@include media-breakpoint-down(md) {
+		flex: 1 1 100%;
+		max-width: 100%;
+	}
+}
+.slide__year {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: $purple-dark;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 58px;
+	color: rgba($white, 0.84);
+	border-radius: 20px 0;
+	padding: 11px 47px;
+	letter-spacing: 0.04em;
+}
+.slide__text {
+	margin: 85px 0;
+	padding: 0 27px;
+	@include media-breakpoint-down(md) {
+		margin: 30px 0;
+	}
+}
+.slide__title {
+	color: rgba($white, 0.84);
+	padding-left: 40px;
+	position: relative;
+	bottom: 8px;
+	@include media-breakpoint-down(md) {
+		padding: 0 27px;
+	}
+}
+.slider__navigation {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	display: flex;
+	justify-content: space-between;
+	@include media-breakpoint-down(lg) {
+		top: auto;
+		bottom: 80px;
+	}
+}
+.slider__btn {
+	position: absolute;
+	top: 50%;
+}
+.slider__btn--prev {
+	left: 0;
+	top: 5px;
+	margin-left: calc((100vw - 1084px) / 2);
+	@include media-breakpoint-down(lg) {
+		margin-left: auto;
+		top: auto;
+		left: 20px;
+	}
+}
+.slider__btn--next {
+	right: 0;
+	top: 5px;
+	margin-right: calc((100vw - 1084px) / 2);
+	@include media-breakpoint-down(lg) {
+		margin-right: auto;
+		top: auto;
+		right: 20px;
+	}
+}
+.swiper-slide-active {
+	filter: blur(0);
+}
+.swiper-button-next,
+.swiper-button-prev {
+	width: auto;
+	height: auto;
+}

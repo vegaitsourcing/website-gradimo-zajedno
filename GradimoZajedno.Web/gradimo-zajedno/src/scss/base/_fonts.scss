@@ -1,0 +1,9 @@
+// ----------  fonts
+// ------------------------------------------------------------------------------
+@include webFont('Inter', 'Inter-Thin', 100);
+@include webFont('Inter', 'Inter-Light', 300);
+@include webFont('Inter', 'Inter-Regular', 400);
+@include webFont('Inter', 'Inter-Medium', 500);
+@include webFont('Inter', 'Inter-SemiBold', 600);
+@include webFont('Inter', 'Inter-Bold', 700);
+@include webFont('Inter', 'Inter-ExtraBold', 800);

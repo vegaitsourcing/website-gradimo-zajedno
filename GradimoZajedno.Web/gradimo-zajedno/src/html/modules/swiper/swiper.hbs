@@ -1,0 +1,44 @@
+<div class="swiper slider">
+	<div class="slider__bg has-cover" style="background-image: url({{bgImg}});"></div>
+	<div class="wrap wrap--xs">
+		<!-- Slider main container -->
+		<div class="swiper-container js-swiper slider__container">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper slider__wrapper">
+				<!-- Slides -->
+				{{#if slide}}
+				{{#each slide}}
+				<div class="swiper-slide slide">
+					<div class="slide__col slide__col--sm">
+						{{#if year}}
+						<span class="slide__year">{{year}}</span>
+						{{/if}}
+						{{#if text}}
+						<p class="text slide__text">{{text}}</p>
+						{{/if}}
+					</div>
+					<div class="slide__col">
+						{{#if title}}
+						<h3 class="h1 slide__title">{{title}}</h3>
+						{{/if}}
+						{{#if img}}
+						<img src="{{img.src}}" alt="{{img.alt}}">
+						{{/if}}
+					</div>
+				</div>
+				{{/each}}
+				{{/if}}
+			</div>
+		</div>
+	</div>
+	<div class="slider__navigation">
+		<button type="button" class="swiper-button-prev btn-navigation btn-navigation--purple slider__btn slider__btn--prev">
+			<span class="icon font-ico-arrow-left"></span>
+			<span class="sr-only">{{prevBtn}}</span>
+		</button>
+		<button type="button" class="swiper-button-next btn-navigation btn-navigation--purple slider__btn slider__btn--next">
+			<span class="icon font-ico-arrow-right"></span>
+			<span class="sr-only">{{nextBtn}}</span>
+		</button>
+	</div>
+</div>

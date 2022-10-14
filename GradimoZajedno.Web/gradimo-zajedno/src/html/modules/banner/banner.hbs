@@ -1,0 +1,19 @@
+<div class="banner wrap wrap--xl js-popup-parent{{#if bottom}} banner--bottom{{/if}}">
+	<div class="banner__bg has-cover" style="background-image: url({{backgroundImage}});"></div>
+	<div class="wrap">
+		<div class="banner__holder">
+			<div class="banner__content">
+				{{#if title}}
+				<h1 class="h1 banner__title">{{title}}</h1>
+				{{/if}}
+				{{#if image}}
+				<img class="banner__img" src="{{image.src}}" alt="{{image.alt}}">
+				{{/if}}
+				{{#if btn}}
+				<button type="button" class="btn banner__btn js-popup-btn">{{btn}}</button>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+	{{> popup popup}}
+</div>

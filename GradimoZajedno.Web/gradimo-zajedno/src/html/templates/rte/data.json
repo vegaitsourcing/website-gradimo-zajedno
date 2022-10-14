@@ -1,0 +1,14 @@
+{
+	"template": "rte",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"content": "templates/index/text.content.html",
+		"sections": []
+	}
+}

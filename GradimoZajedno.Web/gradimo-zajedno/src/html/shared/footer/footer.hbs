@@ -1,0 +1,34 @@
+<footer class="footer">
+	<div class="wrap wrap--lg">
+		<div class="footer__content">
+			<div class="footer__col">
+				{{#if address}}
+				<address class="footer__address">
+					{{{address}}}
+					{{#if mail}}
+					<a class="footer__mail" href="{{mail.url}}">{{mail.name}}</a>
+					{{/if}}
+				</address>
+				{{/if}}
+				{{#if list}}
+				{{#each list}}
+				<ul class="footer__list">
+					{{#each link}}
+					<li class="footer__item">
+						<a class="link link--white footer__link" href="{{url}}">{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+				{{/each}}
+				{{/if}}
+			</div>
+			<div class="footer__col footer__col--sm">
+				{{#if text}}
+				{{#each text}}
+				<p class="footer__text">{{this}}</p>
+				{{/each}}
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</footer>

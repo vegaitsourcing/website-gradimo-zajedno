@@ -1,0 +1,44 @@
+// ---------- forms
+// ------------------------------------------------------------------------------
+
+.forms {
+	width: 100%;
+	padding: 80px 0;
+	@include media-breakpoint-down(sm) {
+		padding: 60px 0;
+	}
+}
+.forms__title {
+	max-width: 928px;
+	margin: 0 auto;
+	text-align: center;
+}
+.form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 53px 0;
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+}
+.form__input-wrap {
+	flex: 1 1 calc(50% - 6px);
+	max-width: calc(50% - 6px);
+	margin-bottom: 7px;
+}
+.form__input-wrap--full {
+	flex: 1 1 100%;
+	max-width: 100%;
+}
+.form__btn-wrap {
+	display: flex;
+}
+.form__btn {
+	margin-top: 15px;
+	@include media-breakpoint-down(md) {
+		align-items: center;
+		justify-content: center;
+	}
+}

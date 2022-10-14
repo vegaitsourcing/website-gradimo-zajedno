@@ -1,0 +1,13 @@
+<div class="pagination">
+	<div class="wrap">
+		<div class="pagination__content">
+			<ul class="pagination__list">
+				{{#each num}}
+				<li class="pagination__item">
+					<a class="pagination__link{{#if current}} pagination__link--active{{/if}}" href="{{url}}">{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>

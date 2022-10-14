@@ -1,0 +1,49 @@
+<div class="swiper events">
+		<div class="events__bg has-cover" style="background-image: url({{bgImg}});"></div>
+	<div class="wrap">
+		<!-- Slider main container -->
+		<div class="swiper-container js-swiper-events events__container">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper events__wrapper">
+				<!-- Slides -->
+				{{#if slide}}
+				{{#each slide}}
+				<div class="swiper-slide events__slide">
+					<div class="events__slide-col">
+						<div class="events__img-wrap">
+							<div class="events__img has-cover" style="background-image: url({{img}});"></div>
+						</div>
+					</div>
+					<div class="events__slide-col">
+						<div class="events__info">
+							{{#if title}}
+							<h3 class="h1 events__title">{{title}}</h3>
+							{{/if}}
+							{{#if date}}
+							<time class="events__date" datetime="{{date.atr}}">{{date.text}}</time>
+							{{/if}}
+							{{#if text}}
+							<p class="text text--sm events__text">{{text}}</p>
+							{{/if}}
+							{{#if link}}
+							<a href="{{link.url}}" class="btn btn--white events__link">{{link.name}}</a>
+							{{/if}}
+						</div>
+					</div>
+				</div>
+				{{/each}}
+				{{/if}}
+			</div>
+			<div class="events__navigation">
+				<button type="button" class="events-button-prev btn-navigation events__btn events__btn--prev">
+					<span class="icon font-ico-arrow-left"></span>
+					<span class="sr-only">{{prevBtn}}</span>
+				</button>
+				<button type="button" class="events-button-next btn-navigation events__btn events__btn--next">
+					<span class="icon font-ico-arrow-right"></span>
+					<span class="sr-only">{{nextBtn}}</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

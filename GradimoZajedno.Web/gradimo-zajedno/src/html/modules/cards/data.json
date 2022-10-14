@@ -1,0 +1,24 @@
+{
+	"backgroundImage": "assets/images/dots-3.png",
+	"prevBtn": "Previous slide",
+	"nextBtn": "Next slide",
+	"img": "assets/images/round-img.png",
+	"card": [
+		{
+			"title": "Kvart Otkrića",
+			"text": ["Kvart se nalazi između Bulevara Deda Mraza na severu i Gusarskog Bulevara  na zapadu.", "U južnom delu ovog kvarta nalazi se nacionalni muzej Žizuko."]
+		},
+		{
+			"title": "Kvart Pobede",
+			"text": ["Kvart se nalazi između Sunčanog Bulevara na istoku i Bulevara Deda Mraza na severu.", "U severnom delu ovog kvarta nalazi se Hram dobrog srca."]
+		},
+		{
+			"title": "Kvart Blaga",
+			"text": ["Kvart se nalazi između Bulevara Savane na jugu i Gusarskog Bulevara  na zapadu.", "U južnom delu ovog kvarta nalaze se Skupština i Koncertna dvorana."]
+		},
+		{
+			"title": "Magični Kvart",
+			"text": ["Kvart se nalazi između Sunčanog Bulevara na istoku i Bulevara Savane na jugu.", "U severnom delu ovog kvarta nalazi se roditeljski kutak, bolnica..."]
+		}
+	]
+}

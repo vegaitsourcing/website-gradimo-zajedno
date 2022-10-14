@@ -1,0 +1,18 @@
+{
+	"template": "event",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"sections": [
+			{
+				"moduleAlias": "event-single",
+				">>": "modules/event-single/data.json"
+			}
+		]
+	}
+}

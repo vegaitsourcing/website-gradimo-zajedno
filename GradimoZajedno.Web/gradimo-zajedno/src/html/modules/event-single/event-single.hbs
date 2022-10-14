@@ -1,0 +1,27 @@
+<div class="event-single">
+	<div class="event-single__bg has-cover" style="background-image: url({{backgroundImage}});"></div>
+	<div class="wrap">
+		<div class="event-single__content">
+			{{#if title}}
+			<h1 class="h1 event-single__title">{{title}}</h1>
+			{{/if}}
+			{{#if date}}
+			<time class="event-single__date" datetime="{{date.atr}}">{{date.text}}</time>
+			{{/if}}
+			{{#if text}}
+			{{#each text}}
+			<p class="text text--sm event-single__text">{{this}}</p>
+			{{/each}}
+			{{/if}}
+			{{#if img}}
+			<div class="event-single__img-wrap">
+				{{#each img}}
+				<div class="event-single__img-holder">
+					<img src="{{src}}" alt="{{alt}}" class="event-single__img">
+				</div>
+				{{/each}}
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</div>

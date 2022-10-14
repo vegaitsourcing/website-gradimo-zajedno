@@ -1,0 +1,47 @@
+{{#> master this }}
+
+{{> header data.header}}
+
+	<div class="wrap">
+		<ul>
+			<li>
+				<a href="index.html">home</a>
+			</li>
+			<li>
+				<a href="about.html">about</a>
+			</li>
+			<li>
+				<a href="contact.html">contact</a>
+			</li>
+			<li>
+				<a href="event.html">event</a>
+			</li>
+			<li>
+				<a href="objects.html">objects</a>
+			</li>
+			<li>
+				<a href="single-object.html">single object</a>
+			</li>
+			<li>
+				<a href="timeline.html">vremenska kapsula</a>
+			</li>
+			<li>
+				<a href="rte.html">rte example</a>
+			</li>
+			<li>
+				<a href="error.html">404</a>
+			</li>
+		</ul>
+	</div>
+
+	{{#each data.sections1}}
+		{{> (lookup this 'moduleAlias') this}}
+	{{/each}}
+
+	{{#each data.sections2}}
+		{{> (lookup this 'moduleAlias') this}}
+	{{/each}}
+
+{{> footer data.footer}}
+
+{{/master}}

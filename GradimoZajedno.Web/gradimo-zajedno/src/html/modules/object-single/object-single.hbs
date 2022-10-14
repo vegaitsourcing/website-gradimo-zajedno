@@ -1,0 +1,45 @@
+<div class="object-single js-popup-parent">
+	<div class="object-single__bg has-cover" style="background-image: url({{backgroundImage}});"></div>
+	<div class="wrap wrap--lg">
+		<div class="object">
+			<div class="object__header">
+				{{#if backBtn}}
+				<a class="object__back-btn" href="{{backBtn.url}}">
+					<span class="icon font-ico-arrow-left"></span>
+					{{backBtn.name}}</a>
+				{{/if}}
+			</div>
+			<div class="object__body">
+				<div class="object__col object__col--sm">
+					<div class="object__img-wrap">
+						<div class="object__img has-cover" style="background-image: url({{img}});"></div>
+					</div>
+				</div>
+				<div class="object__col">
+					<div class="object__info">
+						<h1 class="h1 object__title">{{title}}</h1>
+						<span class="object__location">{{location}}</span>
+						<p class="text text--sm object__text">{{text}}</p>
+						<div class="object__desc-wrap">
+							<span class="object__desc">{{descTag}}</span>
+							<span class="object__desc object__desc--lg">{{nameSurname}}</span>
+						</div>
+						<div class="object__tag-wrap">
+							{{#each tag}}
+							<span class="tag tag--{{class}}">{{text}}</span>
+							{{/each}}
+						</div>
+						<div class="object__price">
+							<div class="price">
+								<span class="object__desc">{{priceTag}}</span>
+								<span class="object__desc object__desc--lg">{{price}}</span>
+							</div>
+							<button type="button" class="item__btn object__btn js-popup-btn">{{btn}}</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{> popup popup}}
+	</div>
+</div>

@@ -1,0 +1,55 @@
+// ----------  forms
+// ------------------------------------------------------------------------------
+input,
+textarea {
+	background: $white;
+	border-radius: 0;
+	box-shadow: none;
+	color: $black;
+	padding: 0 10px;
+	font-family: $font-default;
+	&::placeholder {
+		color: $purple;
+	}
+	&:focus {
+		outline: 1px dashed $purple-dark;
+	}
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='search'],
+input[type='password'] {
+	appearance: caret;
+}
+
+// @supports (-webkit-touch-callout: none) {
+// 	select,
+// 	textarea,
+// 	input {
+// 		font-size: 16px !important;
+// 	}
+// }
+.label {
+	display: block;
+	color: $purple;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.04em;
+}
+.input {
+	border: 2px solid $purple;
+	border-radius: 8px;
+	width: 100%;
+	color: $purple;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: 0.04em;
+	padding: 6px;
+}
+.input:invalid {
+	border: 2px solid $red;
+}

@@ -1,0 +1,66 @@
+{
+	"backgroundImage": "assets/images/dots.png",
+	"backBtn": {
+		"url": "javascript:;",
+		"name": "Grad Žizuko"
+	},
+	"img": "assets/images/item-img.jpg",
+	"title": "Sportska Hala",
+	"location": "Kvart Otkrića",
+	"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+	"descTag": "Graditelj",
+	"nameSurname": "Ime i Prezime",
+	"tag": [
+		{
+			"class": "green",
+			"text": "Na Prodaju"
+		},
+		{
+			"class": "gold",
+			"text": "Značajan objekat"
+		}
+	],
+	"priceTag": "Cena",
+	"price": "10. 000 RSD",
+	"btn": "Kupi",
+	"popup": {
+		"text": "Molimo Vas da popunite podatke navedene ispod kako bismo Vas mogli kontaktirati i poslati Vam potrebne informacije za kupovinu objekta:",
+		"desc": {
+			"object": "Sportska Hala",
+			"location": "Kvart Otkrića, Grad Žizuko"
+		},
+		"forms": {
+			"col": [
+				{
+					"form": true,
+					"input": [
+						{
+							"label": "Ime:",
+							"name": "ime",
+							"type": "text"
+						},
+						{
+							"label": "Prezime:",
+							"name": "prezime",
+							"type": "text"
+						},
+						{
+							"label": "Email:",
+							"name": "email",
+							"type": "email",
+							"full": true
+						},
+						{
+							"label": "Kontakt telefon:",
+							"name": "tel",
+							"type": "tel",
+							"full": true
+						}
+					],
+					"submit": "Pošalji",
+					"exit": "Odustani"
+				}
+			]
+		}
+	}
+}

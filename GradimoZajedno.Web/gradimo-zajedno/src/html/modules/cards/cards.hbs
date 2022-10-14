@@ -1,0 +1,38 @@
+<div class="cards">
+	<div class="cards__bg has-cover" style="background-image: url({{backgroundImage}});"></div>
+	<div class="wrap swiper js-swiper-cards">
+		<div class="cards__img-wrap">
+			<div class="cards__img-holder">
+				<div class="cards__img has-cover" style="background-image: url({{img}});"></div>
+			</div>
+		</div>
+		<div class="cards__content swiper-wrapper">
+			{{#each card}}
+			<div class="card{{#if active}} card--active{{/if}} js-card swiper-slide card-{{@index}}" data-id="{{@index}}">
+                <div class="card__info">
+                    {{#if title}}
+					<h2 class="card__title">{{title}}</h2>
+					{{/if}}
+					{{#if text}}
+					{{#each text}}
+					<p class="card__text">{{this}}</p>
+					{{/each}}
+					{{/if}}
+                </div>
+            </div>
+			{{/each}}
+		</div>
+		<div class="cards__pagination js-cards-pagination"></div>
+		<div class="swiper-pagination"></div>
+		<div class="cards__navigation">
+			<button type="button" class="cards-button-prev btn-navigation cards__btn cards__btn--prev">
+				<span class="icon font-ico-arrow-left"></span>
+				<span class="sr-only">{{prevBtn}}</span>
+			</button>
+			<button type="button" class="cards-button-next btn-navigation cards__btn cards__btn--next">
+				<span class="icon font-ico-arrow-right"></span>
+				<span class="sr-only">{{nextBtn}}</span>
+			</button>
+		</div>
+	</div>
+</div>

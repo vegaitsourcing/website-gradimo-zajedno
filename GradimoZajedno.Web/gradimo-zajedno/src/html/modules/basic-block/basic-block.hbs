@@ -1,0 +1,40 @@
+<div class="basic-block{{#if col}} basic-block--flex{{/if}}{{#if sm}} basic-block--sm{{/if}}">
+	<div class="wrap">
+		<div class="basic-block__content">
+			{{#if col}}
+			{{#each col}}
+			<div class="basic-block__col">
+				{{#if title}}
+				<h2 class="h1 basic-block__title">{{title}}</h2>
+				{{/if}}
+				{{#if img}}
+				<div class="basic-block__img-wrap">
+					<img class="basic-block__img" src="{{img.src}}" alt="{{img.alt}}">
+				</div>
+				{{/if}}
+				{{#if text}}
+				{{#each text}}
+				<p class="text basic-block__text">{{this}}</p>
+				{{/each}}
+				{{/if}}
+				{{#if link}}
+				<a href="{{link.url}}" class="btn btn--white basic-block__link">{{link.name}}</a>
+				{{/if}}
+			</div>
+			{{/each}}
+			{{else}}
+				{{#if title}}
+				<h2 class="h1 basic-block__title">{{title}}</h2>
+				{{/if}}
+				{{#if text}}
+				{{#each text}}
+				<p class="text basic-block__text">{{this}}</p>
+				{{/each}}
+				{{/if}}
+				{{#if link}}
+				<a href="{{link.url}}" class="btn btn--white basic-block__link">{{link.name}}</a>
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+</div>

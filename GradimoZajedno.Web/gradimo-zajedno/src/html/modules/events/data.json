@@ -1,0 +1,33 @@
+{
+	"bgImg": "assets/images/dots-2.png",
+	"prevBtn": "Previous slide",
+	"nextBtn": "Next slide",
+	"slide": [
+		{
+			"img": "assets/images/events-img.jpg",
+			"title": "Radionica Naziv",
+			"date": {
+				"atr": "2022-09-10",
+				"text": "10. septembar 2022."
+			},
+			"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+			"link": {
+				"url": "javascript:;",
+				"name": "Saznaj Više"
+			}
+		},
+		{
+			"img": "assets/images/events-img.jpg",
+			"title": "Radionica Naziv",
+			"date": {
+				"atr": "2022-09-10",
+				"text": "10. septembar 2022."
+			},
+			"text": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+			"link": {
+				"url": "javascript:;",
+				"name": "Saznaj Više"
+			}
+		}
+	]
+}

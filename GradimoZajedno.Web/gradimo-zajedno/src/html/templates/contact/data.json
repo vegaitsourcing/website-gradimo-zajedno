@@ -1,0 +1,24 @@
+{
+	"template": "contact",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json",
+			"active": "5"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"sections": [
+			{
+				"moduleAlias": "banner",
+				"bottom": true,
+				"backgroundImage": "assets/images/about-banner.png"
+			},
+			{
+				"moduleAlias": "forms",
+				">>": "modules/forms/data.json"
+			}
+		]
+	}
+}

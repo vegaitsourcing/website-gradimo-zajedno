@@ -1,0 +1,34 @@
+{
+	"logo": {
+		"src": "assets/images/logo.png",
+		"alt": "Logo"
+	},
+	"menuIcon": "menu icon",
+	"menu": [
+		{
+			"url": "javascript:;",
+			"name": "Početna",
+			"id": "1"
+		},
+		{
+			"url": "javascript:;",
+			"name": "O nama",
+			"id": "2"
+		},
+		{
+			"url": "javascript:;",
+			"name": "Grad",
+			"id": "3"
+		},
+		{
+			"url": "javascript:;",
+			"name": "Vremenska kapsula",
+			"id": "4"
+		},
+		{
+			"url": "javascript:;",
+			"name": "Kontakt",
+			"id": "5"
+		}
+	]
+}

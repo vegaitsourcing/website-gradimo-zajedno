@@ -1,0 +1,198 @@
+// ---------- cards
+// ------------------------------------------------------------------------------
+
+.cards {
+	width: 100%;
+	position: relative;
+	padding: 80px 0;
+	overflow: hidden;
+	@include media-breakpoint-down(sm) {
+		padding: 60px 0;
+	}
+}
+.cards__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	@include media-breakpoint-down(lg) {
+		display: none;
+	}
+}
+.cards__img-wrap {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 840px;
+	width: 100%;
+	z-index: 2;
+	@include media-breakpoint-down(lg) {
+		position: static;
+		top: auto;
+		left: auto;
+		transform: none;
+		max-width: 650px;
+		margin: 0 auto;
+	}
+}
+.cards__img-holder {
+	position: relative;
+	padding-bottom: 60%;
+}
+.cards__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.cards__content {
+	padding: 110px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	@include media-breakpoint-down(lg) {
+		padding: 30px 0;
+	}
+	@include media-breakpoint-down(md) {
+		flex-wrap: nowrap;
+	}
+}
+.card {
+	flex: 1 1 calc(50% - 65px);
+	max-width: calc(50% - 65px);
+	color: $white;
+	position: relative;
+	padding: 25px 30px;
+	margin-bottom: 44px;
+	cursor: pointer;
+	transition: $transition;
+	opacity: 0.5;
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		border-radius: 24px;
+	}
+	&::after {
+		z-index: -2;
+		background-color: $purple-dark;
+		top: 10px;
+		left: 0;
+		height: calc(100% - 10px);
+		width: 100%;
+	}
+	&::before {
+		z-index: -1;
+		background-color: $purple;
+		left: 10px;
+		top: 0;
+		height: calc(100% - 10px);
+		width: calc(100% - 10px);
+	}
+	&:nth-child(even) {
+		.card__info {
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+	&:nth-child(4) {
+		order: 3;
+	}
+	@include media-breakpoint-down(lg) {
+		flex: 1 1 calc(50% - 10px);
+		max-width: calc(50% - 10px);
+	}
+	@include media-breakpoint-down(md) {
+		flex: none;
+		max-width: unset;
+		opacity: 1;
+	}
+}
+.card--active {
+	opacity: 1;
+}
+.card__info {
+	width: 60%;
+	position: relative;
+	z-index: 2;
+	@include media-breakpoint-down(lg) {
+		width: 100%;
+	}
+}
+.card__title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 58px;
+	margin-bottom: 17px;
+}
+.card__text {
+	letter-spacing: 0.08em;
+	margin-bottom: 20px;
+	max-width: 280px;
+	@include media-breakpoint-down(md) {
+		max-width: none;
+	}
+}
+.cards__navigation {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	@include media-breakpoint-down(md) {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+	}
+}
+.cards__btn--prev {
+	margin-left: 20px;
+}
+.cards__btn--next {
+	margin-right: 20px;
+}
+.cards__pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	position: relative;
+	z-index: 2;
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+}
+.dot,
+.swiper-pagination-bullet {
+	background-color: $white;
+	border: 2px solid $purple;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.dot--active,
+.swiper-pagination-bullet-active {
+	background-color: $purple;
+}
+.swiper-pagination {
+	position: relative;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	@include media-breakpoint-up(md) {
+		display: none;
+	}
+	@include media-breakpoint-down(md) {
+		display: flex;
+	}
+}
+.swiper-pagination-bullet {
+	opacity: 1;
+}

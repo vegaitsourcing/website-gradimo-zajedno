@@ -1,0 +1,24 @@
+{
+	"template": "timeline",
+	"data": {
+		">>": "shared/master/data.json",
+		"header": {
+			">>": "shared/header/data.json",
+			"active": "4"
+		},
+		"footer": {
+			">>": "shared/footer/data.json"
+		},
+		"sections": [
+			{
+				"moduleAlias": "banner",
+				"bottom": true,
+				"backgroundImage": "assets/images/timeline-banner.png"
+			},
+			{
+				"moduleAlias": "stories",
+				">>": "modules/stories/data.json"
+			}
+		]
+	}
+}
