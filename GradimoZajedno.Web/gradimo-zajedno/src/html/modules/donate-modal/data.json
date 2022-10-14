@@ -1,3 +1,6 @@
 {
-	"title": "This is Title"
+	"img": {
+		"src": "assets/images/uplatnica.jpg",
+		"alt": "Donation form"
+	}
 }

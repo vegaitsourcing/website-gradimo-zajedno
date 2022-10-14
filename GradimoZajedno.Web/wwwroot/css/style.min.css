@@ -3056,7 +3056,7 @@ button.swiper-pagination-bullet {
 }
 
 .popup {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -3136,7 +3136,10 @@ button.swiper-pagination-bullet {
 .popup__content {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 500px;
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -4083,6 +4086,9 @@ button.swiper-pagination-bullet {
   padding: 45px 0;
   overflow: hidden;
 }
+.object-single .popup__content {
+  min-width: 800px;
+}
 
 .object-single__bg {
   position: absolute;
@@ -4489,7 +4495,36 @@ button.swiper-pagination-bullet {
 }
 
 .donate-modal {
+  position: relative;
+  width: 1000px;
+}
+
+.donate-modal__img {
   width: 100%;
+}
+
+.donate-modal__textarea {
+  position: absolute;
+  top: 17%;
+  left: 2.6%;
+  width: 390px;
+  height: 70px;
+  resize: none;
+  border: 1px solid #000;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.donate-modal__input {
+  position: absolute;
+  top: 20.5%;
+  right: 3%;
+  width: 285px;
+  height: 37px;
+  border: 1px solid #000;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
 }
 
 /* --------------------------------------------------------------
