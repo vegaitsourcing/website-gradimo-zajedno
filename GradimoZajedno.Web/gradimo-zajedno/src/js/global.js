@@ -28,5 +28,5 @@ cards.init();
 import filters from './_project/filters';
 filters.init();
 
-import forms from './_project/forms';
-forms.init();
+import form from './_project/form';
+form.init();

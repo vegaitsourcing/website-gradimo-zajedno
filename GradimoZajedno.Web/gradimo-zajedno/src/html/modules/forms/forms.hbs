@@ -7,18 +7,18 @@
 				<h2 class="h1 forms__title">{{title}}</h2>
 				{{/if}}
 				{{#if form}}
-				<form class="form js-form" action="/">
+				<form class="form js-form" action="/contact">
 					{{#each input}}
 					<div class="form__input-wrap{{#if full}} form__input-wrap--full{{/if}}">
 						{{#if textarea}}
 						<label for="{{name}}" class="label">{{label}}</label>
-						<textarea class="input js-input" name="{{name}}" id="{{name}}" cols="30" rows="5"></textarea>
+						<textarea class="input js-input" name="{{name}}" id="{{name}}" cols="30" rows="5"{{#if required}} required{{/if}}></textarea>
 						<span class="form__error-msg"></span>
 						{{else}}
 						<div class="input-wrap">
 							<label for="{{name}}" class="label">{{label}}</label>
 							<span class="error-msg"></span>
-							<input class="input js-input" type="{{type}}" name="{{name}}" id="{{name}}">
+							<input class="input js-input" type="{{type}}" name="{{name}}" {{#if required}} required{{/if}} id="{{name}}" autocomplete="off">
 							<span class="form__error-msg js-error-msg"></span>
 						</div>
 						{{/if}}
