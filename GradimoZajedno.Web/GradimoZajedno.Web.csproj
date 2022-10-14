@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
+    <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GradimoZajedno.Common\GradimoZajedno.Common.csproj" />
+    <ProjectReference Include="..\GradimoZajedno.Core\GradimoZajedno.Core.csproj" />
+    <Content Include="Startup.cs" />
+    <Content Include="Views\Partials\_Footer.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\_Layout.cshtml" />
+    <Content Include="App_Code\UIHelper.cshtml" />
+    <Content Include="Views\Partials\_OpenGraph.cshtml" />
+    <Content Include="Views\XMLSitemap\Index.cshtml" />
+    <Content Include="Views\_ViewImports.cshtml" />
+    <Content Include="Views\Error404.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="wwwroot\error.html" />
+    <Content Include="appsettings.Development.json" />
+    <Content Include="appsettings.json" />
+    <Content Include="Program.cs" />
+    <Content Include="App_Code\Functions.cshtml" />
+    <Content Include=".gitignore" />
+    <Content Include="Views\Partials\grid\editors\embed.cshtml" />
+    <Content Include="Views\Partials\grid\editors\base.cshtml" />
+    <Content Include="Views\Partials\grid\editors\textstring.cshtml" />
+    <Content Include="Views\Partials\grid\editors\rte.cshtml" />
+    <Content Include="Views\Partials\grid\editors\media.cshtml" />
+    <Content Include="Views\Partials\grid\editors\macro.cshtml" />
+    <Content Include="Views\Partials\blocklist\default.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <!-- Razor files are needed for the backoffice to work correctly -->
+    <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+  </PropertyGroup>
+</Project>

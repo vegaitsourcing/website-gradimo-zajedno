@@ -1,0 +1,24 @@
+@model GradimoZajedno.Core.ViewModels.Pages.XMLSitemapViewModel
+@{
+    Layout = null;
+    Model.Context.Response.ContentType = "text/xml";
+}<?xml version='1.0' encoding='UTF-8' ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    @foreach (var node in Model.SitemapItems)
+    {
+        <url>
+            <loc>@node.Url</loc>
+            <lastmod>@node.Date</lastmod>
+			@if (!string.IsNullOrWhiteSpace(node.ChangeFrequency))
+			{
+				<changefreq>@node.ChangeFrequency</changefreq>
+			}
+			@if (!string.IsNullOrWhiteSpace(node.Priority))
+			{
+				<priority>@node.Priority</priority>
+			}
+        </url>
+    }
+</urlset>

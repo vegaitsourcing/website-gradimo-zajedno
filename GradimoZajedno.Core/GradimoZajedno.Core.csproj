@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="UmbracoDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Core" Version="10.2.1" />
+    <PackageReference Include="Microsoft.NET.Runtime.WebAssembly.Sdk" Version="6.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="10.2.1" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
+    <Content Include="ViewModels\Pages\XMLSitemapViewModel.cs" />
+    <Content Include="ViewModels\Shared\ImageViewModel.cs" />
+    <Content Include="ViewModels\Shared\LinkViewModel.cs" />
+    <Content Include="Models\IPagination.cs" />
+    <Content Include="Models\IReadOnlyPagedCollection.cs" />
+    <Content Include="Models\Page.cs" />
+    <Content Include="Models\ReadOnlyPagedCollection.cs" />
+    <Content Include="Models\Pagination.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GradimoZajedno.Common\GradimoZajedno.Common.csproj" />
+    <Content Include="HttpHandlers\RobotsHandler.cs" />
+    <Content Include="Extensions\HttpResponseExtensions.cs" />
+    <Content Include="Extensions\SiteContextExtensions.cs" />
+    <Content Include="Extensions\ViewModelExtensions.cs" />
+    <Content Include="Contexts\PageContext.cs" />
+    <Content Include="Composers\ApplicationConfigurationComposer.cs" />
+    <Content Include="Attributes\ExternalRedirectAttribute.cs" />
+    <Content Include="Composers\SearchComposer.cs" />
+    <Content Include="Controllers\RenderMvc\XMLSitemapController.cs" />
+    <Content Include="Controllers\RenderMvc\HomeController.cs" />
+    <Content Include="Controllers\RenderMvc\Error404Controller.cs" />
+    <Content Include="Controllers\RenderMvc\BasePageController.cs" />
+    <Content Include="ViewModels\Pages\HomeViewModel.cs" />
+    <Content Include="ViewModels\Pages\PageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GradimoZajedno.Models\GradimoZajedno.Models.csproj" />
+    <Content Include="Contexts\SiteContext.cs" />
+    <Content Include="Contexts\ISiteContext.cs" />
+    <Content Include="Composers\RegisterDependencies.cs" />
+    <Content Include="Controllers\Surface\Partials\LayoutController.cs" />
+    <Content Include="Controllers\Surface\BaseSurfaceController.cs" />
+    <Content Include="Contexts\SeoContext.cs" />
+    <Content Include="Contexts\ISeoContext.cs" />
+    <Content Include="Contexts\IPageContext.cs" />
+    <Content Include="Extensions\HttpContextExtensions.cs" />
+    <Content Include="Extensions\HtmlHelperExtensions.cs" />
+    <Content Include="Extensions\HttpRequestBaseExtensions.cs" />
+    <Content Include="Extensions\StringExtensions.cs" />
+    <Content Include="Extensions\UmbracoContextExtensions.cs" />
+    <Content Include="Extensions\UmbracoHelperExtensions.cs" />
+    <Content Include="Handlers\Error404RouteHandler.cs" />
+    <Content Include="Services\IXmlSitemapService.cs" />
+    <Content Include="Services\XmlSitemapService.cs" />
+    <Content Include="ViewModels\Pages\Error404ViewModel.cs" />
+    <Content Include="ViewModels\Partials\Layout\FooterViewModel.cs" />
+    <Content Include="ViewModels\Partials\Listing\PaginationViewModel.cs" />
+    <Content Include="ViewModels\Partials\Listing\ListingViewModel.cs" />
+    <Content Include="ViewModels\Shared\AlternateLinkViewModel.cs" />
+    <Content Include="ViewModels\Partials\Layout\OpenGraphViewModel.cs" />
+    <Content Include="ViewModels\Partials\Layout\MetaTagsViewModel.cs" />
+    <Content Include="ViewModels\Partials\Layout\HeaderViewModel.cs" />
+    <Content Include="Controllers\RenderMvc\RobotsController.cs" />
+    <Content Include="Extensions\HttpRequestExtensions.cs" />
+    <Content Include="Extensions\UmbracoApplicationBuilderExtensions.cs" />
+    <Content Include="appsettings-schema.json" />
+  </ItemGroup>
+</Project>

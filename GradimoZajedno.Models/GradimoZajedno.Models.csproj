@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="MediaTypes\IMedia.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="10.2.1" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="10.2.1" />
+    <Content Include="Extensions\DomainRootExtensions.cs" />
+    <Content Include="Extensions\PublishedContentExtensions.cs" />
+    <Content Include="Extensions\PageExtensions.cs" />
+    <Content Include="Extensions\PublishedContentPropertyExtensions.cs" />
+    <Content Include="Converters\CustomMediaPickerValueConverter.cs" />
+    <Content Include="DocumentTypes\ISeo.cs" />
+    <Content Include="DocumentTypes\IDomainRoot.cs" />
+    <Content Include="Generated\IPage.cs" />
+    <Content Include="Extensions\PublishedElementPropertyExtensions.cs" />
+    <Content Include="Extensions\SeoExtensions.cs" />
+    <Content Include="Generated\File.generated.cs" />
+    <Content Include="Generated\Folder.generated.cs" />
+    <Content Include="Generated\Image.generated.cs" />
+    <Content Include="Generated\Member.generated.cs" />
+    <Content Include="Generated\UmbracoMediaArticle.generated.cs" />
+    <Content Include="Generated\UmbracoMediaAudio.generated.cs" />
+    <Content Include="Generated\UmbracoMediaVectorGraphics.generated.cs" />
+    <Content Include="Generated\UmbracoMediaVideo.generated.cs" />
+    <Content Include="Generated\File.cs" />
+    <Content Include="Generated\Footer.generated.cs" />
+    <Content Include="Generated\Header.generated.cs" />
+    <Content Include="Generated\Home.cs" />
+    <Content Include="Generated\Error404.generated.cs" />
+    <Content Include="Generated\Image.cs" />
+    <Content Include="Generated\Page.generated.cs" />
+    <Content Include="Generated\SiteSettings.generated.cs" />
+    <Content Include="appsettings-schema.json" />
+    <Content Include="Generated\Home.generated.cs" />
+  </ItemGroup>
+</Project>

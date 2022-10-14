@@ -1,0 +1,12 @@
+GradimoZajedno.Models/bin
+GradimoZajedno.Models/obj
+
+GradimoZajedno.Core/bin
+GradimoZajedno.Core/obj
+
+GradimoZajedno.Web/bin
+GradimoZajedno.Web/obj
+
+GradimoZajedno.Common/bin
+GradimoZajedno.Common/obj
+/GradimoZajedno.Common/obj/project.nuget.cache
