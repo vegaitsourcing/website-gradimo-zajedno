@@ -8,9 +8,9 @@ const lang = {
 			const path = window.location.pathname;
 
 			if (dataChecked === 'true') {
-				console.log('en');
+				this.changeToEn();
 			} else {
-				console.log('sr');
+				this.changeToSr();
 			}
 
 		});
@@ -18,16 +18,37 @@ const lang = {
 	},
 
 	langToggleEventListener: function() {
+		console.log(this.langToggle);
 		if (!this.langToggle) return;
-		this.langToggle.addEventListener('click', () => {
-			const dataChecked = this.langToggle.getAttribute('data-checked');
+		this.langToggle.addEventListener('click', (e) => {
+
+			const dataChecked = e.target.getAttribute('data-checked');
+			console.log(dataChecked);
+
 			if (dataChecked === 'false') {
-				this.langToggle.setAttribute('data-checked', true);
+				this.changeToEn();
+				e.target.setAttribute('data-checked', 'true');
 			} else {
-				this.langToggle.setAttribute('data-checked', false);
+				this.changeToSr();
+				e.target.setAttribute('data-checked', 'false');
 			}
+
+			// console.log(!dataChecked);
 		});
+	},
+
+	changeToSr: function() {
+		console.log('change to sr');
+		// const dataChecked = this.langToggle.getAttribute('data-checked');
+		// this.langToggle.setAttribute('data-checked', !dataChecked);
+	},
+
+	changeToEn: function() {
+		console.log('change to en');
+		// const dataChecked = this.langToggle.getAttribute('data-checked');
+		// this.langToggle.setAttribute('data-checked', !dataChecked);
 	}
+
 };
 
 export default lang;

@@ -10,10 +10,8 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link rel="canonical" href="http://umbraco9-test.local/">
-	<link rel="preconnect" href="https://www.googletagmanager.com">
-	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
-	<meta name="robots" content="index, follow">
-	<meta name="googlebot" content="index, follow">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="googlebot" content="noindex, nofollow">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="http://umbraco9-test.local/">
 	<meta property="og:locale" content="en-US">
@@ -26,26 +24,9 @@
 	<meta property="og:image:height" content="700">
 	<meta property="og:image:alt" content="">
 	<!-- main css file -->
-	<link rel="stylesheet" href="css/style.min.css?v=1665867418108">
-	<!-- Google Tag Manager -->
-	<script>
-		(function(w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'XXX-XXXXXX');
-	</script>
-	<!-- End Google Tag Manager -->
+	<link rel="stylesheet" href="css/style.min.css">
 	<!-- global js file -->
-	<script defer src="js/global.min.js?v=1665867418108"></script>
+	<script defer src="js/global.min.js"></script>
 	<div class="cookie js-cookie">
 		<div class="cookie__content">
 			<div class="cookie__top">
@@ -66,11 +47,6 @@
 </head>
 
 <body class="">
-	<!-- Google Tag Manager -->
-	<noscript>
-		<iframe src="//www.googletagmanager.com/ns.html?id=XXX-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
-	<!-- End Google Tag Manager -->
 	<header class="header">
 		<div class="wrap">
 			<div class="header__container">
@@ -102,7 +78,7 @@
 				</nav>
 				<div class="lang-toggle">
 					<label class="lang-toggle__label" for="">
-						<input class="lang-toggle__input js-lang-toggle" data-checked="false" type="checkbox">
+						<input class="lang-toggle__input js-lang-toggle" data-checked=false type="checkbox">
 						<span class="lang-toggle__slider">
 							<span class="lang lang--srb">SRB</span>
 							<span class="lang lang--en">ENG</span>
