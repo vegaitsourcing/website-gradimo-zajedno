@@ -18,44 +18,39 @@ using Umbraco.Extensions;
 
 namespace GradimoZajedno.Models.Generated
 {
-	// Mixin Content Type with alias "footer"
-	/// <summary>Footer</summary>
-	public partial interface IFooter : IPublishedElement
+	// Mixin Content Type with alias "banner"
+	/// <summary>Banner</summary>
+	public partial interface IBanner : IPublishedElement
 	{
-		/// <summary>Address</summary>
+		/// <summary>Button</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Address { get; }
+		global::Umbraco.Cms.Core.Models.Link Button { get; }
 
-		/// <summary>Donations</summary>
+		/// <summary>Description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Donations { get; }
+		string Description { get; }
 
-		/// <summary>Email</summary>
+		/// <summary>Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Email { get; }
+		global::Umbraco.Cms.Core.Models.MediaWithCrops Image { get; }
 
-		/// <summary>MenuFirstColumn</summary>
+		/// <summary>Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuFirstColumn { get; }
-
-		/// <summary>MenuSecondColumn</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuSecondColumn { get; }
+		string Title { get; }
 	}
 
-	/// <summary>Footer</summary>
-	[PublishedModel("footer")]
-	public partial class Footer : PublishedElementModel, IFooter
+	/// <summary>Banner</summary>
+	[PublishedModel("banner")]
+	public partial class Banner : PublishedElementModel, IBanner
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		public new const string ModelTypeAlias = "footer";
+		public new const string ModelTypeAlias = "banner";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
@@ -64,14 +59,14 @@ namespace GradimoZajedno.Models.Generated
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Footer, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Banner, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public Footer(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public Banner(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -80,68 +75,55 @@ namespace GradimoZajedno.Models.Generated
 		// properties
 
 		///<summary>
-		/// Address
+		/// Button
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("address")]
-		public virtual string Address => GetAddress(this, _publishedValueFallback);
+		[ImplementPropertyType("button")]
+		public virtual global::Umbraco.Cms.Core.Models.Link Button => GetButton(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Address</summary>
+		/// <summary>Static getter for Button</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetAddress(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "address");
+		public static global::Umbraco.Cms.Core.Models.Link GetButton(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Link>(publishedValueFallback, "button");
 
 		///<summary>
-		/// Donations
+		/// Description
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("donations")]
-		public virtual string Donations => GetDonations(this, _publishedValueFallback);
+		[ImplementPropertyType("description")]
+		public virtual string Description => GetDescription(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Donations</summary>
+		/// <summary>Static getter for Description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetDonations(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "donations");
+		public static string GetDescription(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "description");
 
 		///<summary>
-		/// Email
+		/// Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("email")]
-		public virtual string Email => GetEmail(this, _publishedValueFallback);
+		[ImplementPropertyType("image")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Image => GetImage(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Email</summary>
+		/// <summary>Static getter for Image</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetEmail(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "email");
+		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetImage(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "image");
 
 		///<summary>
-		/// MenuFirstColumn
+		/// Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("menuFirstColumn")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuFirstColumn => GetMenuFirstColumn(this, _publishedValueFallback);
+		[ImplementPropertyType("title")]
+		public virtual string Title => GetTitle(this, _publishedValueFallback);
 
-		/// <summary>Static getter for MenuFirstColumn</summary>
+		/// <summary>Static getter for Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> GetMenuFirstColumn(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(publishedValueFallback, "menuFirstColumn");
-
-		///<summary>
-		/// MenuSecondColumn
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("menuSecondColumn")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuSecondColumn => GetMenuSecondColumn(this, _publishedValueFallback);
-
-		/// <summary>Static getter for MenuSecondColumn</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> GetMenuSecondColumn(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(publishedValueFallback, "menuSecondColumn");
+		public static string GetTitle(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "title");
 	}
 }
