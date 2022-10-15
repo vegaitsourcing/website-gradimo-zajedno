@@ -1,9 +1,10 @@
 ﻿@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.Error404ViewModel>
-
-<html>
-<head>
-</head>
-<body>
-    <p>Error 404</p>
-</body>
-</html>
+<div class="error-mod">
+    <div class="wrap">
+        <div class="error-mod__content">
+            <h1 class="h1 error-mod__title">@Model.Title</h1>
+            <p class="text error-mod__text">@Model.Text</p>
+            <a href="/" class="btn error-mod__link" >@Umbraco.GetDictionaryValue("Error.MainPage")</a>
+        </div>
+    </div>
+</div>

@@ -50,7 +50,7 @@ namespace GradimoZajedno.Web
             {
                 app.UseDeveloperExceptionPage();
             } else {
-                app.UseExceptionHandler("/error.html");
+                app.UseExceptionHandler("/error_page.html");
             }
 
             app.UseUmbraco()
