@@ -1,4 +1,6 @@
 @inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Partials.Layout.HeaderViewModel>
+@using Microsoft.AspNetCore.Http.Extensions; 
+
 @{
 	var navigation = @Model.NavigationMenu;
 }
@@ -6,7 +8,7 @@
 		<div class="wrap">
 			<div class="header__container">
 				<a href="/" class="header__home">
-					<img src="@Model.Logo" alt="Logo" class="header__logo">
+					<img src="@Model.Logo.Url" alt="Logo" class="header__logo">
 				</a>
 				<nav class="nav js-nav">
 					<button class="nav__btn js-menu" type="button">
@@ -19,8 +21,14 @@
 							foreach(var item in navigation)
 							{
 								<li class="nav__item" role="menuitem">
-								<a href="@item.Url" target="@item.Target" class="link link--active nav__link">@item.Content</a> 
-								@* TODO active switch *@
+									@{
+										var activeClass = "";
+										if(item.Url.Equals(Context.Request.Path))
+										{
+											activeClass = "link--active";
+										}
+										<a href="@item.Url" target="@item.Target" class="link @activeClass nav__link">@item.Content</a> 
+									}
 								</li>
 							}
 						}
