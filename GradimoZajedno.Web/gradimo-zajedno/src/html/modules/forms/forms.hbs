@@ -13,13 +13,11 @@
 						{{#if textarea}}
 						<label for="{{name}}" class="label">{{label}}</label>
 						<textarea class="input js-input" name="{{name}}" id="{{name}}" cols="30" rows="5"{{#if required}} required{{/if}}></textarea>
-						<span class="form__error-msg"></span>
 						{{else}}
 						<div class="input-wrap">
 							<label for="{{name}}" class="label">{{label}}</label>
 							<span class="error-msg"></span>
 							<input class="input js-input" type="{{type}}" name="{{name}}" {{#if required}} required{{/if}} id="{{name}}" autocomplete="off">
-							<span class="form__error-msg js-error-msg"></span>
 						</div>
 						{{/if}}
 					</div>
@@ -27,7 +25,7 @@
 					<div class="form__btn-wrap">
 						<button class="btn form__btn" type="submit">{{submit}}</button>
 						{{#if exit}}
-						<button class="btn btn--outline form__btn js-submit" type="button">{{exit}}</button>
+						<button class="btn btn--outline form__btn js-close-popup" type="button">{{exit}}</button>
 						{{/if}}
 					</div>
 				</form>

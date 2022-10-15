@@ -193,7 +193,7 @@
 		<div class="wrap wrap--lg">
 			<div class="object">
 				<div class="object__header">
-					<a class="object__back-btn" href="javascript:;">
+					<a href="/objects.html" class="object__back-btn" href="javascript:;">
 						<span class="icon font-ico-arrow-left"></span> Grad Žizuko</a>
 				</div>
 				<div class="object__body">
@@ -229,7 +229,6 @@
 			<div class="popup js-popup">
 				<div class="popup__content">
 					<div class="popup__header">
-						<span class="popup__header-desc">[object Object]</span>
 						<button type="button" class="popup__btn-close js-close-popup">
 							<span class="icon font-ico-close"></span>
 							<span class="sr-only"></span>
@@ -250,24 +249,21 @@
 												<div class="input-wrap">
 													<label for="ime" class="label">Ime:</label>
 													<span class="error-msg"></span>
-													<input class="input js-input" type="text" name="ime" id="ime" autocomplete="off">
-													<span class="form__error-msg js-error-msg"></span>
+													<input class="input js-input" type="text" name="ime" required id="ime" autocomplete="off">
 												</div>
 											</div>
 											<div class="form__input-wrap">
 												<div class="input-wrap">
 													<label for="prezime" class="label">Prezime:</label>
 													<span class="error-msg"></span>
-													<input class="input js-input" type="text" name="prezime" id="prezime" autocomplete="off">
-													<span class="form__error-msg js-error-msg"></span>
+													<input class="input js-input" type="text" name="prezime" required id="prezime" autocomplete="off">
 												</div>
 											</div>
 											<div class="form__input-wrap form__input-wrap--full">
 												<div class="input-wrap">
 													<label for="email" class="label">Email:</label>
 													<span class="error-msg"></span>
-													<input class="input js-input" type="email" name="email" id="email" autocomplete="off">
-													<span class="form__error-msg js-error-msg"></span>
+													<input class="input js-input" type="email" name="email" required id="email" autocomplete="off">
 												</div>
 											</div>
 											<div class="form__input-wrap form__input-wrap--full">
@@ -275,12 +271,11 @@
 													<label for="tel" class="label">Kontakt telefon:</label>
 													<span class="error-msg"></span>
 													<input class="input js-input" type="tel" name="tel" id="tel" autocomplete="off">
-													<span class="form__error-msg js-error-msg"></span>
 												</div>
 											</div>
 											<div class="form__btn-wrap">
 												<button class="btn form__btn" type="submit">Pošalji</button>
-												<button class="btn btn--outline form__btn js-submit" type="button">Odustani</button>
+												<button class="btn btn--outline form__btn js-close-popup" type="button">Odustani</button>
 											</div>
 										</form>
 									</div>
