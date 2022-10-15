@@ -6,14 +6,12 @@ const lang = {
 		window.addEventListener('load', () => {
 
 			if (this.path.search('/en') === 0) {
-				this.changeToSr();
-				this.langToggle.setAttribute('data-checked', 'false');
-
-			} else {
-				this.changeToEn();
 				this.langToggle.setAttribute('data-checked', 'true');
+				this.langToggle.setAttribute('checked', true);
+			} else {
+				this.langToggle.setAttribute('data-checked', 'false');
+				this.langToggle.removeAttribute('checked');
 			}
-
 		});
 		this.langToggleEventListener();
 	},
