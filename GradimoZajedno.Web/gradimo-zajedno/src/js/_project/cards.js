@@ -20,11 +20,10 @@ const cards = {
 			this.swiper();
 		} else {
 			this.cardAnimationSettings();
-			this.cardAnimation();
-			this.generatePagination();
 			this.paginationEventListener();
 			this.cardEventListener();
 		}
+
 	},
 
 	cardAnimationSettings: function() {
@@ -33,9 +32,20 @@ const cards = {
 		this.cards[3] = temp;
 	},
 
-	cardAnimation: function() {
-		setTimeout(() => {
+	cardEventListener: function() {
+		let isPaused = false;
+		let time = 0;
+		const t = window.setInterval(() => {
+			if (!isPaused) {
+				time++;
+				console.log('timer');
+				cardsHoverRepeat();
+			}
+		}, 3000);
+
+		const cardsHoverRepeat = () => {
 			if (!this.cards) {return;}
+
 			this.cards.forEach((card) => {
 				card.classList.remove('card--active');
 			});
@@ -44,20 +54,21 @@ const cards = {
 			if (this.current > this.cards.length - 1) {
 				this.current = 0;
 			}
-			this.cardAnimation();
-		}, 5000);
-	},
+		};
 
-	cardEventListener: function() {
 		this.cards.forEach((card) => {
-			card.addEventListener('click', (e) => {
+			card.addEventListener('mouseenter', (e) => {
 				const clicked = e.target;
+				isPaused = true;
+				this.current = card.getAttribute('data-id');
+
 				const parent = clicked.closest('.js-card');
 				this.cards.forEach((card) => {
 					card.classList.remove('card--active');
 				});
 				parent.classList.add('card--active');
 				const cardId = +parent.getAttribute('data-id');
+
 				this.dots.forEach((dot) => {
 					const dotId = +dot.getAttribute('data-id');
 
@@ -67,6 +78,9 @@ const cards = {
 					}
 				});
 				this.updatePagination();
+			});
+			card.addEventListener('mouseleave', (e) => {
+				isPaused = false;
 			});
 		});
 	},
