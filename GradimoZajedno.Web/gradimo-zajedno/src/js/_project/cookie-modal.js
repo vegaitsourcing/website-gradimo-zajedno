@@ -1,9 +1,13 @@
 const cookieModal = {
+	cookieModalEl: document.querySelector('.js-cookie'),
 	cookieBtn: document.querySelector('.js-cookie-opener'),
+	closeCookieBtn: document.querySelector('.js-close-cookie'),
 	confirmText: 'Confirm Settings',
 
+	cookieModalHiddenClass: 'cookie--hidden',
+
 	init: function() {
-		this.cookieModal();
+		this.closeCookieModal();
 	},
 
 	cookieModal: function() {
@@ -17,6 +21,12 @@ const cookieModal = {
 			if (e.currentTarget.id === '#confirm-btn') {
 				document.getElementById('ccc').innerHTML = '';
 			}
+		});
+	},
+
+	closeCookieModal: function() {
+		this.closeCookieBtn.addEventListener('click', () => {
+			this.cookieModalEl.classList.add(this.cookieModalHiddenClass);
 		});
 	},
 
