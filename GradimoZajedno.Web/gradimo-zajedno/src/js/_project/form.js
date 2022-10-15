@@ -10,6 +10,7 @@ const form = {
 
 	onFormSubmit: function(e) {
 		e.preventDefault();
+		console.log('onFormSubmit JS funciton');
 		const form = e.target;
 		const formName = form.getAttribute('data-name');
 		const serializedForm = $(form).serializeArray();
@@ -36,6 +37,8 @@ const form = {
 		}
 
 		if (!endpoint) return;
+		console.log(endpoint);
+		console.log(JSON.stringify(formData));
 
 		$.post(endpoint, JSON.stringify(formData)).done(() => {
 			alert('second success');
