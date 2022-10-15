@@ -1,1 +1,45 @@
 @inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Partials.Layout.FooterViewModel>
+@using GradimoZajedno.Common.Extensions;
+
+@{
+    var firstLinks = @Model.MenuFirstColumn;
+    var secondLinks = @Model.MenuSecondColumn;
+}
+
+<footer class="footer">
+		<div class="wrap wrap--lg">
+			<div class="footer__content">
+				<div class="footer__col">
+					<address class="footer__address"> @Html.Raw(Model.Address.ReplaceNewLinesWithLineBreaks()) <a class="footer__mail" href="mailto:sadecom@sbb.rs">@Model.Email</a>
+					</address>
+                    <ul class="footer__list">
+					    @if(firstLinks != null && firstLinks.Any())
+					    {
+						    foreach(var item in firstLinks)
+						    {
+						    	<li class="footer__item">
+    					    		<a class="link link--white footer__link" href="@item.Url">@item.Content</a>
+							    </li>
+						    }
+				    	}
+					</ul>
+                    <ul class="footer__list">
+                        @if(secondLinks != null && secondLinks.Any())
+					    {
+					    	foreach(var item in secondLinks)
+					    	{
+					    		<li class="footer__item">
+    				    			<a class="link link--white footer__link" href="@item.Url">@item.Content</a>
+					    		</li>
+					    	}
+					    }
+					</ul>
+                
+				
+				</div>
+				<div class="footer__col footer__col--sm">
+					<p class="footer__text">@Html.Raw(Model.Donations.ReplaceNewLinesWithLineBreaks())</p>
+				</div>
+			</div>
+		</div>
+	</footer>

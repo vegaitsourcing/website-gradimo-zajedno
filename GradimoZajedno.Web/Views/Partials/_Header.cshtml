@@ -1,1 +1,31 @@
 @inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Partials.Layout.HeaderViewModel>
+@{
+	var navigation = @Model.NavigationMenu;
+}
+<header class="header">
+		<div class="wrap">
+			<div class="header__container">
+				<a href="/" class="header__home">
+					<img src="@Model.Logo" alt="Logo" class="header__logo">
+				</a>
+				<nav class="nav js-nav">
+					<button class="nav__btn js-menu" type="button">
+						<span class="nav__btn-icon"></span>
+						<span class="sr-only">menu icon</span>
+					</button>
+					<ul class="nav__list" role="menubar">
+						@if(navigation != null && navigation.Any())
+						{
+							foreach(var item in navigation)
+							{
+								<li class="nav__item" role="menuitem">
+								<a href="@item.Url" target="@item.Target" class="link link--active nav__link">@item.Content</a> 
+								@* TODO active switch *@
+								</li>
+							}
+						}
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
