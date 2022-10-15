@@ -12,6 +12,10 @@
 
 		"sections1": [
 			{
+				"moduleAlias": "cookie",
+				">>": "modules/cookie/data.json"
+			},
+			{
 				"moduleAlias":"banner",
 				">>": "modules/banner/data.json"
 			}
