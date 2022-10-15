@@ -7,7 +7,7 @@
 				<h2 class="h1 forms__title">{{title}}</h2>
 				{{/if}}
 				{{#if form}}
-				<form class="form js-form" action="/contact">
+				<form class="form js-form" action="/contact" data-name="{{data-name}}">
 					{{#each input}}
 					<div class="form__input-wrap{{#if full}} form__input-wrap--full{{/if}}">
 						{{#if textarea}}

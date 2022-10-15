@@ -3,16 +3,17 @@
 		{
 			"title": "Želite da stupite u kontakt sa nama? Pošaljite nam poruku!",
 			"form": true,
+			"data-name": "contact",
 			"input": [
 				{
 					"label": "Ime:",
-					"name": "ime",
+					"name": "name",
 					"type": "text",
 					"required": true
 				},
 				{
 					"label": "Prezime:",
-					"name": "prezime",
+					"name": "lastName",
 					"type": "text",
 					"required": true
 				},
@@ -25,14 +26,14 @@
 				},
 				{
 					"label": "Kontakt telefon:",
-					"name": "tel",
+					"name": "telephone",
 					"type": "tel",
 					"full": true,
 					"required": false
 				},
 				{
 					"textarea": true,
-					"name": "poruka",
+					"name": "message",
 					"label": "Vaša poruka:",
 					"full": true,
 					"required": true

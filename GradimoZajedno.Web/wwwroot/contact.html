@@ -26,7 +26,7 @@
 	<meta property="og:image:height" content="700">
 	<meta property="og:image:alt" content="">
 	<!-- main css file -->
-	<link rel="stylesheet" href="css/style.min.css?v=1665853660635">
+	<link rel="stylesheet" href="css/style.min.css?v=1665859699297">
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w, d, s, l, i) {
@@ -45,7 +45,7 @@
 	</script>
 	<!-- End Google Tag Manager -->
 	<!-- global js file -->
-	<script defer src="js/global.min.js?v=1665853660635"></script>
+	<script defer src="js/global.min.js?v=1665859699297"></script>
 	<div class="cookie js-cookie">
 		<div class="cookie__content">
 			<div class="cookie__top">
@@ -131,19 +131,19 @@
 			<div class="forms__content">
 				<div class="forms__col">
 					<h2 class="h1 forms__title">Želite da stupite u kontakt sa nama? Pošaljite nam poruku!</h2>
-					<form class="form js-form" action="/contact">
+					<form class="form js-form" action="/contact" data-name="contact">
 						<div class="form__input-wrap">
 							<div class="input-wrap">
-								<label for="ime" class="label">Ime:</label>
+								<label for="name" class="label">Ime:</label>
 								<span class="error-msg"></span>
-								<input class="input js-input" type="text" name="ime" required id="ime" autocomplete="off">
+								<input class="input js-input" type="text" name="name" required id="name" autocomplete="off">
 							</div>
 						</div>
 						<div class="form__input-wrap">
 							<div class="input-wrap">
-								<label for="prezime" class="label">Prezime:</label>
+								<label for="lastName" class="label">Prezime:</label>
 								<span class="error-msg"></span>
-								<input class="input js-input" type="text" name="prezime" required id="prezime" autocomplete="off">
+								<input class="input js-input" type="text" name="lastName" required id="lastName" autocomplete="off">
 							</div>
 						</div>
 						<div class="form__input-wrap form__input-wrap--full">
@@ -155,14 +155,14 @@
 						</div>
 						<div class="form__input-wrap form__input-wrap--full">
 							<div class="input-wrap">
-								<label for="tel" class="label">Kontakt telefon:</label>
+								<label for="telephone" class="label">Kontakt telefon:</label>
 								<span class="error-msg"></span>
-								<input class="input js-input" type="tel" name="tel" id="tel" autocomplete="off">
+								<input class="input js-input" type="tel" name="telephone" id="telephone" autocomplete="off">
 							</div>
 						</div>
 						<div class="form__input-wrap form__input-wrap--full">
-							<label for="poruka" class="label">Vaša poruka:</label>
-							<textarea class="input js-input" name="poruka" id="poruka" cols="30" rows="5" required></textarea>
+							<label for="message" class="label">Vaša poruka:</label>
+							<textarea class="input js-input" name="message" id="message" cols="30" rows="5" required></textarea>
 						</div>
 						<div class="form__btn-wrap">
 							<button class="btn form__btn" type="submit">Pošalji</button>
