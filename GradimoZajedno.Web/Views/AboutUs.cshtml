@@ -1,6 +1,39 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.AboutUs>
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.AboutUsViewModel>
 @using ContentModels = GradimoZajedno.Models.Generated;
-@{
-	Layout = null;
-}
+@using GradimoZajedno.Common.Extensions;
+
+<body class="about">
+	<div class="banner wrap wrap--xl js-popup-parent banner--bottom">
+		<div class="banner__bg has-cover" style="background-image: url(@Model.AboutUsPicture.Url);"></div>
+		<div class="wrap">
+			<div class="banner__holder">
+				<div class="banner__content">
+				</div>
+			</div>
+		</div>
+		<div class="popup js-popup">
+			<div class="popup__content">
+				<div class="popup__header">
+					<button type="button" class="popup__btn-close js-close-popup">
+						<span class="icon font-ico-close"></span>
+						<span class="sr-only"></span>
+					</button>
+				</div>
+				<div class="popup__body">
+				</div>
+				<div class="popup__success">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="basic-block basic-block--sm">
+		<div class="wrap">
+			<div class="basic-block__content">
+				<h2 class="h1 basic-block__title">@Model.BannerTitle</h2>
+				<p class="text basic-block__text">@Html.Raw(Model.BannerDescription.ReplaceNewLinesWithLineBreaks())</p>
+			</div>
+		</div>
+	</div>
+	@await Html.PartialAsync("_ContactForm")
+</body>
