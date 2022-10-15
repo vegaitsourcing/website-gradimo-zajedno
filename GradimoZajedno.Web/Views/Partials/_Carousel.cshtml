@@ -1,11 +1,10 @@
-@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.HomeViewModel>
+@inherits UmbracoViewPage<IPublishedContent>
 @using GradimoZajedno.Common.Extensions;
 
 <div class="cards__content swiper-wrapper">
 @{
     int i = 0;
-    var currentSettlement = Model.Home.City.Value("CurrentSettlement") as IPublishedContent;
-    foreach (var item in currentSettlement.Children)
+    foreach (var item in Model.Children)
     {
         <div class="card js-card swiper-slide card-@i" data-id="@i">
             <div class="card__info">
