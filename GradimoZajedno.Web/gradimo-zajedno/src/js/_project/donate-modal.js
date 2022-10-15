@@ -10,9 +10,6 @@ const donateModal = {
 		const donatorValue = document.querySelector('.donate-modal__input');
 		const donatorInformation = document.querySelector('.donate-modal__textarea');
 
-		console.log(donatorInformation.value);
-		console.log(donatorValue.value);
-
 		const informationObject = {
 			K: 'PR',
 			V: '01',
@@ -47,17 +44,10 @@ const donateModal = {
 	},
 
 	onDonatorInformationChange: function(e) {
-		console.log('s');
 		this.onInputValuesChange(e);
 	},
 
-	onDonatorValueChange: function(e) {
-		console.log(e.target.value);
-	},
-
-	onFormSubmit: function(e) {
-		e.preventDefault();
-	},
+	onFormSubmit: function(e) {e.preventDefault();},
 
 	donatorFormEventListener: function() {
 		this.donatorForm.addEventListener('submit', this.onFormSubmit);
