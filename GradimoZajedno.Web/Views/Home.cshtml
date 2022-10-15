@@ -19,6 +19,7 @@
         </div>
     </div>
 </div>
+@if(homeModel.Banners.Count > 0) {
 <div class="basic-block">
     <div class="wrap">
         <div class="basic-block__content">
@@ -26,6 +27,7 @@
         </div>
     </div>
 </div>
+}
 <div class="block">
     <div class="block__bg has-cover" style="background-image: url(@homeModel.AboutBackgroundImage.Url());"></div>
     <div class="wrap">
@@ -34,7 +36,7 @@
                 <h3 class="h1 block__title">@homeModel.AboutHeading</h3>
                 @{
                     var aboutImage = homeModel.AboutImage as MediaWithCrops;
-                    <img class="block__img" src="@aboutImage.Url()" alt="Heart image">
+                    <img class="block__img" src="@aboutImage.Url()">
                 }
             </div>
             <div class="block__col">
@@ -47,6 +49,7 @@
         </div>
     </div>
 </div>
+@if(homeModel.Banners.Count() >= 1) {
 <div class="image-block">
     <div class="image-block__wrap">
         @{
@@ -55,6 +58,7 @@
         }
     </div>
 </div>
+}
 <div class="cards">
     @{
         var currentSettlement = homeModel.City.Value("CurrentSettlement") as Settlement;
@@ -86,17 +90,18 @@
         </div>
     </div>
 </div>
+@if(homeModel.Banners.Count() >= 2) {
+    var banner2 = homeModel.Banners[2].Content as Banner;
+
 <div class="basic-block">
     <div class="wrap">
         <div class="basic-block__content">
-            @{
-                var banner2 = homeModel.Banners[2].Content as Banner;
-            }
             <p class="text basic-block__text">@banner2.Description.ReplaceNewLinesWithLineBreaks()</p>
             <a href="@banner2.Button.Url" class="btn btn--white basic-block__link">@banner2.Button.Name</a>
         </div>
     </div>
 </div>
+}
 <div class="swiper slider">
     <div class="slider__bg has-cover" style="background-image: url(@homeModel.SettlementBackgroundImage.Url());"></div>
     <div class="wrap wrap--xs">
@@ -114,7 +119,7 @@
                         </div>
                         <div class="slide__col">
                             <h3 class="h1 slide__title">@item.Name</h3>
-                            <img src="@item.Image.Url()" alt="City image">
+                            <img src="@item.Image.Url()">
                         </div>
                     </div>
                 }
@@ -132,12 +137,13 @@
         </button>
     </div>
 </div>
+
+@if(homeModel.Banners.Count() >= 3) {
+    var banner3 = homeModel.Banners[3].Content as Banner;
+
 <div class="basic-block basic-block--flex">
     <div class="wrap">
         <div class="basic-block__content">
-            @{
-                var banner3 = homeModel.Banners[3].Content as Banner;
-            }
             <div class="basic-block__col">
                 <h2 class="h1 basic-block__title">@banner3.Title</h2>
                 <div class="basic-block__img-wrap">
@@ -151,6 +157,7 @@
         </div>
     </div>
 </div>
+}
 <div class="swiper events">
     <div class="events__bg has-cover" style="background-image: url(@homeModel.WorkshopBackgroundImage.Url());"></div>
     <div class="wrap">
@@ -170,7 +177,7 @@
                         <div class="events__slide-col">
                             <div class="events__info">
                                 <h3 class="h1 events__title">@workshopElement.Title</h3>
-                                <time class="events__date" datetime="2022-09-10">@workshopElement.Date.ToShortDateString()</time>
+                                <time class="events__date">@workshopElement.Date.ToShortDateString()</time>
                                 <p class="text text--sm events__text">@workshopElement.Description.ReplaceNewLinesWithLineBreaks()</p>
                                 <a href="@workshopElement.Button.Url" class="btn btn--white events__link">@workshopElement.Button.Name</a>
                             </div>
