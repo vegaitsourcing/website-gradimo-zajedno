@@ -7,30 +7,35 @@
 				{
 					"label": "Ime:",
 					"name": "ime",
-					"type": "text"
+					"type": "text",
+					"required": true
 				},
 				{
 					"label": "Prezime:",
 					"name": "prezime",
-					"type": "text"
+					"type": "text",
+					"required": true
 				},
 				{
 					"label": "Email:",
 					"name": "email",
 					"type": "email",
-					"full": true
+					"full": true,
+					"required": true
 				},
 				{
 					"label": "Kontakt telefon:",
 					"name": "tel",
 					"type": "tel",
-					"full": true
+					"full": true,
+					"required": false
 				},
 				{
 					"textarea": true,
 					"name": "poruka",
 					"label": "Vaša poruka:",
-					"full": true
+					"full": true,
+					"required": true
 				}
 			],
 			"submit": "Pošalji"
