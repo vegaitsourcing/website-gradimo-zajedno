@@ -32,6 +32,9 @@
 	Html.RenderPartial("_Footer", Model.Footer);
 }
 @PrintCode(Model.GoogleAnalyticsCode)
+
+@await Html.PartialAsync("_CookieConsent")
+
 </body>
 </html>
 

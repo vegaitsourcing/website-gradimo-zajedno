@@ -1,4 +1,6 @@
 using System.Globalization;
+using GradimoZajedno.Core.Models;
+using GradimoZajedno.Core.Services;
 using Microsoft.AspNetCore.Localization;
 
 namespace GradimoZajedno.Web
@@ -32,6 +34,8 @@ namespace GradimoZajedno.Web
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<SmtpSettings>(_config.GetSection(SmtpSettings.SectionName));
+            services.AddSingleton<EmailService>();
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
