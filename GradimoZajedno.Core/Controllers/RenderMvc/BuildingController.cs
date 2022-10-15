@@ -7,7 +7,9 @@ using Umbraco.Cms.Core.Web;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Umbraco.Cms.Core.Models.PublishedContent;
+using Infocaster.Umbraco.ETag;
 
+[ETag]
 public class BuildingController : BasePageController<Building>
 {
     private readonly IPublishedValueFallback _publishedValueFallback;
