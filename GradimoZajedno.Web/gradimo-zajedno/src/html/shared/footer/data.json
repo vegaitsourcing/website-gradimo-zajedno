@@ -8,15 +8,15 @@
 		{
 			"link": [
 				{
-					"url": "javascript:;",
+					"url": "/index.html",
 					"name": "Početna"
 				},
 				{
-					"url": "javascript:;",
+					"url": "/about.html",
 					"name": "O nama"
 				},
 				{
-					"url": "javascript:;",
+					"url": "/contact.html",
 					"name": "Kontakt"
 				}
 			]
@@ -24,7 +24,7 @@
 		{
 			"link": [
 				{
-					"url": "javascript:;",
+					"url": "/objects.html",
 					"name": "Grad"
 				},
 				{
@@ -32,7 +32,7 @@
 					"name": "Arhiva grada"
 				},
 				{
-					"url": "javascript:;",
+					"url": "/timeline.html",
 					"name": "Vremenska kapsula"
 				}
 				,
