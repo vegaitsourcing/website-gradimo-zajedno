@@ -30,3 +30,6 @@ filters.init();
 
 import form from './_project/form';
 form.init();
+
+import lang from './_project/lang';
+lang.init();
