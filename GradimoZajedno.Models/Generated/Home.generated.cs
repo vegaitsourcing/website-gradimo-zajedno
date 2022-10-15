@@ -50,12 +50,164 @@ namespace GradimoZajedno.Models.Generated
 		// properties
 
 		///<summary>
-		/// CopyrightText
+		/// AboutBackgroundImage
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("copyrightText")]
-		public virtual string CopyrightText => global::GradimoZajedno.Models.Generated.Footer.GetCopyrightText(this, _publishedValueFallback);
+		[ImplementPropertyType("aboutBackgroundImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops AboutBackgroundImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "aboutBackgroundImage");
+
+		///<summary>
+		/// AboutCTA
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("aboutCTA")]
+		public virtual global::Umbraco.Cms.Core.Models.Link AboutCta => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "aboutCTA");
+
+		///<summary>
+		/// AboutHeading
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("aboutHeading")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString AboutHeading => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "aboutHeading");
+
+		///<summary>
+		/// AboutImage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("aboutImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops AboutImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "aboutImage");
+
+		///<summary>
+		/// AboutText
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("aboutText")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString AboutText => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "aboutText");
+
+		///<summary>
+		/// Banners
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("banners")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Banners => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "banners");
+
+		///<summary>
+		/// City
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("city")]
+		public virtual global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent City => this.Value<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedContent>(_publishedValueFallback, "city");
+
+		///<summary>
+		/// QuarterBackgroundImage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("quarterBackgroundImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops QuarterBackgroundImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "quarterBackgroundImage");
+
+		///<summary>
+		/// SettlementBackgroundImage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("settlementBackgroundImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops SettlementBackgroundImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "settlementBackgroundImage");
+
+		///<summary>
+		/// Title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("title")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Title => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "title");
+
+		///<summary>
+		/// TitleBackgroundImage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("titleBackgroundImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops TitleBackgroundImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "titleBackgroundImage");
+
+		///<summary>
+		/// TitleCTA
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("titleCTA")]
+		public virtual string TitleCta => this.Value<string>(_publishedValueFallback, "titleCTA");
+
+		///<summary>
+		/// TitleImage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("titleImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops TitleImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "titleImage");
+
+		///<summary>
+		/// WorkshopBackgroundImage
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("workshopBackgroundImage")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops WorkshopBackgroundImage => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "workshopBackgroundImage");
+
+		///<summary>
+		/// Workshops
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("workshops")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Workshops => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "workshops");
+
+		///<summary>
+		/// Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("address")]
+		public virtual string Address => global::GradimoZajedno.Models.Generated.Footer.GetAddress(this, _publishedValueFallback);
+
+		///<summary>
+		/// Donations
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("donations")]
+		public virtual string Donations => global::GradimoZajedno.Models.Generated.Footer.GetDonations(this, _publishedValueFallback);
+
+		///<summary>
+		/// Email
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("email")]
+		public virtual string Email => global::GradimoZajedno.Models.Generated.Footer.GetEmail(this, _publishedValueFallback);
+
+		///<summary>
+		/// MenuFirstColumn
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("menuFirstColumn")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuFirstColumn => global::GradimoZajedno.Models.Generated.Footer.GetMenuFirstColumn(this, _publishedValueFallback);
+
+		///<summary>
+		/// MenuSecondColumn
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("menuSecondColumn")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuSecondColumn => global::GradimoZajedno.Models.Generated.Footer.GetMenuSecondColumn(this, _publishedValueFallback);
 
 		///<summary>
 		/// Logo
@@ -64,6 +216,14 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("logo")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Logo => global::GradimoZajedno.Models.Generated.Header.GetLogo(this, _publishedValueFallback);
+
+		///<summary>
+		/// NavigationMenu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("navigationMenu")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> NavigationMenu => global::GradimoZajedno.Models.Generated.Header.GetNavigationMenu(this, _publishedValueFallback);
 
 		///<summary>
 		/// Alternate languages
@@ -79,7 +239,7 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("canonicalLink")]
-		public virtual global::Umbraco.Cms.Core.Models.Link CanonicalLink => global::GradimoZajedno.Models.Generated.Page.GetCanonicalLink(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> CanonicalLink => global::GradimoZajedno.Models.Generated.Page.GetCanonicalLink(this, _publishedValueFallback);
 
 		///<summary>
 		/// External redirect

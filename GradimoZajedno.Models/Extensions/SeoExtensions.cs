@@ -34,8 +34,6 @@ public static class SeoExtensions
     /// <returns></returns>
     public static string GetCanonicalUrl(this ISeo seo, string canonicalDomain)
     {
-        if (seo.CanonicalLink != null) return seo.CanonicalLink.Url;
-
         if (canonicalDomain.IsNullOrWhiteSpace())
         {
             return seo.Url(mode: UrlMode.Absolute);

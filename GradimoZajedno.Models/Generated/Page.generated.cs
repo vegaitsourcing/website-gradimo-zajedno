@@ -30,7 +30,7 @@ namespace GradimoZajedno.Models.Generated
 		/// <summary>Canonical link</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.Link CanonicalLink { get; }
+		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> CanonicalLink { get; }
 
 		/// <summary>External redirect</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
@@ -165,12 +165,12 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("canonicalLink")]
-		public virtual global::Umbraco.Cms.Core.Models.Link CanonicalLink => GetCanonicalLink(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> CanonicalLink => GetCanonicalLink(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Canonical link</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.Link GetCanonicalLink(IPage that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Link>(publishedValueFallback, "canonicalLink");
+		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> GetCanonicalLink(IPage that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(publishedValueFallback, "canonicalLink");
 
 		///<summary>
 		/// External redirect

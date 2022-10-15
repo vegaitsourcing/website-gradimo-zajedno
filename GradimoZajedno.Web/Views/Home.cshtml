@@ -1,3 +1,195 @@
 ﻿@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.HomeViewModel>
+@using GradimoZajedno.Common.Extensions;
+@using Umbraco.Cms.Core.Models;
+@using GradimoZajedno.Models.Generated;
 
-<p>Homepage</p>
+@{
+    var homeModel = Model.Home;
+}
+
+<div class="banner wrap wrap--xl js-popup-parent">
+    <div class="banner__bg has-cover" style="background-image: url(@homeModel.TitleBackgroundImage.Url());"></div>
+    <div class="wrap">
+        <div class="banner__holder">
+            <div class="banner__content">
+                <h1 class="h1 banner__title">@homeModel.Title</h1>
+                <img class="banner__img" src="@homeModel.TitleImage.Url()" alt="Logo">
+                <button type="button" class="btn banner__btn js-popup-btn">@homeModel.TitleCta</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="basic-block">
+    <div class="wrap">
+        <div class="basic-block__content">
+            <h2 class="h1 basic-block__title">@homeModel.Banners[0].Content.Value("title")</h2>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <div class="block__bg has-cover" style="background-image: url(@homeModel.AboutBackgroundImage.Url());"></div>
+    <div class="wrap">
+        <div class="block__content">
+            <div class="block__col block__col--sm">
+                <h3 class="h1 block__title">@homeModel.AboutHeading</h3>
+                @{
+                    var aboutIimage = homeModel.AboutImage as MediaWithCrops;
+                    <img class="block__img" src="@aboutIimage.Url()" alt="Heart image">
+                }
+            </div>
+            <div class="block__col">
+                <div class="text block__text">@homeModel.AboutText</div>
+                @{
+                    var aboutCta = homeModel.AboutCta as Link;
+                }
+                <a class="btn block__btn" href="@aboutCta.Url">@aboutCta.Name</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-block">
+    <div class="image-block__wrap">
+        @{
+            var image = homeModel.Banners[1].Content.Value("image") as MediaWithCrops;
+            <div class="image-block__img img" style="background-image: url(@image.Url());"></div>
+        }
+    </div>
+</div>
+<div class="cards">
+    @{
+        var currentSettlement = homeModel.City.Value("CurrentSettlement") as Settlement;
+    }
+    <div class="cards__bg has-cover" style="background-image: url(@homeModel.QuarterBackgroundImage.Url());"></div>
+    <div class="wrap swiper js-swiper-cards">
+        <div class="cards__img-wrap">
+            <div class="cards__img-holder">
+                @{
+                    var settlmentImage = currentSettlement.Image as MediaWithCrops;
+                    <div class="cards__img has-cover" style="background-image: url(@settlmentImage.Url());"></div>
+                }
+            </div>
+        </div>
+
+        @await Html.PartialAsync("_Carousel")
+        
+        <div class="cards__pagination js-cards-pagination"></div>
+        <div class="swiper-pagination"></div>
+        <div class="cards__navigation">
+            <button type="button" class="cards-button-prev btn-navigation cards__btn cards__btn--prev">
+                <span class="icon font-ico-arrow-left"></span>
+                <span class="sr-only">Previous slide</span>
+            </button>
+            <button type="button" class="cards-button-next btn-navigation cards__btn cards__btn--next">
+                <span class="icon font-ico-arrow-right"></span>
+                <span class="sr-only">Next slide</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="basic-block">
+    <div class="wrap">
+        <div class="basic-block__content">
+            @{
+                var banner2 = homeModel.Banners[2].Content as Banner;
+            }
+            <p class="text basic-block__text">@banner2.Description.ReplaceNewLinesWithLineBreaks()</p>
+            <a href="@banner2.Button.Url" class="btn btn--white basic-block__link">@banner2.Button.Name</a>
+        </div>
+    </div>
+</div>
+<div class="swiper slider">
+    <div class="slider__bg has-cover" style="background-image: url(@homeModel.SettlementBackgroundImage.Url());"></div>
+    <div class="wrap wrap--xs">
+        <!-- Slider main container -->
+        <div class="swiper-container js-swiper slider__container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper slider__wrapper">
+                <!-- Slides -->
+                @foreach (Settlement item in homeModel.City.Children)
+                {
+                    <div class="swiper-slide slide">
+                        <div class="slide__col slide__col--sm">
+                            <span class="slide__year">@item.Year.</span>
+                            <p class="text slide__text">@item.ShortDescription</p>
+                        </div>
+                        <div class="slide__col">
+                            <h3 class="h1 slide__title">@item.Name</h3>
+                            <img src="@item.Image.Url()" alt="City image">
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="slider__navigation">
+        <button type="button" class="swiper-button-prev btn-navigation btn-navigation--purple slider__btn slider__btn--prev">
+            <span class="icon font-ico-arrow-left"></span>
+            <span class="sr-only">Previous slide</span>
+        </button>
+        <button type="button" class="swiper-button-next btn-navigation btn-navigation--purple slider__btn slider__btn--next">
+            <span class="icon font-ico-arrow-right"></span>
+            <span class="sr-only">Next slide</span>
+        </button>
+    </div>
+</div>
+<div class="basic-block basic-block--flex">
+    <div class="wrap">
+        <div class="basic-block__content">
+            @{
+                var banner3 = homeModel.Banners[3].Content as Banner;
+            }
+            <div class="basic-block__col">
+                <h2 class="h1 basic-block__title">@banner3.Title</h2>
+                <div class="basic-block__img-wrap">
+                    <img class="basic-block__img" src="@banner3.Image.Url()" alt="Image">
+                </div>
+            </div>
+            <div class="basic-block__col">
+                <p class="text basic-block__text">@banner3.Description</p>
+                <a href="@banner3.Button.Url" class="btn btn--white basic-block__link">@banner3.Button.Name</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="swiper events">
+    <div class="events__bg has-cover" style="background-image: url(@homeModel.WorkshopBackgroundImage.Url());"></div>
+    <div class="wrap">
+        <!-- Slider main container -->
+        <div class="swiper-container js-swiper-events events__container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper events__wrapper">
+                <!-- Slides -->
+                @foreach (var item in @homeModel.Workshops){
+                    var workshopElement = item.Content as WorkshopElement;
+                    <div class="swiper-slide events__slide">
+                        <div class="events__slide-col">
+                            <div class="events__img-wrap">
+                                <div class="events__img has-cover" style="background-image: url(@workshopElement.Images.First().Url());"></div>
+                            </div>
+                        </div>
+                        <div class="events__slide-col">
+                            <div class="events__info">
+                                <h3 class="h1 events__title">@workshopElement.Title</h3>
+                                <time class="events__date" datetime="2022-09-10">@workshopElement.Date.ToShortDateString()</time>
+                                <p class="text text--sm events__text">@workshopElement.Description.ReplaceNewLinesWithLineBreaks()</p>
+                                <a href="@workshopElement.Button.Url" class="btn btn--white events__link">@workshopElement.Button.Name</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="events__navigation">
+                <button type="button" class="events-button-prev btn-navigation events__btn events__btn--prev">
+                    <span class="icon font-ico-arrow-left"></span>
+                    <span class="sr-only">Previous slide</span>
+                </button>
+                <button type="button" class="events-button-next btn-navigation events__btn events__btn--next">
+                    <span class="icon font-ico-arrow-right"></span>
+                    <span class="sr-only">Next slide</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("_ContactForm")

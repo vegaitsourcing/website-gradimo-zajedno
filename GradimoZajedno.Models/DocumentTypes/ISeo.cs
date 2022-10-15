@@ -13,5 +13,4 @@ public interface ISeo : IPublishedContent
     string SitemapChangeFrequency { get; }
     string SitemapPriority { get; }
     IEnumerable<string> AlternateLanguages { get; }
-    Link CanonicalLink { get; }
 }
