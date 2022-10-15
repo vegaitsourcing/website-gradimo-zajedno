@@ -4,6 +4,8 @@ using GradimoZajedno.Models.Generated;
 using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Core.Models;
+using Umbraco.Cms.Web.Common;
+using Umbraco.Cms.Core.Models.PublishedContent;
 
 [Route("buildings/[action]")]
 public class BuildingsController : UmbracoApiController
@@ -11,10 +13,13 @@ public class BuildingsController : UmbracoApiController
     private readonly IUmbracoContextFactory _context;
     private readonly ILocalizationService _textService;
 
-    public BuildingsController(IUmbracoContextFactory contextFactory, ILocalizationService textService)
+    private readonly IVariationContextAccessor _variationContextAccessor;
+
+    public BuildingsController(IUmbracoContextFactory contextFactory, ILocalizationService textService, IVariationContextAccessor variationContextAccessor)
     {
         _context = contextFactory;
         _textService = textService;
+        _variationContextAccessor = variationContextAccessor;
     }
 
     public SettlementDTO GetAllSettlementBuildings(string lang)
@@ -26,9 +31,15 @@ public class BuildingsController : UmbracoApiController
             language = _textService.GetLanguageByIsoCode("en-US");
         }
 
-        var homeNode = cref.UmbracoContext.Content.GetAtRoot(language.IsoCode).Where(e => e.Cultures.ContainsKey(language.IsoCode)).FirstOrDefault(x => x.ContentType.Alias == Home.ModelTypeAlias);
+        _variationContextAccessor.VariationContext = new VariationContext(language.IsoCode);
+
+        var homeNode = cref.UmbracoContext.Content
+                            .GetAtRoot(language.IsoCode)
+                            .Where(e => e.Cultures.ContainsKey(language.IsoCode))
+                            .FirstOrDefault(x => x.ContentType.Alias == Home.ModelTypeAlias);
+        var title = (homeNode as Home).Title;
         var cityNode = homeNode.Descendants<City>(language.IsoCode).FirstOrDefault();
-        var currentSettlement = cref.UmbracoContext.Content.GetById(cityNode.CurrentSettlement.Id);
+        var cityTitle = (cityNode as City).Title;
 
         var retVal = new SettlementDTO();
 
@@ -40,7 +51,7 @@ public class BuildingsController : UmbracoApiController
         retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.OnSale", language)));
         retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.Sold", language)));
 
-        foreach (var quarter in currentSettlement.Descendants<Quarter>(language.IsoCode))
+        foreach (var quarter in cityNode.CurrentSettlement.Descendants<Quarter>(language.IsoCode))
         {
             retVal.FilterTop.Add(new QuarterDTO(quarter.Title));
 
