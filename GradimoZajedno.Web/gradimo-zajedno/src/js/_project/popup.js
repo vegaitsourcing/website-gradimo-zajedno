@@ -29,6 +29,13 @@ const popup = {
 				}
 			});
 		});
+		this.popups.forEach((popup) => {
+			popup.addEventListener('click', (e) => {
+				if (e.target !== e.currentTarget) return;
+				popup.classList.remove(this.popupActiveClass);
+				helpers.enableScroll();
+			});
+		});
 	},
 
 	popupEvents: function() {

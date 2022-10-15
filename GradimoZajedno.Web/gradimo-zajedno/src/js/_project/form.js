@@ -1,7 +1,6 @@
 const form = {
 	form: document.querySelectorAll('.js-form'),
 	inputs: document.querySelectorAll('.js-input'),
-	error: document.querySelectorAll('.js-error-msg'),
 	submit: document.querySelectorAll('.js-submit'),
 
 	init: function() {

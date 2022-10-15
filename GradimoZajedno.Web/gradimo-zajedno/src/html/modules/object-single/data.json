@@ -37,24 +37,28 @@
 						{
 							"label": "Ime:",
 							"name": "ime",
-							"type": "text"
+							"type": "text",
+							"required": true
 						},
 						{
 							"label": "Prezime:",
 							"name": "prezime",
-							"type": "text"
+							"type": "text",
+							"required": true
 						},
 						{
 							"label": "Email:",
 							"name": "email",
 							"type": "email",
-							"full": true
+							"full": true,
+							"required": true
 						},
 						{
 							"label": "Kontakt telefon:",
 							"name": "tel",
 							"type": "tel",
-							"full": true
+							"full": true,
+							"required": false
 						}
 					],
 					"submit": "Pošalji",

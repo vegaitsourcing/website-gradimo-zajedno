@@ -254,6 +254,7 @@
 	padding: 8px 24px;
 	border-radius: 4px;
 	transition: $transition;
+	align-self: center;
 	@include hover {
 		opacity: 0.8;
 	}

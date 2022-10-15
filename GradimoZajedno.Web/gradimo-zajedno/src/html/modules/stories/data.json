@@ -65,24 +65,28 @@
 						{
 							"label": "Ime:",
 							"name": "ime",
-							"type": "text"
+							"type": "text",
+							"required": true
 						},
 						{
 							"label": "Prezime:",
 							"name": "prezime",
-							"type": "text"
+							"type": "text",
+							"required": true
 						},
 						{
 							"label": "Email:",
 							"name": "email",
 							"type": "email",
-							"full": true
+							"full": true,
+							"required": true
 						},
 						{
 							"textarea": true,
 							"name": "poruka",
 							"label": "Priča:",
-							"full": true
+							"full": true,
+							"required": true
 						}
 					],
 					"submit": "Pošalji",
