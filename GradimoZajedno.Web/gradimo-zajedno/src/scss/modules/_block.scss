@@ -65,6 +65,13 @@
 	letter-spacing: 0.04em;
 	padding: 0 9px;
 	margin-bottom: 30px;
+	> div {
+		margin-bottom: 30px;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
 }
 .block__btn {
 	display: inline-block;
