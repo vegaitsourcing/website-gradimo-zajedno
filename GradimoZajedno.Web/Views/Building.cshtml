@@ -50,6 +50,13 @@
 								</div>
 								<button type="button" class="item__btn object__btn js-popup-btn">@Umbraco.GetDictionaryValue("Building.BuyButton")</button>
 							</div>
+						} else {
+							<div class="object__price">
+								<div class="price">
+									<span class="object__desc">@Umbraco.GetDictionaryValue("Building.Owner")</span>
+									<span class="object__desc object__desc--lg">@Model.Owner</span>
+								</div>
+							</div>
 						}
 					</div>
 				</div>

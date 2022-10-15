@@ -8,9 +8,7 @@ const form = {
 	},
 
 	onFormSubmit: function(e) {
-		e.preventDefault();
 		console.log('Form submited');
-		console.log('Refresh page after submit');
 	},
 
 	formsEventListener: function() {
