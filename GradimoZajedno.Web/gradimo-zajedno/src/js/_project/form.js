@@ -40,8 +40,22 @@ const form = {
 		console.log(endpoint);
 		console.log(JSON.stringify(formData));
 
-		$.post(endpoint, JSON.stringify(formData)).done(() => {
-			alert('second success');
+		// $.post(endpoint, JSON.stringify(formData), Headers: 'application/').done(() => {
+		// 	alert('second success');
+		// });
+
+		const onSuccess = function() {
+			console.log('success');
+		};
+
+		$.ajax({
+			type: 'POST',
+			contentType: 'application/json',
+			url: endpoint,
+			data: JSON.stringify(formData),
+			dataType: 'json',
+			success: onSuccess(),
+
 		});
 	},
 
