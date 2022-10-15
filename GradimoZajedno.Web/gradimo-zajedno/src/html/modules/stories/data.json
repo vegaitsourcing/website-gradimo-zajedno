@@ -56,7 +56,7 @@
 		}
 	],
 	"popup": {
-		"desc": "Vremenska Kapsula",
+		"descTitle": "Vremenska Kapsula",
 		"forms": {
 			"col": [
 				{
