@@ -26,7 +26,7 @@
 	<meta property="og:image:height" content="700">
 	<meta property="og:image:alt" content="">
 	<!-- main css file -->
-	<link rel="stylesheet" href="css/style.min.css?v=1665853660810">
+	<link rel="stylesheet" href="css/style.min.css?v=1665859699512">
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w, d, s, l, i) {
@@ -45,7 +45,7 @@
 	</script>
 	<!-- End Google Tag Manager -->
 	<!-- global js file -->
-	<script defer src="js/global.min.js?v=1665853660810"></script>
+	<script defer src="js/global.min.js?v=1665859699512"></script>
 	<div class="cookie js-cookie">
 		<div class="cookie__content">
 			<div class="cookie__top">
@@ -235,19 +235,19 @@
 							<div class="wrap">
 								<div class="forms__content">
 									<div class="forms__col">
-										<form class="form js-form" action="/contact">
+										<form class="form js-form" action="/contact" data-name="timecapsule">
 											<div class="form__input-wrap">
 												<div class="input-wrap">
-													<label for="ime" class="label">Ime:</label>
+													<label for="name" class="label">Ime:</label>
 													<span class="error-msg"></span>
-													<input class="input js-input" type="text" name="ime" required id="ime" autocomplete="off">
+													<input class="input js-input" type="text" name="name" required id="name" autocomplete="off">
 												</div>
 											</div>
 											<div class="form__input-wrap">
 												<div class="input-wrap">
-													<label for="prezime" class="label">Prezime:</label>
+													<label for="lastName" class="label">Prezime:</label>
 													<span class="error-msg"></span>
-													<input class="input js-input" type="text" name="prezime" required id="prezime" autocomplete="off">
+													<input class="input js-input" type="text" name="lastName" required id="lastName" autocomplete="off">
 												</div>
 											</div>
 											<div class="form__input-wrap form__input-wrap--full">
@@ -258,8 +258,8 @@
 												</div>
 											</div>
 											<div class="form__input-wrap form__input-wrap--full">
-												<label for="poruka" class="label">Priča:</label>
-												<textarea class="input js-input" name="poruka" id="poruka" cols="30" rows="5" required></textarea>
+												<label for="message" class="label">Priča:</label>
+												<textarea class="input js-input" name="message" id="message" cols="30" rows="5" required></textarea>
 											</div>
 											<div class="form__btn-wrap">
 												<button class="btn form__btn" type="submit">Pošalji</button>

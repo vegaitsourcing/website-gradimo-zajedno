@@ -61,16 +61,17 @@
 			"col": [
 				{
 					"form": true,
+					"data-name": "timecapsule",
 					"input": [
 						{
 							"label": "Ime:",
-							"name": "ime",
+							"name": "name",
 							"type": "text",
 							"required": true
 						},
 						{
 							"label": "Prezime:",
-							"name": "prezime",
+							"name": "lastName",
 							"type": "text",
 							"required": true
 						},
@@ -83,7 +84,7 @@
 						},
 						{
 							"textarea": true,
-							"name": "poruka",
+							"name": "message",
 							"label": "Priča:",
 							"full": true,
 							"required": true

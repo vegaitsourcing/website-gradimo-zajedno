@@ -33,16 +33,17 @@
 			"col": [
 				{
 					"form": true,
+					"data-name": "buy",
 					"input": [
 						{
 							"label": "Ime:",
-							"name": "ime",
+							"name": "name",
 							"type": "text",
 							"required": true
 						},
 						{
 							"label": "Prezime:",
-							"name": "prezime",
+							"name": "lastName",
 							"type": "text",
 							"required": true
 						},
@@ -55,7 +56,7 @@
 						},
 						{
 							"label": "Kontakt telefon:",
-							"name": "tel",
+							"name": "telephone",
 							"type": "tel",
 							"full": true,
 							"required": false

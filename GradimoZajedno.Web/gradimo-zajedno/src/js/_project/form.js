@@ -1,3 +1,4 @@
+
 const form = {
 	form: document.querySelectorAll('.js-form'),
 	inputs: document.querySelectorAll('.js-input'),
@@ -8,7 +9,37 @@ const form = {
 	},
 
 	onFormSubmit: function(e) {
-		console.log('Form submited');
+		e.preventDefault();
+		const form = e.target;
+		const formName = form.getAttribute('data-name');
+		const serializedForm = $(form).serializeArray();
+		let endpoint = '';
+		let formData = {};
+
+		if (!serializedForm.length || !formName) return;
+
+		serializedForm.forEach((element) => {
+			if (!element?.name || !element?.value) return;
+
+			formData = { ...formData, [element.name]: element.value };
+		});
+
+		switch (formName) {
+			case 'buy': endpoint = '/forms/buy';
+				break;
+			case 'contact': endpoint = '/forms/contact';
+				break;
+			case 'timecapsule': endpoint = '/forms/timecapsule';
+				break;
+			default:
+
+		}
+
+		if (!endpoint) return;
+
+		$.post(endpoint, JSON.stringify(formData)).done(() => {
+			alert('second success');
+		});
 	},
 
 	formsEventListener: function() {
