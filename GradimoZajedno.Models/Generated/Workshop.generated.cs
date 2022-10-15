@@ -53,9 +53,8 @@ namespace GradimoZajedno.Models.Generated
 		/// Workshop Date
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("workshopDate")]
-		public virtual string WorkshopDate => this.Value<string>(_publishedValueFallback, "workshopDate");
+		public virtual global::System.DateTime WorkshopDate => this.Value<global::System.DateTime>(_publishedValueFallback, "workshopDate");
 
 		///<summary>
 		/// Workshop Picture 1

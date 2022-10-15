@@ -18,9 +18,9 @@ using Umbraco.Extensions;
 
 namespace GradimoZajedno.Models.Generated
 {
-	/// <summary>Time Capsule</summary>
+	/// <summary>Timeline</summary>
 	[PublishedModel("timeCapsule")]
-	public partial class TimeCapsule : PublishedContentModel, IPage
+	public partial class TimeCapsule : PublishedContentModel, IFooter, IHeader, IPage, ISiteSettings
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,7 +50,7 @@ namespace GradimoZajedno.Models.Generated
 		// properties
 
 		///<summary>
-		/// Time Capsule Picture
+		/// Timeline Picture
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -58,7 +58,7 @@ namespace GradimoZajedno.Models.Generated
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops TimeCapsulePicture => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "timeCapsulePicture");
 
 		///<summary>
-		/// Time Capsule Text
+		/// Timeline Text
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -66,12 +66,68 @@ namespace GradimoZajedno.Models.Generated
 		public virtual string TimeCapsuleText => this.Value<string>(_publishedValueFallback, "timeCapsuleText");
 
 		///<summary>
-		/// Time Capsule Title
+		/// Timeline Title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("timeCapsuleTitle")]
 		public virtual string TimeCapsuleTitle => this.Value<string>(_publishedValueFallback, "timeCapsuleTitle");
+
+		///<summary>
+		/// Address
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("address")]
+		public virtual string Address => global::GradimoZajedno.Models.Generated.Footer.GetAddress(this, _publishedValueFallback);
+
+		///<summary>
+		/// Donations
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("donations")]
+		public virtual string Donations => global::GradimoZajedno.Models.Generated.Footer.GetDonations(this, _publishedValueFallback);
+
+		///<summary>
+		/// Email
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("email")]
+		public virtual string Email => global::GradimoZajedno.Models.Generated.Footer.GetEmail(this, _publishedValueFallback);
+
+		///<summary>
+		/// MenuFirstColumn
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("menuFirstColumn")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuFirstColumn => global::GradimoZajedno.Models.Generated.Footer.GetMenuFirstColumn(this, _publishedValueFallback);
+
+		///<summary>
+		/// MenuSecondColumn
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("menuSecondColumn")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> MenuSecondColumn => global::GradimoZajedno.Models.Generated.Footer.GetMenuSecondColumn(this, _publishedValueFallback);
+
+		///<summary>
+		/// Logo
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("logo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Logo => global::GradimoZajedno.Models.Generated.Header.GetLogo(this, _publishedValueFallback);
+
+		///<summary>
+		/// NavigationMenu
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("navigationMenu")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> NavigationMenu => global::GradimoZajedno.Models.Generated.Header.GetNavigationMenu(this, _publishedValueFallback);
 
 		///<summary>
 		/// Alternate languages
@@ -221,5 +277,68 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("umbracoUrlName")]
 		public virtual string UmbracoUrlName => global::GradimoZajedno.Models.Generated.Page.GetUmbracoUrlName(this, _publishedValueFallback);
+
+		///<summary>
+		/// Canonical domain
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("canonicalDomain")]
+		public virtual string CanonicalDomain => global::GradimoZajedno.Models.Generated.SiteSettings.GetCanonicalDomain(this, _publishedValueFallback);
+
+		///<summary>
+		/// Cookie script
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("cookieScript")]
+		public virtual string CookieScript => global::GradimoZajedno.Models.Generated.SiteSettings.GetCookieScript(this, _publishedValueFallback);
+
+		///<summary>
+		/// Google analytics script code
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("googleAnalyticsScriptCode")]
+		public virtual string GoogleAnalyticsScriptCode => global::GradimoZajedno.Models.Generated.SiteSettings.GetGoogleAnalyticsScriptCode(this, _publishedValueFallback);
+
+		///<summary>
+		/// Google tag manager non script code
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("googleTagManagerNonScriptCode")]
+		public virtual string GoogleTagManagerNonScriptCode => global::GradimoZajedno.Models.Generated.SiteSettings.GetGoogleTagManagerNonScriptCode(this, _publishedValueFallback);
+
+		///<summary>
+		/// Google tag manager script code
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("googleTagManagerScriptCode")]
+		public virtual string GoogleTagManagerScriptCode => global::GradimoZajedno.Models.Generated.SiteSettings.GetGoogleTagManagerScriptCode(this, _publishedValueFallback);
+
+		///<summary>
+		/// Hide all pages from search engines
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[ImplementPropertyType("hideAllPagesFromSearchEngines")]
+		public virtual bool HideAllPagesFromSearchEngines => global::GradimoZajedno.Models.Generated.SiteSettings.GetHideAllPagesFromSearchEngines(this, _publishedValueFallback);
+
+		///<summary>
+		/// Robots
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("robots")]
+		public virtual string Robots => global::GradimoZajedno.Models.Generated.SiteSettings.GetRobots(this, _publishedValueFallback);
+
+		///<summary>
+		/// Site name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("siteName")]
+		public virtual string SiteName => global::GradimoZajedno.Models.Generated.SiteSettings.GetSiteName(this, _publishedValueFallback);
 	}
 }

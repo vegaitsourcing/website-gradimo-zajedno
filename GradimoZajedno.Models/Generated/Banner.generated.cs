@@ -18,34 +18,9 @@ using Umbraco.Extensions;
 
 namespace GradimoZajedno.Models.Generated
 {
-	// Mixin Content Type with alias "banner"
-	/// <summary>Banner</summary>
-	public partial interface IBanner : IPublishedElement
-	{
-		/// <summary>Button</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.Link Button { get; }
-
-		/// <summary>Description</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Description { get; }
-
-		/// <summary>Image</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.MediaWithCrops Image { get; }
-
-		/// <summary>Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Title { get; }
-	}
-
 	/// <summary>Banner</summary>
 	[PublishedModel("banner")]
-	public partial class Banner : PublishedElementModel, IBanner
+	public partial class Banner : PublishedElementModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -80,12 +55,7 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("button")]
-		public virtual global::Umbraco.Cms.Core.Models.Link Button => GetButton(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Button</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.Link GetButton(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Link>(publishedValueFallback, "button");
+		public virtual global::Umbraco.Cms.Core.Models.Link Button => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "button");
 
 		///<summary>
 		/// Description
@@ -93,12 +63,7 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("description")]
-		public virtual string Description => GetDescription(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Description</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetDescription(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "description");
+		public virtual string Description => this.Value<string>(_publishedValueFallback, "description");
 
 		///<summary>
 		/// Image
@@ -106,12 +71,7 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("image")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Image => GetImage(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Image</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetImage(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "image");
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Image => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "image");
 
 		///<summary>
 		/// Title
@@ -119,11 +79,6 @@ namespace GradimoZajedno.Models.Generated
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("title")]
-		public virtual string Title => GetTitle(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetTitle(IBanner that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "title");
+		public virtual string Title => this.Value<string>(_publishedValueFallback, "title");
 	}
 }
