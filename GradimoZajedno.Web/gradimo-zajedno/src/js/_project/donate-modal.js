@@ -3,8 +3,10 @@ import QRCode from 'easyqrcodejs';
 const donateModal = {
 	donatorInformation: document.querySelector('.donate-modal__textarea'),
 	donatorValue: document.querySelector('.donate-modal__input'),
+	donatorForm: document.querySelector('.donate-modal__form'),
 
 	onInputValuesChange: function() {
+		const qrCodeContainer = document.querySelector('.donate-modal__qrcode');
 		const donatorValue = document.querySelector('.donate-modal__input');
 		const donatorInformation = document.querySelector('.donate-modal__textarea');
 
@@ -19,34 +21,46 @@ const donateModal = {
 			N: `Udruženje 'Uvek sa decom'
             Pasterova 14
             11000 beograd`,
-			I: `RSD ${donatorValue.value || ''},00`,
+			I: `RSD${donatorValue.value || ''},00`,
 			P: donatorInformation.value || '',
-			SF: '',
+			SF: '221',
 			S: 'Donacija'
 		};
 
-		// Transform this object to string, separated with '/', and put it to text object
-		// Then set that object in new QR code
+		function objToString(obj) {
+			let str = '';
 
-		// Show that QR code in form
+			for (const [p, val] of Object.entries(obj)) {
+				str += `${p}:${val}|`;
+			}
 
-		console.log(informationObject);
+			return str.slice(0, str.length - 1);
+		}
 
-		// const options = {
-		// 	text: 'https://github.com/ushelp/EasyQRCodeJS'
-		// };
+		const options = {
+			text: objToString(informationObject),
+			correctLevel: QRCode.CorrectLevel.L
+		};
 
-		// new QRCode(document.querySelector('.donate-modal__qrcode'), options);
+		qrCodeContainer.innerHTML = '';
+		new QRCode(qrCodeContainer, options);
 	},
 
 	onDonatorInformationChange: function(e) {
 		console.log('s');
 		this.onInputValuesChange(e);
-		// this.onInputValuesChange({ name: 'donator', value: e.target.value });
 	},
 
 	onDonatorValueChange: function(e) {
 		console.log(e.target.value);
+	},
+
+	onFormSubmit: function(e) {
+		e.preventDefault();
+	},
+
+	donatorFormEventListener: function() {
+		this.donatorForm.addEventListener('submit', this.onFormSubmit);
 	},
 
 	init: function() {
@@ -56,6 +70,8 @@ const donateModal = {
 		this.donatorInformation.addEventListener('change', this.onInputValuesChange);
 
 		this.donatorValue.addEventListener('change', this.onInputValuesChange);
+
+		this.donatorFormEventListener();
 
 	}
 };

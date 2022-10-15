@@ -30,3 +30,11 @@
 	font-weight: 500;
 	text-align: right;
 }
+.donate-modal__qrcode {
+	position: absolute;
+	right: 4%;
+	bottom: 1%;
+	& canvas {
+		width: 181px;
+	}
+}
