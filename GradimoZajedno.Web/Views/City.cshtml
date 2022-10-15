@@ -1,0 +1,66 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.CityViewModel>
+
+@using ContentModels = GradimoZajedno.Models.Generated;
+	<div class="cards">
+		<div class="cards__bg has-cover" style="background-image: url(/assets/images/dots-3.png);"></div>
+		<div class="wrap swiper js-swiper-cards">
+			<div class="cards__img-wrap">
+				<div class="cards__img-holder">
+					<div class="cards__img has-cover" style="background-image: url(/assets/images/round-img.png);"></div>
+				</div>
+			</div>
+			<div class="cards__content swiper-wrapper">
+				<div class="card js-card swiper-slide card-0" data-id="0">
+					<div class="card__info">
+						<h2 class="card__title">Kvart Otkrića</h2>
+						<p class="card__text">Kvart se nalazi između Bulevara Deda Mraza na severu i Gusarskog Bulevara na zapadu.</p>
+						<p class="card__text">U južnom delu ovog kvarta nalazi se nacionalni muzej Žizuko.</p>
+					</div>
+				</div>
+				<div class="card js-card swiper-slide card-1" data-id="1">
+					<div class="card__info">
+						<h2 class="card__title">Kvart Pobede</h2>
+						<p class="card__text">Kvart se nalazi između Sunčanog Bulevara na istoku i Bulevara Deda Mraza na severu.</p>
+						<p class="card__text">U severnom delu ovog kvarta nalazi se Hram dobrog srca.</p>
+					</div>
+				</div>
+				<div class="card js-card swiper-slide card-2" data-id="2">
+					<div class="card__info">
+						<h2 class="card__title">Kvart Blaga</h2>
+						<p class="card__text">Kvart se nalazi između Bulevara Savane na jugu i Gusarskog Bulevara na zapadu.</p>
+						<p class="card__text">U južnom delu ovog kvarta nalaze se Skupština i Koncertna dvorana.</p>
+					</div>
+				</div>
+				<div class="card js-card swiper-slide card-3" data-id="3">
+					<div class="card__info">
+						<h2 class="card__title">Magični Kvart</h2>
+						<p class="card__text">Kvart se nalazi između Sunčanog Bulevara na istoku i Bulevara Savane na jugu.</p>
+						<p class="card__text">U severnom delu ovog kvarta nalazi se roditeljski kutak, bolnica...</p>
+					</div>
+				</div>
+			</div>
+			<div class="cards__pagination js-cards-pagination"></div>
+			<div class="swiper-pagination"></div>
+			<div class="cards__navigation">
+				<button type="button" class="cards-button-prev btn-navigation cards__btn cards__btn--prev">
+					<span class="icon font-ico-arrow-left"></span>
+					<span class="sr-only">Previous slide</span>
+				</button>
+				<button type="button" class="cards-button-next btn-navigation cards__btn cards__btn--next">
+					<span class="icon font-ico-arrow-right"></span>
+					<span class="sr-only">Next slide</span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- TODO: Insert partial carousel -->
+
+
+	<div class="basic-block">
+		<div class="wrap">
+			<div class="basic-block__content">
+				<p class="text basic-block__text">@Model.Description</p>
+			</div>
+		</div>
+	</div>

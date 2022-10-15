@@ -40,6 +40,8 @@
     <Content Include="Views\Partials\grid\editors\media.cshtml" />
     <Content Include="Views\Partials\grid\editors\macro.cshtml" />
     <Content Include="Views\Partials\blocklist\default.cshtml" />
+    <Content Include="Views\City.cshtml" />
+    <Content Include="Views\Building.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Razor files are needed for the backoffice to work correctly -->

@@ -73,5 +73,9 @@
     <Content Include="Extensions\HttpRequestExtensions.cs" />
     <Content Include="Extensions\UmbracoApplicationBuilderExtensions.cs" />
     <Content Include="appsettings-schema.json" />
+    <Content Include="Controllers\UmbracoApi\BuildingsController.cs" />
+    <Content Include="ViewModels\Pages\BuildingViewModel.cs" />
+    <Content Include="Controllers\RenderMvc\BuildingController.cs" />
+    <Content Include="Models\SettlementDTO.cs" />
   </ItemGroup>
 </Project>

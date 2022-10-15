@@ -1,0 +1,120 @@
+﻿@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.BuildingViewModel>
+@using ContentModels = GradimoZajedno.Models.Generated;
+
+<div class="object-single js-popup-parent">
+	<div class="object-single__bg has-cover" style="background-image: url(assets/images/dots.png);"></div>
+	<div class="wrap wrap--lg">
+		<div class="object">
+			<div class="object__header">				
+				<a href="@Model.CityUrl" class="object__back-btn" >
+					<span class="icon font-ico-arrow-left"></span> @Model.CityName
+				</a>
+			</div>
+			<div class="object__body">
+				<div class="object__col object__col--sm">
+					<div class="object__img-wrap">
+						<div class="object__img has-cover" style="background-image: url(@Model.Image.UrlAbsolute);"></div>
+					</div>
+				</div>
+				<div class="object__col">
+					<div class="object__info">
+						<h1 class="h1 object__title">@Model.Title</h1>
+						<span class="object__location">@Model.Location</span>
+						<p class="text text--sm object__text">@Model.Description</p>
+						@if(Model.IsSold) {
+							<div class="object__desc-wrap">
+								<span class="object__desc">@Umbraco.GetDictionaryValue("Building.Owner")</span>
+								<span class="object__desc object__desc--lg">@Model.Owner</span>
+							</div>
+						} else {
+							<div class="object__desc-wrap">
+								<span class="object__desc">@Umbraco.GetDictionaryValue("Building.Builder")</span>
+								<span class="object__desc object__desc--lg">@Model.Builder</span>
+							</div>
+						}
+						<div class="object__tag-wrap">
+							@if(!Model.IsSold) {
+								<span class="tag tag--green">@Umbraco.GetDictionaryValue("Building.OnSale")</span>
+							}
+
+							@if(Model.ImportantObject) {
+								<span class="tag tag--gold">@Umbraco.GetDictionaryValue("Building.SignificantObject")</span>
+							}
+						</div>
+
+						@if(!Model.IsSold) {
+							<div class="object__price">
+								<div class="price">
+									<span class="object__desc">@Umbraco.GetDictionaryValue("Building.Price")</span>
+									<span class="object__desc object__desc--lg">@Model.Price</span>
+								</div>
+								<button type="button" class="item__btn object__btn js-popup-btn">@Umbraco.GetDictionaryValue("Building.BuyButton")</button>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup js-popup">
+			<div class="popup__content">
+				<div class="popup__header">
+					<button type="button" class="popup__btn-close js-close-popup">
+						<span class="icon font-ico-close"></span>
+						<span class="sr-only"></span>
+					</button>
+				</div>
+				<div class="popup__body">
+					<p class="text text--sm popup__text">@Umbraco.GetDictionaryValue("Building.Buy.Form.Intro")</p>
+					<div class="popup__desc">
+						<span class="popup__item-desc">@Model.Title</span>
+						<span class="popup__item-desc">@Model.Location, @Model.CityName</span>
+					</div>
+					<div class="forms">
+						<div class="wrap">
+							<div class="forms__content">
+								<div class="forms__col">
+									<form class="form js-form" action="/contact">
+										<div class="form__input-wrap">
+											<div class="input-wrap">
+												<label for="ime" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.Name")</label>
+												<span class="error-msg"></span>
+												<input class="input js-input" type="text" name="ime" required id="ime" autocomplete="off">
+											</div>
+										</div>
+										<div class="form__input-wrap">
+											<div class="input-wrap">
+												<label for="prezime" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.LastName")</label>
+												<span class="error-msg"></span>
+												<input class="input js-input" type="text" name="prezime" required id="prezime" autocomplete="off">
+											</div>
+										</div>
+										<div class="form__input-wrap form__input-wrap--full">
+											<div class="input-wrap">
+												<label for="email" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.Email")</label>
+												<span class="error-msg"></span>
+												<input class="input js-input" type="email" name="email" required id="email" autocomplete="off">
+											</div>
+										</div>
+										<div class="form__input-wrap form__input-wrap--full">
+											<div class="input-wrap">
+												<label for="tel" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.ContactPhone")</label>
+												<span class="error-msg"></span>
+												<input class="input js-input" type="tel" name="tel" id="tel" autocomplete="off">
+											</div>
+										</div>
+										<div class="form__btn-wrap">
+											<button class="btn form__btn" type="submit">@Umbraco.GetDictionaryValue("Building.Buy.Form.Send")</button>
+											<button class="btn btn--outline form__btn js-close-popup" type="button">@Umbraco.GetDictionaryValue("Building.Buy.Form.Cancel")</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup__success">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

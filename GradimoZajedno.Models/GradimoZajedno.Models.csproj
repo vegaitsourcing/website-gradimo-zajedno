@@ -39,5 +39,12 @@
     <Content Include="Generated\SiteSettings.generated.cs" />
     <Content Include="appsettings-schema.json" />
     <Content Include="Generated\Home.generated.cs" />
+    <Content Include="Generated\Workshop.generated.cs" />
+    <Content Include="Generated\TimeCapsule.generated.cs" />
+    <Content Include="Generated\Quarter.generated.cs" />
+    <Content Include="Generated\Settlement.generated.cs" />
+    <Content Include="Generated\Contact.generated.cs" />
+    <Content Include="Generated\City.generated.cs" />
+    <Content Include="Generated\Building.generated.cs" />
   </ItemGroup>
 </Project>
