@@ -11,9 +11,13 @@
 				<img class="block__img" src="{{img.src}}" alt="{{img.alt}}">
 				{{/if}}
 				{{#if text}}
-				{{#each text}}
-				<p class="text block__text">{{this}}</p>
-				{{/each}}
+				<div class="text block__text">
+					{{#each text}}
+						<div>
+							{{this}}
+						</div>
+					{{/each}}
+				</div>
 				{{/if}}
 				{{#if link}}
 				<a class="btn block__btn" href="{{link.url}}">{{link.name}}</a>
