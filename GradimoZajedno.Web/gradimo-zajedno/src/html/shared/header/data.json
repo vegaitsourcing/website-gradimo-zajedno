@@ -6,27 +6,27 @@
 	"menuIcon": "menu icon",
 	"menu": [
 		{
-			"url": "javascript:;",
+			"url": "/index.html",
 			"name": "Početna",
 			"id": "1"
 		},
 		{
-			"url": "javascript:;",
+			"url": "/about.html",
 			"name": "O nama",
 			"id": "2"
 		},
 		{
-			"url": "javascript:;",
+			"url": "/objects.html",
 			"name": "Grad",
 			"id": "3"
 		},
 		{
-			"url": "javascript:;",
+			"url": "/timeline.html",
 			"name": "Vremenska kapsula",
 			"id": "4"
 		},
 		{
-			"url": "javascript:;",
+			"url": "/contact.html",
 			"name": "Kontakt",
 			"id": "5"
 		}
