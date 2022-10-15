@@ -1,0 +1,30 @@
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models;
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.ContactViewModel>
+
+@using ContentModels = GradimoZajedno.Models.Generated;
+
+<div class="banner wrap wrap--xl js-popup-parent banner--bottom">
+    <div class="banner__bg has-cover" style="background-image: url(@Model.Image.UrlAbsolute);"></div>
+    <div class="wrap">
+        <div class="banner__holder">
+            <div class="banner__content">
+            </div>
+        </div>
+    </div>
+    <div class="popup js-popup">
+        <div class="popup__content">
+            <div class="popup__header">
+                <button type="button" class="popup__btn-close js-close-popup">
+                    <span class="icon font-ico-close"></span>
+                    <span class="sr-only"></span>
+                </button>
+            </div>
+            <div class="popup__body">
+            </div>
+            <div class="popup__success">
+            </div>
+        </div>
+    </div>
+</div>
+@await Html.PartialAsync("_ContactForm")
