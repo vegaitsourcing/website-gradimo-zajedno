@@ -4,12 +4,14 @@ const lang = {
 
 	init: function() {
 		window.addEventListener('load', () => {
-			const dataChecked = this.langToggle.getAttribute('data-checked');
 
-			if (dataChecked === 'true') {
-				this.changeToEn();
-			} else {
+			if (this.path.search('/en') === 0) {
 				this.changeToSr();
+				this.langToggle.setAttribute('data-checked', 'false');
+
+			} else {
+				this.changeToEn();
+				this.langToggle.setAttribute('data-checked', 'true');
 			}
 
 		});
@@ -24,10 +26,8 @@ const lang = {
 
 			if (dataChecked === 'false') {
 				this.changeToEn();
-				e.target.setAttribute('data-checked', 'true');
 			} else {
 				this.changeToSr();
-				e.target.setAttribute('data-checked', 'false');
 			}
 
 		});
