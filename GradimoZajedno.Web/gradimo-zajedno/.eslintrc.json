@@ -92,7 +92,6 @@
 		"no-var": "error",
 		"prefer-const": "warn",
 		"no-caller": "error",
-		"no-new": "error",
 		"no-undef": "error",
 		"space-before-function-paren": [
 			"warn",

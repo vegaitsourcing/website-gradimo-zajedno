@@ -1,0 +1,10 @@
+<div class="donate-modal">
+	{{#if img}}
+	<img class="donate-modal__img" src="{{img.src}}" alt="{{img.alt}}">
+	{{/if}}
+	<form class="donate-modal__form" method="post" action="">
+		<textarea name="donator" class="donate-modal__textarea"></textarea>
+		<input name="value" type="number" class="donate-modal__input" pattern="([0-9]{1,3}).([0-9]{1,3})" />
+	</form>
+	<div class="donate-modal__qrcode"></div>
+</div>

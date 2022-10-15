@@ -2,7 +2,7 @@
 // ------------------------------------------------------------------------------
 
 .popup {
-	width: 100%;
+	width: 100vw;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -53,7 +53,8 @@
 .popup__content {
 	display: block;
 	margin: 0 auto;
-	max-width: 800px;
+	width: min-content;
+	min-width: 500px;
 	background-color: $white;
 	border-radius: 20px;
 	overflow: hidden;

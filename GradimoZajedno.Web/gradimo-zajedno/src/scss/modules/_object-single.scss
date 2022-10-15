@@ -6,6 +6,9 @@
 	position: relative;
 	padding: 45px 0;
 	overflow: hidden;
+	.popup__content {
+		min-width: 800px;
+	}
 }
 .object-single__bg {
 	position: absolute;

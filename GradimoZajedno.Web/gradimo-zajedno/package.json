@@ -27,6 +27,7 @@
 		"ios >= 8"
 	],
 	"dependencies": {
+		"easyqrcodejs": "^4.4.13",
 		"jquery": "^3.6.1",
 		"scroll-behavior-polyfill": "^2.0.13",
 		"swiper": "8.3.2"

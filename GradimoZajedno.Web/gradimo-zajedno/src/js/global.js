@@ -33,3 +33,6 @@ form.init();
 
 import lang from './_project/lang';
 lang.init();
+
+import donateModal from './_project/donate-modal';
+donateModal.init();

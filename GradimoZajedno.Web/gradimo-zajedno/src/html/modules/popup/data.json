@@ -1,8 +1,7 @@
 {
 	"closeBtn": "Close popup",
 	"text": "Postoji nekoliko načina da nam pomognete: direktnom uplatom na naš broj računa kod Raiffeisen Bank (265–1610310004281–79), slanjem SMS poruke sa sadržajem 7175 na broj 7175, ili slanjem poklona za decu na adresu udruženja.",
-	"img": {
-		"src": "assets/images/uplatnica.png",
-		"alt": "Uplatnica"
+	"donate-modal": {
+		">>": "modules/donate-modal/data.json"
 	}
 }
