@@ -1,0 +1,26 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.WorkshopViewModel>
+@using ContentModels = GradimoZajedno.Models.Generated;
+	
+<div class="event-single">
+	<div class="event-single__bg has-cover" style="background-image: url(/assets/images/dots.png);"></div>
+	<div class="wrap">
+		<div class="event-single__content">
+			<h1 class="h1 event-single__title">@Model.WorkshopTitle</h1>
+			<time class="event-single__date" datetime="2022-09-10">@Model.WorkshopDate</time>
+			<p class="text text--sm event-single__text">@Model.WorkshopText</p>
+			<div class="event-single__img-wrap">
+				@if(Model.Picture1 != null) {
+					<div class="event-single__img-holder">
+						<img src="@Model.Picture1?.UrlAbsolute" alt="Event Image" class="event-single__img">
+					</div>
+				}
+				@if(Model.Picture2 != null){
+					<div class="event-single__img-holder">
+						<img src="@Model.Picture2?.UrlAbsolute" alt="Event Image" class="event-single__img">
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
