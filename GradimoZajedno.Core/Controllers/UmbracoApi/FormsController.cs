@@ -68,7 +68,7 @@ Telefon: {buyForm.Telephone}
         var templateMessage = @$"Ime: {timeCapsuleForm.Name}
 Prezime: {timeCapsuleForm.LastName}
 Priča:
-{timeCapsuleForm.Story}
+{timeCapsuleForm.Message}
 ";
         await _emailService.SendAsync(from: timeCapsuleForm.Email, message: templateMessage, subject: "Novi zahtev za priču sa web sajta");
         CreateStory(timeCapsuleForm);
@@ -95,7 +95,7 @@ Priča:
         story.SetValue("firstName", form.Name, language.IsoCode);
         story.SetValue("lastName", form.LastName, language.IsoCode);
         story.SetValue("email", form.Email, language.IsoCode);
-        story.SetValue("text", form.Story, language.IsoCode);
+        story.SetValue("text", form.Message, language.IsoCode);
 
         _contentService.Save(story);
     }
