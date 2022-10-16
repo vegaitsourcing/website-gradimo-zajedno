@@ -1,4 +1,6 @@
-const objects = {
+import objectsFilter from './objects-filter';
+
+const objectsRender = {
 	serverUrl: 'https://gradimozajedno.codeforacause.rs/buildings/GetAllSettlementBuildings',
 	recievedObjectsFromServer: {},
 
@@ -82,7 +84,8 @@ const objects = {
 			const soldAttributeValue = filterTags.find((element) => element === 'sold');
 
  			const container = document.createElement('div');
-			container.setAttribute('class', `item ${soldAttributeValue ? 'item--sold' : ''}`);
+			container.setAttribute('class', `item js-object-item-cont ${soldAttributeValue ? 'item--sold' : ''}`);
+			container.setAttribute('data-tags', filterTags);
 
 			container.innerHTML = `
 			<div class="item__col item__col--sm">
@@ -129,8 +132,10 @@ const objects = {
 			`;
 
 			this.domObjectsContainer.appendChild(container);
+
 		});
+		objectsFilter.init();
 	}
 };
 
-export default objects;
+export default objectsRender;
