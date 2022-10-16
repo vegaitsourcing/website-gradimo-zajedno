@@ -80,19 +80,19 @@
 						<div class="wrap">
 							<div class="forms__content">
 								<div class="forms__col">
-									<form class="form js-form" action="/contact">
+									<form class="form js-form" action="/contact" data-name="buy">
 										<div class="form__input-wrap">
 											<div class="input-wrap">
-												<label for="ime" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.Name")</label>
+												<label for="name" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.Name")</label>
 												<span class="error-msg"></span>
-												<input class="input js-input" type="text" name="ime" required id="ime" autocomplete="off">
+												<input class="input js-input" type="text" name="name" required id="name" autocomplete="off">
 											</div>
 										</div>
 										<div class="form__input-wrap">
 											<div class="input-wrap">
-												<label for="prezime" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.LastName")</label>
+												<label for="lastName" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.LastName")</label>
 												<span class="error-msg"></span>
-												<input class="input js-input" type="text" name="prezime" required id="prezime" autocomplete="off">
+												<input class="input js-input" type="text" name="lastName" required id="lastName" autocomplete="off">
 											</div>
 										</div>
 										<div class="form__input-wrap form__input-wrap--full">
@@ -104,9 +104,9 @@
 										</div>
 										<div class="form__input-wrap form__input-wrap--full">
 											<div class="input-wrap">
-												<label for="tel" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.ContactPhone")</label>
+												<label for="telephone" class="label">@Umbraco.GetDictionaryValue("Building.Buy.Form.ContactPhone")</label>
 												<span class="error-msg"></span>
-												<input class="input js-input" type="tel" name="tel" id="tel" autocomplete="off">
+												<input class="input js-input" type="tel" name="telephone" id="telephone" autocomplete="off">
 											</div>
 										</div>
 										<div class="form__btn-wrap">
