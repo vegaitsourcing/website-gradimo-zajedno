@@ -5,6 +5,7 @@ const objectsFilter = {
 		if (!this.filterContainer) return;
 
 		this.addListenersToFilterButtons();
+		this.addEventListenersToPaginationButton();
 	},
 
 	addListenersToFilterButtons: function() {
@@ -28,9 +29,41 @@ const objectsFilter = {
 				return item.classList.add('sr-only');
 			}
 		});
+	},
 
+	addEventListenersToPaginationButton: function() {
+		const buttons = document.querySelectorAll('.js-objects-pagination-button');
+		const objects = document.querySelectorAll('.js-object-item-cont');
+
+		buttons.forEach((button) => {
+			button.addEventListener('click', this.onPaginationClick);
+		});
+
+		Array.from(objects).map((element, index) => {
+			index > 5 && element.classList.add('sr-only');
+		});
+	},
+
+	onPaginationClick: function(e) {
+		const clickedPageNumeber = e.target.getAttribute('data-number');
+		const objects = document.querySelectorAll('.js-object-item-cont');
+		console.log(clickedPageNumeber);
+		if (clickedPageNumeber === '1') {
+			return Array.from(objects).map((element, index) => {
+				index > 5 ? element.classList.add('sr-only') : element.classList.remove('sr-only');
+			});
+		}
+
+		const condition = ((clickedPageNumeber - 1) * 6) - 1;
+
+		Array.from(objects).map((element, index) => {
+			if (index > condition && index < condition + 6) {
+			 	element.classList.remove('sr-only');
+			} else {
+				element.classList.add('sr-only');
+			}
+		});
 	}
-
 };
 
 export default objectsFilter;

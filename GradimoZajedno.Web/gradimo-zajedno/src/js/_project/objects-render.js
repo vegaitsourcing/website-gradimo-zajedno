@@ -3,6 +3,7 @@ import objectsFilter from './objects-filter';
 const objectsRender = {
 	serverUrl: 'https://gradimozajedno.codeforacause.rs/buildings/GetAllSettlementBuildings',
 	recievedObjectsFromServer: {},
+	paginationInnerElements: [],
 
 	globalDomContainer: document.querySelector('.js-object-global-cont'),
 	domTopFilterRow: document.querySelector('.js-objects-top-filter-row'),
@@ -134,6 +135,30 @@ const objectsRender = {
 			this.domObjectsContainer.appendChild(container);
 
 		});
+		const paginationContainer = document.createElement('div');
+		paginationContainer.setAttribute('class', 'pagination js-items-pagination');
+		const pageAmount = Math.floor(this.recievedObjectsFromServer?.item?.length / 6) + 1;
+		const array = Array.from(Array(pageAmount).keys());
+
+		console.log(array);
+
+		paginationContainer.innerHTML = `
+			<div class="wrap">
+				<div class="pagination__content">
+					<ul class="pagination__list">
+						${array.map((element, index) => `<li class="pagination__item">
+						<button type="button" class="pagination__link js-objects-pagination-button" data-number=${index + 1}>
+							${index + 1}
+						</button>
+						</li>`)}
+
+					</ul>
+				</div>
+			</div>
+		`;
+
+		this.domObjectsContainer.appendChild(paginationContainer);
+
 		objectsFilter.init();
 	}
 };
