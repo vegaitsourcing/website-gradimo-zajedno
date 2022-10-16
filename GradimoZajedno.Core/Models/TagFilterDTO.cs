@@ -12,9 +12,9 @@ public class TagFilterDTO {
 
     }
 
-    public TagFilterDTO(string name, bool isChecked = false) {
+    public TagFilterDTO(string name, bool isChecked = false, bool isEmptySlug = false) {
         this.Name = name;
-        this.Id = name.GenerateSlug();
+        this.Id = isEmptySlug ? "" : name.GenerateSlug();
         this.Checked = isChecked;
     }
 }

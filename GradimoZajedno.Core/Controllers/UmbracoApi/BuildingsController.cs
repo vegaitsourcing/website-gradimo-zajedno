@@ -46,7 +46,7 @@ public class BuildingsController : UmbracoApiController
         retVal.CloseBtn = GetTranslation("Form.Close", language);
         retVal.FiltersBtn = GetTranslation("Quarter.Filters", language);
 
-        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Quarters.All", language), true));
+        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Quarters.All", language), true, true));
         retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.SignificantObject", language)));
         retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.OnSale", language)));
         retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.Sold", language)));
