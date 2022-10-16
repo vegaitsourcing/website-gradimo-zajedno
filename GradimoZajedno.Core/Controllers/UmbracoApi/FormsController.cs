@@ -70,7 +70,7 @@ Prezime: {timeCapsuleForm.LastName}
 Priča:
 {timeCapsuleForm.Story}
 ";
-        await _emailService.SendAsync(from: timeCapsuleForm.Email, message: templateMessage, subject: "Novi zahtev za kupovinu sa web sajta");
+        await _emailService.SendAsync(from: timeCapsuleForm.Email, message: templateMessage, subject: "Novi zahtev za priču sa web sajta");
         CreateStory(timeCapsuleForm);
         return Ok();
     }
