@@ -5,7 +5,7 @@ using Umbraco.Cms.Web.Common.Controllers;
 
 namespace GradimoZajedno.Core.Controllers.UmbracoApi;
 
-[Route("forms")]
+[Route("[controller]/[action]")]
 public class FormsController : UmbracoApiController
 {
     private readonly EmailService _emailService;
@@ -15,7 +15,7 @@ public class FormsController : UmbracoApiController
         _emailService = emailService;
     }
 
-    [HttpPost("contact")]
+    [HttpPost]
     public async Task<IActionResult> ContactAsync([FromBody]ContactDTO contact)
     {
         if (!contact.IsValid)
@@ -31,4 +31,22 @@ Poruka:
         await _emailService.SendAsync(from: contact.Email, message: templateMessage, subject: $"Novi zahtev za kontakt sa web sajta");
         return Ok();
     }
+
+    [HttpPost]
+    public async Task<IActionResult> BuyAsync([FromBody]BuyFormDto buyFormValues)
+    {
+        if (!buyFormValues.IsValid)
+        {
+            return BadRequest();
+        }
+
+        var templateMessage = @$"Ime: {buyFormValues.Name}
+Prezime: {buyFormValues.LastName}
+Telefon: {buyFormValues.Telephone}
+";
+        await _emailService.SendAsync(from: buyFormValues.Email, message: templateMessage, subject: "Novi zahtev za kupovinu sa web sajta");
+        return Ok();
+    }
+
+
 }
