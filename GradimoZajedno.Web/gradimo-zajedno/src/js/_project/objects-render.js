@@ -116,7 +116,10 @@ const objectsRender = {
 						<div class="item__header-col item__header-col--flex">
 							${item?.tag?.length ? item.tag.map((tag) => `<span class="tag tag--${tag?.class}">${tag?.name}</span>`) : ''}
 
-							<div class="item__body">
+						</div>
+					</div>
+
+					<div class="item__body">
 								<div class="item__body-col">
 									${item?.text && `<p class="text text--sm item__text">${item.text}</p>`}
 								</div>
@@ -134,9 +137,6 @@ const objectsRender = {
 									<a href="${item?.url}" class="item__btn">${item?.btn}</a>
 								</div>
 							</div>
-
-						</div>
-					</div>
 
 			</div>
 			`;
