@@ -11,6 +11,7 @@ const form = {
 	onFormSubmit: function(e) {
 		e.preventDefault();
 		const form = e.target;
+		const popup = document.querySelector('.js-popup');
 		const formName = form.getAttribute('data-name');
 		const serializedForm = $(form).serializeArray();
 		let endpoint = '';
@@ -37,7 +38,9 @@ const form = {
 
 		if (!endpoint) return;
 
-		const onSuccess = function() { };
+		const onSuccess = function() {
+			popup.classList.add('popup--success');
+		};
 
 		$.ajax({
 			type: 'POST',
