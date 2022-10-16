@@ -74,6 +74,14 @@ namespace GradimoZajedno.Models.Generated
 		public virtual string TimeCapsuleTitle => this.Value<string>(_publishedValueFallback, "timeCapsuleTitle");
 
 		///<summary>
+		/// Timeline Button
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("timelineButton")]
+		public virtual global::Umbraco.Cms.Core.Models.Link TimelineButton => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "timelineButton");
+
+		///<summary>
 		/// Address
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.2.1+25a20cf")]
