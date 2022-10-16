@@ -1,6 +1,7 @@
 import objectsFilter from './objects-filter';
 
 const objectsRender = {
+	path: window.location.pathname,
 	serverUrl: 'https://gradimozajedno.codeforacause.rs/buildings/GetAllSettlementBuildings',
 	recievedObjectsFromServer: {},
 	paginationInnerElements: [],
@@ -12,6 +13,15 @@ const objectsRender = {
 
 	init: function() {
 		if (!this.globalDomContainer) return;
+
+		this.serverLinkChangeFromLang();
+	},
+
+	serverLinkChangeFromLang: function() {
+		if (this.path.search('/en') === 0) {
+			this.serverUrl = this.serverUrl + '?lang=en';
+ 		}
+		console.log(this.serverUrl);
 		this.getAllObjects();
 	},
 
