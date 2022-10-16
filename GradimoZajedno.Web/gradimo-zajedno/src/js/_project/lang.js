@@ -38,7 +38,7 @@ const lang = {
 	},
 
 	changeToEn: function() {
-		window.location = '/en';
+		window.location = '/en/';
 	}
 
 };
