@@ -10,7 +10,7 @@
 		<div class="wrap wrap--lg">
 			<div class="footer__content">
 				<div class="footer__col">
-					<address class="footer__address"> @Html.Raw(Model.Address.ReplaceNewLinesWithLineBreaks()) <a class="footer__mail" href="mailto:sadecom@sbb.rs">@Model.Email</a>
+					<address class="footer__address"> @Html.Raw(Model.Address.ReplaceNewLinesWithLineBreaks()) <a class="footer__mail" href="mailto:@Model.Email">@Model.Email</a>
 					</address>
                     <ul class="footer__list">
 					    @if(firstLinks != null && firstLinks.Any())
