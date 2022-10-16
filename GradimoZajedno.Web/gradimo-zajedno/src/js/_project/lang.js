@@ -33,14 +33,12 @@ const lang = {
 
 	changeToSr: function() {
 		if (this.path.search('/en') === 0) {
-			window.location = this.path.slice(3, this.path.length);
+			window.location = '/';
 		}
 	},
 
 	changeToEn: function() {
-		if (this.path.search('/en') === -1) {
-			window.location = `/en${this.path}`;
-		}
+		window.location = '/en';
 	}
 
 };
