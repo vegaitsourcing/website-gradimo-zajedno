@@ -47,7 +47,7 @@ const objectsFilter = {
 	onPaginationClick: function(e) {
 		const clickedPageNumeber = e.target.getAttribute('data-number');
 		const objects = document.querySelectorAll('.js-object-item-cont');
-		console.log(clickedPageNumeber);
+
 		if (clickedPageNumeber === '1') {
 			return Array.from(objects).map((element, index) => {
 				index > 5 ? element.classList.add('sr-only') : element.classList.remove('sr-only');

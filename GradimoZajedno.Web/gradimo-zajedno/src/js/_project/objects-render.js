@@ -140,8 +140,6 @@ const objectsRender = {
 		const pageAmount = Math.floor(this.recievedObjectsFromServer?.item?.length / 6) + 1;
 		const array = Array.from(Array(pageAmount).keys());
 
-		console.log(array);
-
 		paginationContainer.innerHTML = `
 			<div class="wrap">
 				<div class="pagination__content">
