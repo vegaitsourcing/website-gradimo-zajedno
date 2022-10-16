@@ -78,5 +78,7 @@
     <Content Include="ViewModels\Pages\BuildingViewModel.cs" />
     <Content Include="Controllers\RenderMvc\BuildingController.cs" />
     <Content Include="Models\SettlementDTO.cs" />
+    <Content Include="Controllers\UmbracoApi\TimecapsuleContoller" />
+    <Content Include="Controllers\UmbracoApi\FormssController.cs" />
   </ItemGroup>
 </Project>
