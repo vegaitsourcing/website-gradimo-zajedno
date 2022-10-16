@@ -1,6 +1,124 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.TimeCapsule>
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.TimeCapsuleViewModel>
 @using ContentModels = GradimoZajedno.Models.Generated;
-@{
-	Layout = null;
-}
+
+
+
+	<div class="banner wrap wrap--xl js-popup-parent banner--bottom">
+		<div class="banner__bg has-cover" style="background-image: url(@Model.TimeCapsulePicture.Url);"></div>
+		<div class="wrap">
+			<div class="banner__holder">
+				<div class="banner__content">
+				</div>
+			</div>
+		</div>
+		<div class="popup js-popup">
+			<div class="popup__content">
+				<div class="popup__header">
+					<button type="button" class="popup__btn-close js-close-popup">
+						<span class="icon font-ico-close"></span>
+						<span class="sr-only"></span>
+					</button>
+				</div>
+				<div class="popup__body">
+				</div>
+				<div class="popup__success">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="stories js-popup-parent">
+		<div class="wrap">
+			<div class="stories__header">
+				<h1 class="h1 stories__title">@Model.TimeCapsuleTitle</h1>
+				<p class="text stories__text">@Model.TimeCapsuleText</p>
+				<button type="button" class="btn stories__btn js-popup-btn">@Model.ButtonTitle</button>
+			</div>
+			<div class="stories__body">
+				<div class="story">
+					<div class="story__header">
+						<span class="story__title">Moje ime je Nataša</span>
+						<time datetime="2022-09-10">20.09.2022.</time>
+					</div>
+					<div class="story__body">
+						<div class="story__body-holder">
+							<p class="text story__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="story">
+					<div class="story__header">
+						<span class="story__title">Moje ime je Nataša</span>
+						<time datetime="2022-09-10">20.09.2022.</time>
+					</div>
+					<div class="story__body">
+						<div class="story__body-holder">
+							<p class="text story__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="story">
+					<div class="story__header">
+						<span class="story__title">Moje ime je Nataša</span>
+						<time datetime="2022-09-10">20.09.2022.</time>
+					</div>
+					<div class="story__body">
+						<div class="story__body-holder">
+							<p class="text story__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="story">
+					<div class="story__header">
+						<span class="story__title">Moje ime je Nataša</span>
+						<time datetime="2022-09-10">20.09.2022.</time>
+					</div>
+					<div class="story__body">
+						<div class="story__body-holder">
+							<p class="text story__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="story">
+					<div class="story__header">
+						<span class="story__title">Moje ime je Nataša</span>
+						<time datetime="2022-09-10">20.09.2022.</time>
+					</div>
+					<div class="story__body">
+						<div class="story__body-holder">
+							<p class="text story__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+					</div>
+				</div>
+				<div class="story">
+					<div class="story__header">
+						<span class="story__title">Moje ime je Nataša</span>
+						<time datetime="2022-09-10">20.09.2022.</time>
+					</div>
+					<div class="story__body">
+						<div class="story__body-holder">
+							<p class="text story__text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pagination">
+				<div class="wrap">
+					<div class="pagination__content">
+						<ul class="pagination__list">
+							<li class="pagination__item">
+								<a class="pagination__link pagination__link--active" href="javascript:;">1</a>
+							</li>
+							<li class="pagination__item">
+								<a class="pagination__link" href="javascript:;">2</a>
+							</li>
+							<li class="pagination__item">
+								<a class="pagination__link" href="javascript:;">3</a>
+							</li>
+							<li class="pagination__item">
+								<a class="pagination__link" href="javascript:;">4</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
