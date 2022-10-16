@@ -1,6 +1,6 @@
 namespace GradimoZajedno.Core.Models;
 
-public class ContactDTO
+public class ContactFormDTO
 {
     public string Name { get; set; } = null!;
     public string LastName { get; set; } = null!;
