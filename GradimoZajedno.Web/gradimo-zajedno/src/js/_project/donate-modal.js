@@ -15,9 +15,7 @@ const donateModal = {
 			V: '01',
 			C: '1',
 			R: '265161031000428179',
-			N: `Udruženje 'Uvek sa decom'
-            Pasterova 14
-            11000 beograd`,
+			N: 'Udruženje \'Uvek sa decom\'\nPasterova 14\n11000 beograd',
 			I: `RSD${donatorValue.value || ''},00`,
 			P: donatorInformation.value || '',
 			SF: '221',
@@ -34,9 +32,13 @@ const donateModal = {
 			return str.slice(0, str.length - 1);
 		}
 
+		function decode(data) {
+			return data.normalize('NFD').replace(/\p{Diacritic}/gu, '');
+		}
+
 		const options = {
-			text: objToString(informationObject),
-			correctLevel: QRCode.CorrectLevel.L
+			text: decode(objToString(informationObject)),
+			correctLevel: QRCode.CorrectLevel.M
 		};
 
 		qrCodeContainer.innerHTML = '';
