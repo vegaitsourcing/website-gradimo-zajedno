@@ -21,7 +21,6 @@ const objectsRender = {
 		if (this.path.search('/en') === 0) {
 			this.serverUrl = this.serverUrl + '?lang=en';
  		}
-		console.log(this.serverUrl);
 		this.getAllObjects();
 	},
 
