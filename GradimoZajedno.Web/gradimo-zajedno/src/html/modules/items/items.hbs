@@ -1,79 +1,19 @@
-<div class="items">
+<div class="js-object-global-cont">
 	<div class="wrap">
 		<div class="items__header">
 			<button type="button" class="btn filters-btn js-filters-btn">{{filtersBtn}}</button>
-			<div class="filters js-filters">
-				<button type="button" class="filters__close-btn js-filters-close-btn">
-					<span class="icon"></span>
-					<span class="sr-only">{{closeBtn}}</span>
-				</button>
-				<div class="filters__row">
-					{{#each filterTop}}
-					<div class="filter">
-						<input type="checkbox" class="filter__input js-filter-input" name="{{id}}" id="{{id}}">
-						<label for="{{id}}" class="filter__label">{{name}}</label>
+				<div class="filters js-filters">
+					<button type="button" class="filters__close-btn js-filters-close-btn">
+						<span class="icon"></span>
+						<span class="sr-only">Close</span>
+					</button>
+					<div class="filters__row js-objects-top-filter-row">
 					</div>
-					{{/each}}
-				</div>
-				<div class="filters__row">
-					{{#each filterBottom}}
-					<div class="filter">
-						<input type="checkbox" class="filter__input js-filter-input" name="{{id}}" id="{{id}}"{{#if checked}} data-checked="true"{{/if}}>
-						<label for="{{id}}" class="filter__label">{{name}}</label>
+					<div class="filters__row js-objects-bottom-filter-row">
 					</div>
-					{{/each}}
 				</div>
-			</div>
 		</div>
-		<div class="items__content">
-			{{#each item}}
-			<div class="item{{#if sold}} item--sold{{/if}}">
-				<div class="item__col item__col--sm">
-					<div class="item__overlay">
-						<span class="item__overlay-span">{{sold}}</span>
-					</div>
-					<div class="item__img has-cover" style="background-image: url({{img}});"></div>
-				</div>
-				<div class="item__col">
-					<div class="item__header">
-						<div class="item__header-col">
-							<span class="item__desc item__desc--lg">{{object}}</span>
-							<span class="item__desc">{{location}}</span>
-						</div>
-						<div class="item__header-col item__header-col--flex">
-							{{#each tag}}
-							<span class="tag tag--{{class}}">{{name}}</span>
-							{{/each}}
-						</div>
-					</div>
-					<div class="item__body">
-						<div class="item__body-col">
-							{{#if text}}
-							{{#each text}}
-							<p class="text text--sm item__text">{{this}}</p>
-							{{/each}}
-							{{/if}}
-						</div>
-						<div class="item__body-col item__body-col--margin">
-							<span class="item__desc">{{nameLabel}}</span>
-							<span class="item__desc item__desc--lg">{{nameSurname}}</span>
-						</div>
-						<div class="item__body-col item__body-col--flex">
-							<div class="item__price">
-								{{#if sold}}
-								<span class="item__desc">{{ownerLabel}}</span>
-								<span class="item__desc item__desc--lg">{{nameSurname}}</span>
-								{{else}}
-								<span class="item__desc">{{priceTag}}</span>
-								<span class="item__desc item__desc--lg">{{price}}</span>
-								{{/if}}
-							</div>
-							<a href="/single-object.html" class="item__btn">{{btn}}</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			{{/each}}
+		<div class="items__content js-object-item-container">
 		</div>
 		{{> pagination pagination}}
 	</div>
