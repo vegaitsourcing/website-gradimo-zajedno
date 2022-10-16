@@ -9,8 +9,8 @@ public class TimeCapsuleViewModel : PageViewModel
 {
     public TimeCapsuleViewModel(IPageContext<TimeCapsule> context) : base(context)
     {
-        this.TimeCapsuleTitle = context.Page.TimeCapsuleTitle.Value("title").ToString();;
-        this.ButtonTitle = context.Page.ButtonTitle;
+        this.TimeCapsuleTitle = context.Page.TimeCapsuleTitle;
+        this.ButtonTitle = (context.Page.Value("timelineButton") as Umbraco.Cms.Core.Models.Link).Name;
         this.TimeCapsuleText = context.Page.TimeCapsuleText;
         TimeCapsulePicture = context.Page.TimeCapsulePicture?.Content.TryCreateImageViewModel();
         
