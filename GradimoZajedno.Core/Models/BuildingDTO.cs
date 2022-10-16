@@ -2,9 +2,12 @@
 public class BuildingDTO {
     public BuildingDTO () {
         Tag = new List<BuildingTagDTO>();
+        FilterTags = new List<string>();
     }
 
     public List<BuildingTagDTO> Tag {get;set;}
+
+    public List<string> FilterTags {get;set;}
 
     public string Img {get;set;}
     public string Object {get;set;}

@@ -4,8 +4,8 @@ using GradimoZajedno.Models.Generated;
 using Microsoft.AspNetCore.Mvc;
 using Umbraco.Cms.Core.Services;
 using Umbraco.Cms.Core.Models;
-using Umbraco.Cms.Web.Common;
 using Umbraco.Cms.Core.Models.PublishedContent;
+using GradimoZajedno.Common.Extensions;
 
 [Route("buildings/[action]")]
 public class BuildingsController : UmbracoApiController
@@ -46,10 +46,10 @@ public class BuildingsController : UmbracoApiController
         retVal.CloseBtn = GetTranslation("Form.Close", language);
         retVal.FiltersBtn = GetTranslation("Quarter.Filters", language);
 
-        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Quarters.All", language), true, true));
-        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.SignificantObject", language)));
-        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.OnSale", language)));
-        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.Sold", language)));
+        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Quarters.All", language), "", true));
+        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.SignificantObject", language), "importantObject"));
+        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.OnSale", language), "onSale"));
+        retVal.FilterBottom.Add(new TagFilterDTO(GetTranslation("Building.Sold", language), "sold"));
 
         foreach (var quarter in cityNode.CurrentSettlement.Descendants<Quarter>(language.IsoCode))
         {
@@ -94,6 +94,16 @@ public class BuildingsController : UmbracoApiController
                         Name = GetTranslation("Building.SignificantObject", language)
                     });
                 }
+                if(building.IsSold) {
+                    buildingDTO.FilterTags.Add("sold");
+                } else {
+                    buildingDTO.FilterTags.Add("onSale");
+                }
+                if(building.ImportantObject) {
+                    buildingDTO.FilterTags.Add("importantObject");
+                }
+
+                buildingDTO.FilterTags.Add(quarter.Title.GenerateSlug());
 
                 retVal.Item.Add(buildingDTO);
             }
