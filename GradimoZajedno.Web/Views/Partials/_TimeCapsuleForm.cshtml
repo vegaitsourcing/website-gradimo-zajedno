@@ -1,0 +1,43 @@
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.PageViewModel>
+
+<div class="popup__body">
+    <div class="forms">
+        <div class="wrap">
+            <div class="forms__content">
+                <div class="forms__col">
+                    <form class="form js-form" action="/contact" data-name="timecapsule">
+                        <div class="form__input-wrap">
+                            <div class="input-wrap">
+                                <label for="name" class="label">@Umbraco.GetDictionaryValue("Form.Contact.Name")</label>
+                                <span class="error-msg"></span>
+                                <input class="input js-input" type="text" name="name" required id="name" autocomplete="off">
+                            </divS>
+                        </div>
+                        <div class="form__input-wrap">
+                            <div class="input-wrap">
+                                <label for="lastName" class="label">@Umbraco.GetDictionaryValue("Form.Contact.Surname")</label>
+                                <span class="error-msg"></span>
+                                <input class="input js-input" type="text" name="lastName" required id="lastName" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form__input-wrap form__input-wrap--full">
+                            <div class="input-wrap">
+                                <label for="email" class="label">@Umbraco.GetDictionaryValue("Form.Contact.Email")</label>
+                                <span class="error-msg"></span>
+                                <input class="input js-input" type="email" name="email" required id="email" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="form__input-wrap form__input-wrap--full">
+                            <label for="message" class="label">@Umbraco.GetDictionaryValue("Form.Timeline.Story")</label>
+                            <textarea class="input js-input" name="message" id="message" cols="30" rows="5" required></textarea>
+                        </div>
+                        <div class="form__btn-wrap">
+                            <button class="btn form__btn" type="submit">@Umbraco.GetDictionaryValue("Form.Timeline.Send")</button>
+                            <button class="btn btn--outline form__btn js-close-popup" type="button">@Umbraco.GetDictionaryValue("Form.Timeline.Cancel")</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
