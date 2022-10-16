@@ -17,25 +17,34 @@
 
         @await Html.PartialAsync("_Carousel", Model.CurrentSettlement)
         
-        <div class="cards__pagination js-cards-pagination"></div>
-        <div class="swiper-pagination"></div>
-        <div class="cards__navigation">
-            <button type="button" class="cards-button-prev btn-navigation cards__btn cards__btn--prev">
-                <span class="icon font-ico-arrow-left"></span>
-                <span class="sr-only">@Umbraco.GetDictionaryValue("City.Carousel.Previous")</span>
-            </button>
-            <button type="button" class="cards-button-next btn-navigation cards__btn cards__btn--next">
-                <span class="icon font-ico-arrow-right"></span>
-                <span class="sr-only">@Umbraco.GetDictionaryValue("City.Carousel.Next")</span>
-            </button>
-        </div>
+        <div class="swiper-pagination cards__pagination js-cards-pagination"></div>
     </div>
 </div>
-
 <div class="basic-block">
 	<div class="wrap">
 		<div class="basic-block__content">
 			<p class="text basic-block__text">@Model.Description</p>
 		</div>
 	</div>
+</div>
+
+<div class="js-object-global-cont">
+    <div class="wrap">
+        <div class="items__header">
+            <button type="button" class="btn filters-btn js-filters-btn">@Umbraco.GetDictionaryValue("Filters")</button>
+                <div class="filters js-filters">
+                    <button type="button" class="filters__close-btn js-filters-close-btn">
+                        <span class="icon"></span>
+                        <span class="sr-only">@Umbraco.GetDictionaryValue("Form.Close")</span>
+                    </button>
+                    <div class="filters__row js-objects-top-filter-row">
+                    </div>
+                    <div class="filters__row js-objects-bottom-filter-row">
+                    </div>
+                </div>
+        </div>
+        <div class="items__content js-object-item-container">
+        </div>
+
+    </div>
 </div>
