@@ -1,0 +1,25 @@
+@inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.PageViewModel>
+
+<div class="popup js-popup">
+    <div class="popup__content">
+        <div class="popup__header">
+            <button type="button" class="popup__btn-close js-close-popup">
+                <span class="icon font-ico-close"></span>
+                <span class="sr-only">@Umbraco.GetDictionaryValue("Popup.Close")</span>
+            </button>
+        </div>
+        <div class="popup__body">
+            <p class="text text--sm popup__text">@Umbraco.GetDictionaryValue("DonatePopup.Text")</p>
+            <div class="donate-modal">
+                <img class="donate-modal__img" src="/assets/images/uplatnica.jpg" alt="Donation form">
+                <form class="donate-modal__form" method="post" action="">
+                    <textarea name="donator" class="donate-modal__textarea"></textarea>
+                    <input name="value" type="number" class="donate-modal__input" pattern="([0-9]{1,3}).([0-9]{1,3})" />
+                </form>
+                <div class="donate-modal__qrcode"></div>
+            </div>
+        </div>
+        <div class="popup__success">
+        </div>
+    </div>
+</div>
