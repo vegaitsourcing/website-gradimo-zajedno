@@ -51,10 +51,11 @@ const form = {
 			success: onSuccess(),
 
 		});
+
 		function showSuccessMessage(element) {
 			const messageEl = document.createElement('p');
 			messageEl.classList.add('form__success-msg');
-			messageEl.textContent = 'Poruka uspješno poslana!';
+			messageEl.textContent = 'Poruka uspešno poslata!';
 			element.appendChild(messageEl);
 			const inputs = form.querySelectorAll('.input');
 			inputs.forEach((input) => {
