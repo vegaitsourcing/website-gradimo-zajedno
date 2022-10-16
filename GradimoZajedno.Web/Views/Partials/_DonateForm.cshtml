@@ -1,4 +1,5 @@
 @inherits UmbracoViewPage<GradimoZajedno.Core.ViewModels.Pages.PageViewModel>
+@using GradimoZajedno.Common.Extensions;
 
 <div class="popup js-popup">
     <div class="popup__content">
@@ -9,7 +10,7 @@
             </button>
         </div>
         <div class="popup__body">
-            <p class="text text--sm popup__text">@Umbraco.GetDictionaryValue("DonatePopup.Text")</p>
+            <p class="text text--sm popup__text">@Html.Raw(Umbraco.GetDictionaryValue("DonatePopup.Text").ReplaceNewLinesWithLineBreaks())</p>
             <div class="donate-modal">
                 <img class="donate-modal__img" src="/assets/images/uplatnica.jpg" alt="Donation form">
                 <form class="donate-modal__form" method="post" action="">
