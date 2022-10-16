@@ -36,3 +36,6 @@ lang.init();
 
 import donateModal from './_project/donate-modal';
 donateModal.init();
+
+import objects from './_project/objects';
+objects.init();
