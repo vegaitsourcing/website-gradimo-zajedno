@@ -40,3 +40,5 @@ donateModal.init();
 import objectsRender from './_project/objects-render';
 objectsRender.init();
 
+import stories from './_project/stories';
+stories.init();

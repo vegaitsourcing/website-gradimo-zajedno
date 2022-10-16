@@ -5,24 +5,7 @@
 			<p class="text stories__text">{{text}}</p>
 			<button type="button" class="btn stories__btn js-popup-btn">{{btn}}</button>
 		</div>
-		<div class="stories__body">
-			{{#each story}}
-			<div class="story">
-				<div class="story__header">
-					<span class="story__title">{{title}}</span>
-					{{#if date}}
-					<time datetime="{{date.atr}}">{{date.text}}</time>
-					{{/if}}
-				</div>
-				<div class="story__body">
-					<div class="story__body-holder">
-						{{#if text}}
-						<p class="text story__text">{{text}}</p>
-						{{/if}}
-					</div>
-				</div>
-			</div>
-			{{/each}}
+		<div class="stories__body js-stories-container">
 		</div>
 		{{> pagination pagination}}
 		{{> popup popup}}
