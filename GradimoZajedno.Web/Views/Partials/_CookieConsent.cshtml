@@ -5,14 +5,14 @@
 		<div class="cookie__top">
 			<button type="button" class="cookie__btn-close js-close-cookie">
 				<span class="icon font-ico-close"></span>
-				<span class="sr-only">Close</span>
+				<span class="sr-only">@Umbraco.GetDictionaryValue("Cookie.Close")</span>
 			</button>
-			<span class="h1 cookie__title">This website uses cookies</span>
-			<p class="text text--sm cookie__text">We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.</p>
+			<span class="h1 cookie__title">@Umbraco.GetDictionaryValue("Cookie.Title")</span>
+			<p class="text text--sm cookie__text">@Umbraco.GetDictionaryValue("Cookie.Text")</p>
 		</div>
 		<div class="cookie__bottom">
-			<button type="button" class="btn cookie__btn cookie__btn--accept">Allow</button>
-			<button type="button" class="btn btn--outline cookie__btn cookie__btn--settings">Decline</button>
+			<button type="button" class="btn cookie__btn cookie__btn--accept">@Umbraco.GetDictionaryValue("Cookie.Allow")</button>
+			<button type="button" class="btn btn--outline cookie__btn cookie__btn--settings">@Umbraco.GetDictionaryValue("Cookie.Decline")</button>
 		</div>
 	</div>
 </div>
