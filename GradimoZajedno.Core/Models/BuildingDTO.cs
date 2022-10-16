@@ -20,6 +20,10 @@ public class BuildingDTO {
 
     public string NameSurname {get;set;}
 
+    public string OwnerLabel {get;set;}
+
+    public string Owner {get;set;}
+
     public string PriceTag {get;set;}
 
     public string Price {get;set;}

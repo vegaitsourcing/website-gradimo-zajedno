@@ -63,6 +63,9 @@ public class BuildingsController : UmbracoApiController
                 buildingDTO.Location = quarter.Title;
                 buildingDTO.NameLabel = GetTranslation("Building.Builder", language);
                 buildingDTO.NameSurname = building.Builder;
+                buildingDTO.OwnerLabel = GetTranslation("Building.Owner", language);
+                buildingDTO.Owner = building.Owner;
+
                 buildingDTO.PriceTag = GetTranslation("Building.Price", language);
                 buildingDTO.Btn = GetTranslation("Building.BuyButton", language);
                 buildingDTO.Url = building.Url(language.IsoCode);
