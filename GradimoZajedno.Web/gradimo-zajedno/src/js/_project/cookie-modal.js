@@ -1,27 +1,22 @@
 const cookieModal = {
 	cookieModalEl: document.querySelector('.js-cookie'),
-	cookieBtn: document.querySelector('.js-cookie-opener'),
 	closeCookieBtn: document.querySelector('.js-close-cookie'),
-	confirmText: 'Confirm Settings',
+	allowCookiesBtn: document.querySelector('.js-allow-cookies'),
+	declineCookiesBtn: document.querySelector('.js-decline-cookies'),
 
 	cookieModalHiddenClass: 'cookie--hidden',
+	active: true,
 
 	init: function() {
+		const current = localStorage.getItem('active');
+		if (current === 'true' || current === null) {
+			this.cookieModalEl.classList.remove(this.cookieModalHiddenClass);
+		} else {
+			this.cookieModalEl.classList.add(this.cookieModalHiddenClass);
+		}
 		this.closeCookieModal();
-	},
-
-	cookieModal: function() {
-		if (!this.cookieBtn) return;
-		this.cookieBtn.addEventListener('click', (e) => {
-			e.preventDefault();
-			CookieControl.open();
-			this.cookieAppendInfoButton();
-		});
-		document.addEventListener('click', (e) => {
-			if (e.currentTarget.id === '#confirm-btn') {
-				document.getElementById('ccc').innerHTML = '';
-			}
-		});
+		this.allowCookiesEventListener();
+		this.declineCookiesEventListener();
 	},
 
 	closeCookieModal: function() {
@@ -30,15 +25,23 @@ const cookieModal = {
 		});
 	},
 
-	cookieAppendInfoButton: function() {
-		const $cookiesContainer = $('#ccc');
-		const cookieInfoBtn = `<button class="btn-info" id="confirm-btn">${this.confirmText}</button>`;
-		setTimeout(() => {
-			const confirmBtnHolder = $cookiesContainer.find('#ccc-info');
-			if (!$('#confirm-btn').length) {
-				confirmBtnHolder.append(cookieInfoBtn);
-			}
-		}, 200);
+	allowCookiesEventListener: function() {
+		if (!this.allowCookiesBtn) return;
+		this.allowCookiesBtn.addEventListener('click', () => {
+			this.cookieModalEl.setAttribute('data-active', false);
+			localStorage.setItem('active', false);
+			this.active = false;
+			this.cookieModalEl.classList.add(this.cookieModalHiddenClass);
+		});
+	},
+
+	declineCookiesEventListener: function() {
+		if (!this.declineCookiesBtn) return;
+		this.declineCookiesBtn.addEventListener('click', () => {
+			this.cookieModalEl.classList.add(this.cookieModalHiddenClass);
+			this.cookieModalEl.setAttribute('data-active', true);
+			localStorage.setItem('active', true);
+		});
 	}
 };
 
