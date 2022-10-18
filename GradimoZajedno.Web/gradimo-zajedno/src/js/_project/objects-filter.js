@@ -14,8 +14,12 @@ const objectsFilter = {
 	},
 
 	onButtonClick: function(e) {
+		const filterButtons = document.querySelectorAll('.js-obejcts-filter-button');
+		filterButtons.forEach((button) => button.classList.remove('filter__label--checked'));
+		const button = e.target;
 		const buttonAttribute = e.target.getAttribute('data-name');
 		const items = document.querySelectorAll('.js-object-item-cont');
+		button.classList.add('filter__label--checked');
 		items.forEach((item) => {
 			if (buttonAttribute === '') {
 				return item.classList.remove('sr-only');
