@@ -66,7 +66,7 @@ const objectsRender = {
 
 			const filterData = this.recievedObjectsFromServer['filterBottom'];
 
-			filterData.map((element) => {
+			filterData.map((element, index) => {
 				const container = document.createElement('div');
 				container.setAttribute('class', 'filter');
 				const button = document.createElement('button');
@@ -74,6 +74,10 @@ const objectsRender = {
 				button.setAttribute('class', 'filter__label js-obejcts-filter-button');
 				button.setAttribute('data-name', element.id);
 				button.innerHTML = element.name;
+
+				if (index === 0) {
+					button.classList.add('filter__label--checked');
+				}
 
 				container.appendChild(button);
 
