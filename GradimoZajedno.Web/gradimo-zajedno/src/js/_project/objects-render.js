@@ -118,7 +118,7 @@ const objectsRender = {
 							${item?.location && `<span class="item__desc">${item.location}</span>`}
 						</div>
 						<div class="item__header-col item__header-col--flex">
-							${item?.tag?.length ? item.tag.map((tag) => `<span class="tag tag--${tag?.class}">${tag?.name}</span>`) : ''}
+							${item?.tag?.length ? item.tag.map((tag) => `<span class="tag tag--${tag?.class}">${tag?.name}</span>`).join('') : ''}
 
 						</div>
 					</div>
@@ -161,8 +161,7 @@ const objectsRender = {
 						<button type="button" class="pagination__link js-objects-pagination-button" data-number=${index + 1}>
 							${index + 1}
 						</button>
-						</li>`)}
-
+						</li>`).join('')}
 					</ul>
 				</div>
 			</div>
