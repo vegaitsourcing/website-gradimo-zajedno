@@ -98,7 +98,7 @@ const objectsRender = {
 			const soldAttributeValue = filterTags.find((element) => element === 'sold');
 
  			const container = document.createElement('div');
-			container.setAttribute('class', `item js-object-item-cont ${soldAttributeValue ? 'item--sold' : ''}`);
+			container.setAttribute('class', `item active-item js-object-item-cont ${soldAttributeValue ? 'item--sold' : ''}`);
 			container.setAttribute('data-tags', filterTags);
 
 			container.innerHTML = `
@@ -150,7 +150,7 @@ const objectsRender = {
 		});
 		const paginationContainer = document.createElement('div');
 		paginationContainer.setAttribute('class', 'pagination js-items-pagination');
-		const pageAmount = Math.floor(this.recievedObjectsFromServer?.item?.length / 6) + 1;
+		const pageAmount = Math.floor(this.recievedObjectsFromServer?.item?.length / 6);
 		const array = Array.from(Array(pageAmount).keys());
 
 		paginationContainer.innerHTML = `
@@ -158,7 +158,7 @@ const objectsRender = {
 				<div class="pagination__content">
 					<ul class="pagination__list">
 						${array.map((element, index) => `<li class="pagination__item">
-						<button type="button" class="pagination__link js-objects-pagination-button" data-number=${index + 1}>
+						<button type="button" class="pagination__link ${index === 0 ? 'pagination__link--active' : ''} js-objects-pagination-button" data-number=${index + 1}>
 							${index + 1}
 						</button>
 						</li>`).join('')}
