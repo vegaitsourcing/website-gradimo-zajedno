@@ -20,9 +20,9 @@ const objectsFilter = {
 		const buttonAttribute = e.target.getAttribute('data-name');
 		const items = document.querySelectorAll('.js-object-item-cont');
 		button.classList.add('filter__label--checked');
-		items.forEach((item) => {
+		items.forEach((item, index) => {
 			if (buttonAttribute === '') {
-				return item.classList.remove('sr-only');
+				return item.classList.remove('sr-only', 'active-item');
 			}
 
 			const itemTags = item.getAttribute('data-tags').split(',');
@@ -32,7 +32,48 @@ const objectsFilter = {
 			} else {
 				return item.classList.add('sr-only');
 			}
+
 		});
+
+		updatePagination(items);
+
+		function updatePagination(elements) {
+			const filteredArray = [];
+			const paginationButtons = document.querySelectorAll('.js-objects-pagination-button');
+			elements.forEach((element, index) => {
+				element.classList.remove('active-item');
+				if (!element.classList.contains('sr-only')) {
+					filteredArray.push(element);
+
+					const condition = 6;
+
+					paginationButtons.forEach((button, index) => {
+						button.classList.remove('pagination__link--active');
+						if (filteredArray.length < 6) {
+							if (index > 0) {
+								button.classList.add('sr-only');
+							} else {
+								button.classList.add('pagination__link--active');
+							}
+						} else {
+							if (index === 0) {
+								button.classList.add('pagination__link--active');
+							}
+							button.classList.remove('sr-only');
+						}
+					});
+
+					filteredArray.map((element, index) => {
+						element.classList.add('active-item');
+						if (index + 1 > condition) {
+							element.classList.add('sr-only');
+						} else {
+							element.classList.remove('sr-only');
+						}
+					});
+				}
+			});
+		}
 	},
 
 	addEventListenersToPaginationButton: function() {
@@ -49,8 +90,16 @@ const objectsFilter = {
 	},
 
 	onPaginationClick: function(e) {
+		const clicked = e.target;
 		const clickedPageNumeber = e.target.getAttribute('data-number');
-		const objects = document.querySelectorAll('.js-object-item-cont');
+		const objects = document.querySelectorAll('.active-item');
+		const buttons = document.querySelectorAll('.js-objects-pagination-button');
+
+		buttons.forEach((button) => {
+			button.classList.remove('pagination__link--active');
+		});
+
+		clicked.classList.add('pagination__link--active');
 
 		if (clickedPageNumeber === '1') {
 			return Array.from(objects).map((element, index) => {
@@ -61,7 +110,7 @@ const objectsFilter = {
 		const condition = ((clickedPageNumeber - 1) * 6) - 1;
 
 		Array.from(objects).map((element, index) => {
-			if (index > condition && index < condition + 6) {
+			if (index > condition && index - 1 < condition + 6) {
 			 	element.classList.remove('sr-only');
 			} else {
 				element.classList.add('sr-only');
