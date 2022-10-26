@@ -6,6 +6,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript">
+		var translations = {};
+		fetch('/translations/GetAll')
+		.then(res => res.json())
+		.then(out => { translations = out; })
+		.catch(err => { throw err });
+	</script>
 	<link rel="stylesheet" href="/css/style.min.css">
 	<script defer src="/js/global.min.js"></script>
 
