@@ -21,26 +21,6 @@
 				<button type="button" class="btn stories__btn js-popup-btn">@Umbraco.GetDictionaryValue("Timeline.Button")</button>
 			</div>
 			<div class="stories__body js-stories-container"></div>
-			<div class="pagination">
-				<div class="wrap">
-					<div class="pagination__content">
-						<ul class="pagination__list">
-							<li class="pagination__item">
-								<a class="pagination__link pagination__link--active" href="javascript:;">1</a>
-							</li>
-							<li class="pagination__item">
-								<a class="pagination__link" href="javascript:;">2</a>
-							</li>
-							<li class="pagination__item">
-								<a class="pagination__link" href="javascript:;">3</a>
-							</li>
-							<li class="pagination__item">
-								<a class="pagination__link" href="javascript:;">4</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
 
 			@await Html.PartialAsync("_TimeCapsuleForm")
 		</div>
