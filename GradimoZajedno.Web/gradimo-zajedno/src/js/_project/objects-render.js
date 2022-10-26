@@ -104,7 +104,7 @@ const objectsRender = {
 			container.innerHTML = `
 			<div class="item__col item__col--sm">
 				<div class="item__overlay">
-					<span class="item__overlay-span">Prodato</span>
+					<span class="item__overlay-span">${this.path.search('en') === -1 ? translations['Building.Sold'][1].item2 : translations['Building.Sold'][0].item2}</span>
 				</div>
 				<div class="item__img has-cover" style="background-image: url(${item?.img || ''});"></div>
 			</div>
